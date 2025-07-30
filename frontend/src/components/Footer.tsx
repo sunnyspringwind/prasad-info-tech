@@ -87,11 +87,11 @@ const Footer: React.FC = () => {
                 +977-9801234567
               </a>
               <a
-                href="mailto:info@prasadinfotech.com"
+                href="mailto:prasadinfotechinquiry@gmail.com"
                 className="flex items-center gap-2 hover:text-white transition-colors duration-200"
               >
                 <FaEnvelope />
-                info@prasadinfotech.com
+                prasadinfotechinquiry@gmail.com
               </a>
             </div>
             <div className="flex justify-center md:justify-start gap-5 text-blue-200 text-2xl">

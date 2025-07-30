@@ -1,6 +1,6 @@
 import React, { useState, type FormEvent } from "react";
 
-const TalkToUsForm: React.FC = () => {
+const ContactSection: React.FC = () => {
   const [formData, setFormData] = useState({
     services: [] as string[],
     fullname: "",
@@ -49,9 +49,9 @@ const TalkToUsForm: React.FC = () => {
   };
 
   return (
-    <section id="HomeTalkToUs" className="bg-white text-blue-900 py-12">
-      <div className="container max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8">Talk To Us</h2>
+    <section id="contact" className="bg-white text-blue-900 py-12 pt-16">
+      <div className="container max-w-6xl mx-auto px-5">
+        <h2 className="text-3xl font-bold mb-8">We'd love to hear from you!</h2>
         {errorMsg && (
           <div className="mb-4 rounded bg-red-600 px-4 py-2 text-white">{errorMsg}</div>
         )}
@@ -129,7 +129,7 @@ const TalkToUsForm: React.FC = () => {
                   type="submit"
                   className="bg-yellow-400 text-blue-900 font-semibold px-6 py-3 rounded-md hover:bg-yellow-500 transition"
                 >
-                  Submit
+                  Get In Touch
                 </button>
               </div>
             </div>
@@ -140,4 +140,4 @@ const TalkToUsForm: React.FC = () => {
   );
 };
 
-export default TalkToUsForm;
+export default ContactSection;

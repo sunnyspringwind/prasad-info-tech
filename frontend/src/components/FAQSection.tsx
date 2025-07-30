@@ -76,7 +76,7 @@ const FAQSection: React.FC = () => {
   };
 
   return (
-    <section id="faqs" className="bg-white py-12 px-6">
+    <section id="faqs" className="bg-white py-12 pb-8 px-6">
       <div className="container mx-auto max-w-4xl">
         <h2 className="text-3xl font-bold text-blue-600 mb-8 text-center">
           <span className="text-blue-600">FAQs</span>
