@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { ArrowRight } from "lucide-react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";

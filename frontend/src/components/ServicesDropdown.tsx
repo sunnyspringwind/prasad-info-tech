@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { ChevronRight } from "lucide-react"; // optional icon package (lucide-react)
 
 const ServicesDropdown: React.FC = () => {
