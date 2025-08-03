@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { ChevronRight, Menu, X, Phone, Mail, Watch } from "lucide-react";
 import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
-import logo from "./../assets/logo.png";
+import logo from "./../assets/img/logo.png";
 import ServicesDropdown from "./ServicesDropdown";
 import MobileServicesDropdown from "./MobileServicesDropdown";
 
@@ -31,15 +31,14 @@ const PrasadTechHeader: React.FC<HeaderProps> = ({ isMainPage }) => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  const goToContactSection = () => {
+ const goToSection = (sectionId: string) => {
     if (isMainPage) {
-      console.log("working");
       document
-        .getElementById("contact")
+        .getElementById(sectionId)
         ?.scrollIntoView({ behavior: "smooth" });
       if (isMobileMenuOpen) toggleMobileMenu();
     } else {
-      sessionStorage.setItem("scrollTarget", "contact");
+      sessionStorage.setItem("scrollTarget", sectionId);
       navigate("/"); // Go to home
     }
   };
@@ -83,18 +82,18 @@ const PrasadTechHeader: React.FC<HeaderProps> = ({ isMainPage }) => {
   }, [scrolled]);
 
   return (
-    <header className="sticky top-0 z-50 bg-transparent w-full h-15">
+    <header className="sticky top-0 shadow-lg z-50 bg-transparent w-full h-15">
       <div
-        className={`w-full bg-white shadow-lg transform-gpu transition-all duration-500 ease-out ${
-          scrolled ? "h-15" : "h-22"
+        className={`w-full h-15 bg-white shadow-lg transform-gpu transition-all duration-500 ease-out ${
+          scrolled ? "h-17" : "sm:h-21"
         }`}
       >
         {/* Mobile Header */}
-        <div className="lg:hidden fixed top-0 left-0 right-0 bg-white z-50 ">
+        <div className="lg:hidden fixed top-0 left-0 right-0 z-50 ">
           <div className="flex items-center justify-between py-1 px-2">
             <div className="logo">
               <a href="/">
-                <img src={logo} alt="Prasad tech logo" className={`p-1 h-16`} />
+                <img src={logo} alt="Prasad tech logo" className={`p-1 h-14 sm:h-16`} />
               </a>
             </div>
             <button onClick={toggleMobileMenu} className="p-2 bg-gray-200 rounded-full">
@@ -104,12 +103,12 @@ const PrasadTechHeader: React.FC<HeaderProps> = ({ isMainPage }) => {
 
           {/* Mobile Sidebar */}
           <div
-            className={`fixed top-18 bg-white border-2 border-gray-200 shadow-lg right-0 max-h-screen overflow-y-scroll w-60 text-black transform transition-transform duration-300 z-40 ${
-              isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+            className={`fixed top-18 bg-white border-2 border-gray-200 shadow-lg right-0 max-h-screen overflow-y-scroll w-60 text-black transform transition-transform duration-300 z-100 ${
+              isMobileMenuOpen ? "visible" : "hidden"
             }`}
           >
             <div className="py-4 px-4">
-              <div className="py-2"><Link to="/" className="hover:to-blue-600">Home</Link></div>
+              <div className="py-2"><NavLink to="/" className={({ isActive }) => `hover:to-blue-600 ${isActive ? 'text-blue-600' : ''}`}>Home</NavLink></div>
               
 
               {/* Services */}
@@ -131,7 +130,8 @@ const PrasadTechHeader: React.FC<HeaderProps> = ({ isMainPage }) => {
                 )}
               </div>
 
-              <div className=" hover:to-blue-600 py-2">                    <a href="/portfolio">Portfolio</a>
+              <div className=" hover:to-blue-600 py-2">                                  <NavLink to="/portfolio" className={({ isActive }) => `hover:to-blue-600 ${isActive ? 'text-blue-600' : ''}`}>Portfolio</NavLink>
+
 </div>
 
               {/* Resources */}
@@ -206,7 +206,7 @@ const PrasadTechHeader: React.FC<HeaderProps> = ({ isMainPage }) => {
                 {/* Contact Section of the site */}
               <div className="">
                 <button
-                  onClick={() => goToContactSection()}
+                  onClick={() => goToSection("contact")}
                   className="block w-full text-left py-2 hover:text-blue-600"
                 >
                   Contact
@@ -273,7 +273,7 @@ const PrasadTechHeader: React.FC<HeaderProps> = ({ isMainPage }) => {
               <nav className="flex items-center space-x-4 pb-3 text-[15px]">
                 {/* Home */}
                 <div className="hover:text-blue-600">
-                  <Link to="/">Home</Link>
+                  <NavLink to="/" className={({ isActive }) => `hover:to-blue-600 ${isActive ? 'text-blue-600' : ''}`}>Home</NavLink>
                 </div>
 
                 {/* Our Services Dropdown */}
@@ -281,9 +281,9 @@ const PrasadTechHeader: React.FC<HeaderProps> = ({ isMainPage }) => {
 
                 {/* Portfolio */}
                 <div className="relative group">
-                  <button className="flex items-center space-x-1 hover:text-blue-600 transition-colors">
-                    <a href="/portfolio">Portfolio</a>
-                  </button>
+                    <NavLink to="/portfolio" className={({ isActive }) => `flex items-center space-x-1 hover:text-blue-600 transition-colors ${isActive ? 'text-blue-600' : ''}`}>
+                    Portfolio
+                    </NavLink>
                 </div>
 
                 {/* Resources Dropdown */}
@@ -337,7 +337,7 @@ const PrasadTechHeader: React.FC<HeaderProps> = ({ isMainPage }) => {
                 {/* Contact Us */}
                 <div className="flex items-center space-x-1 hover:text-blue-600 transition-colors">
                   <button
-                    onClick={() => goToContactSection()}
+                    onClick={() => goToSection("contact")}
                     className=" hover:text-blue-600"
                   >
                     Contact
@@ -368,3 +368,4 @@ const PrasadTechHeader: React.FC<HeaderProps> = ({ isMainPage }) => {
 };
 
 export default PrasadTechHeader;
+

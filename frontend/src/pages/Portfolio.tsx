@@ -96,13 +96,13 @@ const Portfolio = () => {
   return (
     <>
       {" "}
-      <Header isMainPage={true} />{" "}
+      <Header isMainPage={false} />{" "}
       <section className="bg-gradient-to-br from-blue-50 to-white py-16 px-6 md:px-12">
         <div className="container mx-auto px-4">
           {/* Header Section */}
           <div className="mb-16">
             <h2 className="text-4xl md:text-5xl text-center font-bold text-blue-900 relative mb-4">
-              Portfolio
+              Our Projects
               {/* <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full"></div> */}
             </h2>
 

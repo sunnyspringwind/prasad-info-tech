@@ -37,12 +37,12 @@ export default function Home() {
         <FAQSection />
         <ContactSection />
         <Footer />
-        <button onClick={openChatbot} className="fixed bottom-24 right-8 z-50 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-300 flex items-center gap-2">
+        <button onClick={openChatbot} className="fixed bottom-24 right-8 z-30 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-300 flex items-center gap-2">
           <MessageCircle size={24} />
         </button>
        
         {showButton && (
-          <button onClick={scrollToTop}  className="fixed bottom-8 right-8 z-50 bg-blue-600 text-white p-3 rounded-full shadow-lg">
+          <button onClick={scrollToTop}  className="fixed bottom-8 right-8 z-30 bg-blue-600 text-white p-3 rounded-full shadow-lg">
             <FaArrowCircleUp />
           </button>
         )}

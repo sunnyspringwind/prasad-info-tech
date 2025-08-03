@@ -1,6 +1,5 @@
 import AutoScrollSlider from "./AuoScrollSlider"
-import { FaBullhorn, FaSearch, FaFacebookF, FaLaptopCode, FaPalette, FaEnvelope } from 'react-icons/fa';
-
+import { FaBullhorn, FaSearch, FaFacebookF, FaLaptopCode, FaPalette, FaRegEdit } from 'react-icons/fa';
 
 const IntroSection: React.FC = () => {
     const partnerList = ['https://upload.wikimedia.org/wikipedia/commons/c/c4/WWE_official_logo.svg', "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSTWlnJCnn2ljYqv2t4XY9bM5U4pnohvXZRw&s", "https://s7d2.scene7.com/is/image/aeo/0437_5959_471_l1?$pdp-m-opt$", "https://hips.hearstapps.com/hmg-prod/images/ana-de-armas-1626771511.jpg"]
@@ -33,9 +32,9 @@ const services = [
     description: 'Craft a consistent, memorable brand that builds trust and recognition.',
   },
   {
-    icon: <FaEnvelope className="text-blue-600 text-3xl" />,
-    title: 'Content & Email Marketing',
-    description: 'Tell your story and nurture your audience with impactful content and strategic emails.',
+    icon: <FaRegEdit className="text-blue-600 text-3xl" />,
+    title: 'Content & Blog Writing',
+    description: 'Tell your story and nurture your audience with impactful content and strategic blog posts.',
   },
 ];
 

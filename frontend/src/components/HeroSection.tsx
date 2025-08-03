@@ -1,8 +1,13 @@
-import React from "react";
-import { FaCheckCircle, FaArrowRight, FaLaptopCode, FaBullhorn, FaPalette, FaChartLine } from 'react-icons/fa';
+import React, { useState } from "react";
+import { FaArrowRight, FaLaptopCode, FaBullhorn, FaPalette, FaChartLine } from 'react-icons/fa';
 import { Link } from "react-router-dom";
+import { HiOutlineDocumentReport } from 'react-icons/hi';
+import ProjectInquiryForm from "./ProjectEnquiryForm";
 
 const HeroSection: React.FC = () => {
+  const [isContactFormVisible, setContactFormVisibility] = useState(false);
+
+
   return (
     <section className="relative w-full min-h-screen overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-blue-600">
       {/* Animated Background Elements */}
@@ -58,16 +63,29 @@ const HeroSection: React.FC = () => {
 
           {/* CTA Buttons */}
           <div className="mt-10 flex flex-wrap gap-4 items-center">
-            <button className="px-8 py-4 rounded-full bg-white text-blue-900 font-semibold shadow-xl hover:bg-blue-50 hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-3 focus:outline-none focus:ring-4 focus:ring-white/30 active:scale-95">
-              <FaCheckCircle className="text-blue-600 text-lg" />
-              Get Free Consultation
+            <button onClick={()=>setContactFormVisibility(true)} className="px-8 py-4 rounded-md bg-white text-blue-900 font-semibold shadow-xl hover:bg-blue-50 hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-3 focus:outline-none focus:ring-4 focus:ring-white/30 active:scale-95">
+              <HiOutlineDocumentReport className="text-blue-600 text-3xl" />
+              Get Free Quotation
             </button>
             
-            <Link to="/portfolio"  className="px-8 py-4 rounded-full border-2 border-white/80 text-white font-semibold bg-white/10 backdrop-blur-sm hover:bg-white hover:text-blue-900 hover:scale-105 transition-all duration-300 flex items-center gap-3 focus:outline-none focus:ring-4 focus:ring-white/30 active:scale-95 group">
-              View Our Portfolio
+            <Link to="/services"  className="px-8 py-4 rounded-md border-2 border-white/80 text-white font-semibold bg-white/10 backdrop-blur-sm hover:bg-white hover:text-blue-900 hover:scale-105 transition-all duration-300 flex items-center gap-3 focus:outline-none focus:ring-4 focus:ring-white/30 active:scale-95 group">
+              Our Services
               <FaArrowRight className="text-white group-hover:text-blue-900 transition-colors group-hover:translate-x-1 transform duration-300" />
             </Link>
           </div>
+
+          {/*pop up Contact form for free quotation */}
+        {isContactFormVisible && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm p-6">
+            <div className="rounded-lg w-full max-w-2xl m-4 relative h-[400px] sm:max-h-screen overflow-y-auto">
+              <ProjectInquiryForm 
+          showServices={true} 
+          type={"quote for new"} 
+          onClose={() => setContactFormVisibility(false)} 
+              />
+            </div>
+          </div>
+        )}
 
           {/* Trust Indicators */}
           <div className="mt-12 pb-3 flex flex-wrap items-center gap-8 text-blue-200">

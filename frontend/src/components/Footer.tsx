@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   FaPhone,
   FaEnvelope,
@@ -8,8 +8,27 @@ import {
   FaInstagram,
   FaYoutube,
 } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const Footer: React.FC = () => {
+
+  const navigate = useNavigate();
+
+   const goToSection = (sectionId: string) => {
+        sessionStorage.setItem("scrollTarget", sectionId);
+        navigate("/"); // Go to home
+      }
+     
+    useEffect(() => {
+      const target = sessionStorage.getItem("scrollTarget");
+      if (target) {
+        setTimeout(() => {
+          document.getElementById(target)?.scrollIntoView({ behavior: "smooth" });
+          sessionStorage.removeItem("scrollTarget");
+        }, 100); // slight delay for DOM to load
+      }
+    }, []);
+
   return (
     <footer className="bg-blue-900 text-white py-12">
       <div className="container mx-auto px-6 max-w-7xl">
@@ -21,11 +40,11 @@ const Footer: React.FC = () => {
               {[
                 { label: "Home", href: "/" },
                 { label: "Services", href: "/services" },
-                { label: "About Us", href: "/about-us" },
-                { label: "Our Works", href: "/#HomeWorks" },
+                { label: "Our Works", href: "/portfolio" },
+                { label: "About", href: "/about" },
                 { label: "Career", href: "/career" },
                 { label: "Blog", href: "/blog" },
-                { label: "Contact Us", href: "/#contact" },
+                // { label: "Contact Us", href: "/#contact" },
               ].map(({ label, href }) => (
                 <li key={label}>
                   <a
@@ -36,6 +55,9 @@ const Footer: React.FC = () => {
                   </a>
                 </li>
               ))}
+              <button onClick={() => goToSection("contact")} className="hover:text-white transition-colors duration-200">
+                Contact
+              </button>
             </ul>
           </div>
 
@@ -44,12 +66,30 @@ const Footer: React.FC = () => {
             <h3 className="text-xl font-semibold mb-6">Services</h3>
             <ul className="space-y-3 text-blue-200">
               {[
-                { label: "Website Development", href: "/service/website-development" },
-                { label: "Search Engine Marketing", href: "/service/search-engine-marketing" },
-                { label: "Social Media Marketing", href: "/service/social-media-marketing" },
-                { label: "Search Engine Optimization", href: "/service/search-engine-optimization" },
-                { label: "Content Marketing", href: "/service/content-marketing" },
-                { label: "Email Marketing", href: "/service/email-marketing" },
+                {
+                  label: "Website Development",
+                  href: "/service/website-development",
+                },
+                {
+                  label: "Search Engine Marketing",
+                  href: "/service/search-engine-marketing",
+                },
+                {
+                  label: "Social Media Marketing",
+                  href: "/service/social-media-marketing",
+                },
+                {
+                  label: "Search Engine Optimization",
+                  href: "/service/search-engine-optimization",
+                },
+                {
+                  label: "Content Marketing",
+                  href: "/service/content-marketing",
+                },
+                {
+                  label: "Graphic & Logo Design",
+                  href: "/service/email-marketing",
+                },
               ].map(({ label, href }) => (
                 <li key={label}>
                   <a
@@ -67,8 +107,10 @@ const Footer: React.FC = () => {
           <div className="w-full sm:w-1/2 md:w-1/4 text-center md:text-left">
             <h3 className="text-xl font-semibold mb-6">Contact Us</h3>
             <address className="not-italic mb-4 text-blue-200">
-              Prasad Info Tech Pvt. Ltd.<br />
-              2nd Floor, InfoTech Building<br />
+              Prasad Info Tech Pvt. Ltd.
+              <br />
+              2nd Floor, InfoTech Building
+              <br />
               Main Road, Itahari, Sunsari, Nepal
             </address>
             <div className="flex flex-col gap-2 text-blue-200 mb-4">
@@ -159,11 +201,12 @@ const Footer: React.FC = () => {
         </div>
 
         <p className="mt-10 max-w-3xl mx-auto text-center text-blue-300">
-          At Prasad Info Tech, based in Itahari, Nepal, we specialize in crafting
-          innovative digital marketing solutions that drive business growth.
-          From SEO and social media strategies to creative content and web
-          development, we blend technology and creativity to deliver measurable
-          results and help your brand connect with its audience effectively.
+          At Prasad Info Tech, based in Itahari, Nepal, we specialize in
+          crafting innovative digital marketing solutions that drive business
+          growth. From SEO and social media strategies to creative content and
+          web development, we blend technology and creativity to deliver
+          measurable results and help your brand connect with its audience
+          effectively.
         </p>
 
         <div className="mt-8 border-t border-blue-700 pt-6 text-center text-blue-400 text-sm select-none">
