@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { X, Send, BotIcon } from 'lucide-react';
+import { X, Send, User } from 'lucide-react'
 
 interface Message {
   id: number;
@@ -127,7 +127,7 @@ const ChatWidget: React.FC<ChatWidgetProps> = ({ isOpen, onClose }) => {
         <div className="relative z-10 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center font-bold text-lg">
-           <BotIcon/>
+           <User/>
             </div>
             <div>
               <h3 className="font-semibold text-lg">Client Support</h3>

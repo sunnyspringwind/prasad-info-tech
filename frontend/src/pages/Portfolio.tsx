@@ -96,7 +96,7 @@ const Portfolio = () => {
   return (
     <>
       {" "}
-      <Header isMainPage={false} />{" "}
+      <Header />{" "}
       <section className="bg-gradient-to-br from-blue-50 to-white py-16 px-6 md:px-12">
         <div className="container mx-auto px-4">
           {/* Header Section */}

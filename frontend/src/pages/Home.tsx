@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import ContactSection from "../components/ContactSection";
 import FAQSection from "../components/FAQSection";
 import Footer from "../components/Footer";
@@ -6,24 +6,23 @@ import Header from "../components/Header";
 import HeroSection from "../components/HeroSection";
 import IntroSection from "../components/IntroSection";
 import ChatWidget from "../components/ChatWidget";
-import { FaArrowCircleUp } from "react-icons/fa";
 import { MessageCircle } from "lucide-react";
 
 export default function Home() {
-  const [showButton, setShowButton] = useState(false);
+  // const [showButton, setShowButton] = useState(false);
   const [isChatOpen, setIsChatOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setShowButton(window.scrollY > 300);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setShowButton(window.scrollY > 300);
+  //   };
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+  // const scrollToTop = () => {
+  //   window.scrollTo({ top: 0, behavior: "smooth" });
+  // };
 
   const openChatbot = () => {
     setIsChatOpen(true);
