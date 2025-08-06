@@ -48,7 +48,7 @@ const cardVariants = {
 
   return (
     <>
-    <PrasadTechHeader isMainPage={false} />
+    <PrasadTechHeader />
     <section className="bg-white py-24 px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         {/* Minimal Header */}
@@ -148,7 +148,7 @@ const cardVariants = {
                   {/* CTA */}
                   <div className="flex items-center justify-between">
                     <motion.a
-                      href={service.href}
+                      href={`services/${service.slug}`}
                       className="inline-flex items-center text-blue-600 font-medium group/link"
                       whileHover={{ x: 4 }}
                       transition={{ duration: 0.2 }}

@@ -8,7 +8,7 @@ const ServicesDropdown: React.FC = () => {
       className="relative group"
     
     >
-      <button className="flex items-center space-x-1 hover:text-blue-600 transition-colors ">
+      <button className="hover:cursor-pointer flex items-center space-x-1 hover:text-blue-600 transition-colors ">
         Services
         <ChevronRight className="w-4 h-4 pt-1 transform group-hover:rotate-90 transition-transform" />
       </button>

@@ -31,7 +31,7 @@ export default function Home() {
   return (
     <>
       <div className="">
-        <Header isMainPage={true} />
+        <Header />
         <HeroSection />
         <IntroSection />
         <FAQSection />
@@ -41,11 +41,11 @@ export default function Home() {
           <MessageCircle size={24} />
         </button>
        
-        {showButton && (
+        {/* {showButton && (
           <button onClick={scrollToTop}  className="fixed bottom-8 right-8 z-30 bg-blue-600 text-white p-3 rounded-full shadow-lg">
             <FaArrowCircleUp />
           </button>
-        )}
+        )} */}
 
         <ChatWidget isOpen={isChatOpen} onClose={() => setIsChatOpen(false)} />
       </div>

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import {
   FaPhone,
   FaEnvelope,
@@ -8,33 +8,32 @@ import {
   FaInstagram,
   FaYoutube,
 } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
 
 const Footer: React.FC = () => {
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-   const goToSection = (sectionId: string) => {
-        sessionStorage.setItem("scrollTarget", sectionId);
-        navigate("/"); // Go to home
-      }
+  //  const goToSection = (sectionId: string) => {
+  //       sessionStorage.setItem("scrollTarget", sectionId);
+  //       navigate("/"); // Go to home
+  //     }
      
-    useEffect(() => {
-      const target = sessionStorage.getItem("scrollTarget");
-      if (target) {
-        setTimeout(() => {
-          document.getElementById(target)?.scrollIntoView({ behavior: "smooth" });
-          sessionStorage.removeItem("scrollTarget");
-        }, 100); // slight delay for DOM to load
-      }
-    }, []);
+  //   useEffect(() => {
+  //     const target = sessionStorage.getItem("scrollTarget");
+  //     if (target) {
+  //       setTimeout(() => {
+  //         document.getElementById(target)?.scrollIntoView({ behavior: "smooth" });
+  //         sessionStorage.removeItem("scrollTarget");
+  //       }, 100); // slight delay for DOM to load
+  //     }
+  //   }, []);
 
   return (
     <footer className="bg-blue-900 text-white py-12">
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="flex flex-wrap gap-8 md:gap-12">
           {/* Quick Links */}
-          <div className="w-full sm:w-1/2 md:w-1/5">
+          <div className="w-full sm:w-1/2 md:w-1/5 text-center sm:text-left">
             <h3 className="text-xl font-semibold mb-6">Quick Links</h3>
             <ul className="space-y-3 text-blue-200">
               {[
@@ -44,7 +43,7 @@ const Footer: React.FC = () => {
                 { label: "About", href: "/about" },
                 { label: "Career", href: "/career" },
                 { label: "Blog", href: "/blog" },
-                // { label: "Contact Us", href: "/#contact" },
+                { label: "Contact Us", href: "/contact" },
               ].map(({ label, href }) => (
                 <li key={label}>
                   <a
@@ -55,14 +54,14 @@ const Footer: React.FC = () => {
                   </a>
                 </li>
               ))}
-              <button onClick={() => goToSection("contact")} className="hover:text-white transition-colors duration-200">
+              {/* <button onClick={() => goToSection("contact")} className="hover:text-white transition-colors duration-200">
                 Contact
-              </button>
+              </button> */}
             </ul>
           </div>
 
           {/* Services */}
-          <div className="w-full sm:w-1/2 md:w-1/4">
+          <div className="w-full sm:w-1/2 md:w-1/4 text-center sm:text-left">
             <h3 className="text-xl font-semibold mb-6">Services</h3>
             <ul className="space-y-3 text-blue-200">
               {[
@@ -104,7 +103,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="w-full sm:w-1/2 md:w-1/4 text-center md:text-left">
+          <div className="w-full sm:w-1/2 md:w-1/4 text-center sm:text-left">
             <h3 className="text-xl font-semibold mb-6">Contact Us</h3>
             <address className="not-italic mb-4 text-blue-200">
               Prasad Info Tech Pvt. Ltd.
@@ -113,7 +112,7 @@ const Footer: React.FC = () => {
               <br />
               Main Road, Itahari, Sunsari, Nepal
             </address>
-            <div className="flex flex-col gap-2 text-blue-200 mb-4">
+            <div className="flex flex-col gap-2 text-blue-200 mb-4 items-center sm:items-start">
               <a
                 href="tel:025-1234567"
                 className="flex items-center gap-2 hover:text-white transition-colors duration-200"

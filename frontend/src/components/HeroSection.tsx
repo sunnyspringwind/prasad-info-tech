@@ -18,12 +18,12 @@ const HeroSection: React.FC = () => {
       </div>
 
       {/* Content Container */}
-      <div className="relative z-20 flex flex-col lg:flex-row items-center justify-between px-6 sm:px-12 lg:px-20 py-12 lg:py-0 min-h-screen">
+      <div className="relative z-20 flex flex-col lg:flex-row items-center justify-between px-6 sm:px-12 lg:px-20 py-10 sm:py-12 lg:py-0 min-h-screen">
         
         {/* Left Content */}
         <div className="flex-1 max-w-3xl text-white lg:pr-12">
           <div className="mb-2">
-            <span className="inline-block px-4 py-2 mt-10 bg-blue-500/20 backdrop-blur-sm rounded-full text-blue-200 text-sm font-medium border border-blue-400/30">
+            <span className="inline-block px-4 py-2 sm:mt-10 bg-blue-500/20 backdrop-blur-sm rounded-full text-blue-200 text-sm font-medium border border-blue-400/30">
               🚀 Your Digital Success Partner
             </span>
           </div>

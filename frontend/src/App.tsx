@@ -2,6 +2,10 @@ import { Navigate, Route, Routes } from "react-router-dom"
 import Home from "./pages/Home"
 import Portfolio from "./pages/Portfolio"
 import Services from "./pages/Services"
+import ContactPage from "./pages/Contact"
+import ServicePage from "./pages/ServicePage"
+import AboutPage from "./pages/About"
+import CareersPage from "./pages/Career"
 
 function App() {
 
@@ -12,6 +16,10 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/services/:slug" element={<ServicePage/>}/>
+          <Route path="/about" element={<AboutPage/>}/>
+          <Route path="/career" element={<CareersPage/>}/>
 
 
           {/* <Route path="/project-details/:id" element={<ProjectPage />} /> */}

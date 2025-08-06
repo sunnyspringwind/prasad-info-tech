@@ -147,7 +147,7 @@ const FormFields: React.FC<FormFieldsProps> = ({
           <div className="flex flex-col justify-between space-y-4">
             <textarea
               name="message"
-              placeholder="Your Message*"
+              placeholder="Project description*"
               rows={6}
               required
               value={formData.message}

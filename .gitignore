@@ -1,0 +1,25 @@
+# Root-level ignores
+.DS_Store
+Thumbs.db
+.env
+*.log
+
+# Ignore node_modules and dist in frontend
+/frontend/node_modules/
+/frontend/dist/
+/frontend/.env
+
+# Ignore yarn and lockfiles
+/frontend/yarn.lock
+
+# Editor & system
+.idea/
+.vscode/
+*.suo
+
+# TypeScript
+/frontend/*.tsbuildinfo
+
+# Work-proof build output (optional, update if needed)
+/work-proof/
+

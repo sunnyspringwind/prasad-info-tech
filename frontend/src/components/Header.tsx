@@ -1,18 +1,17 @@
 import { useEffect, useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { ChevronRight, Menu, X, Phone, Mail, Watch } from "lucide-react";
 import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import logo from "./../assets/img/logo.png";
 import ServicesDropdown from "./ServicesDropdown";
 import MobileServicesDropdown from "./MobileServicesDropdown";
 
-type HeaderProps = {
-  isMainPage: boolean;
-};
+// type HeaderProps = {
+//   isMainPage: boolean;
+// };
 
-const PrasadTechHeader: React.FC<HeaderProps> = ({ isMainPage }) => {
+const PrasadTechHeader: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const navigate = useNavigate();
   const [scrolled, setScrolled] = useState(false);
   const [openDropdowns, setOpenDropdowns] = useState({
     services: false,
@@ -30,28 +29,6 @@ const PrasadTechHeader: React.FC<HeaderProps> = ({ isMainPage }) => {
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
-
- const goToSection = (sectionId: string) => {
-    if (isMainPage) {
-      document
-        .getElementById(sectionId)
-        ?.scrollIntoView({ behavior: "smooth" });
-      if (isMobileMenuOpen) toggleMobileMenu();
-    } else {
-      sessionStorage.setItem("scrollTarget", sectionId);
-      navigate("/"); // Go to home
-    }
-  };
-
-  useEffect(() => {
-    const target = sessionStorage.getItem("scrollTarget");
-    if (target) {
-      setTimeout(() => {
-        document.getElementById(target)?.scrollIntoView({ behavior: "smooth" });
-        sessionStorage.removeItem("scrollTarget");
-      }, 100); // slight delay for DOM to load
-    }
-  }, []);
 
   // fixes the glitch on navbar
   useEffect(() => {
@@ -115,14 +92,16 @@ const PrasadTechHeader: React.FC<HeaderProps> = ({ isMainPage }) => {
               <div className=" ">
                 <button
                   onClick={() => toggleDropdown("services")}
-                  className="flex items-center w-full text-left hover:to-blue-600 py-2 hover:text-blue-600"
+                  className={`flex items-center w-full text-left hover:to-blue-600 py-2 hover:text-blue-600 ${
+                  window.location.pathname.includes('/services') ? 'text-blue-600' : ''
+                  }`}
                 >
                   Services
                   <ChevronRight
-                    className={`transform transition-transform pt-1 ${
-                      openDropdowns.services ? "rotate-90" : ""
-                    }`}
-                    size={16}
+                  className={`transform transition-transform pt-1 ${
+                    openDropdowns.services ? "rotate-90" : ""
+                  }`}
+                  size={16}
                   />
                 </button>
                 {openDropdowns.services && (
@@ -130,7 +109,7 @@ const PrasadTechHeader: React.FC<HeaderProps> = ({ isMainPage }) => {
                 )}
               </div>
 
-              <div className=" hover:to-blue-600 py-2">                                  <NavLink to="/portfolio" className={({ isActive }) => `hover:to-blue-600 ${isActive ? 'text-blue-600' : ''}`}>Portfolio</NavLink>
+              <div className=" hover:text-blue-600 py-2">                                  <NavLink to="/portfolio" className={({ isActive }) => `hover:to-blue-600 ${isActive ? 'text-blue-600' : ''}`}>Portfolio</NavLink>
 
 </div>
 
@@ -170,10 +149,10 @@ const PrasadTechHeader: React.FC<HeaderProps> = ({ isMainPage }) => {
               </div>
 
               {/* About Company */}
-              <div className="">
+              <div className="hover:text-blue-600">
                 <button
                   onClick={() => toggleDropdown("company")}
-                  className="flex items-center w-full text-left   hover:to-blue-600 py-2"
+                  className="flex items-center w-full text-left hover:to-blue-600 py-2"
                 >
                   Company
                   <ChevronRight
@@ -205,12 +184,13 @@ const PrasadTechHeader: React.FC<HeaderProps> = ({ isMainPage }) => {
 
                 {/* Contact Section of the site */}
               <div className="">
-                <button
+                {/* <button
                   onClick={() => goToSection("contact")}
                   className="block w-full text-left py-2 hover:text-blue-600"
                 >
                   Contact
-                </button>
+                </button> */}
+                <NavLink to="/contact" className={({ isActive }) => `hover:text-blue-600 ${isActive ? 'text-blue-600' : ''}`}>Contact</NavLink>
               </div>
             </div>
 
@@ -277,7 +257,11 @@ const PrasadTechHeader: React.FC<HeaderProps> = ({ isMainPage }) => {
                 </div>
 
                 {/* Our Services Dropdown */}
-                <ServicesDropdown />
+                <div className="relative">
+                  <NavLink to="/services" className={({ isActive }) => `hover:to-blue-600 ${isActive ? 'text-blue-600' : ''}`}>
+                    <ServicesDropdown />
+                  </NavLink>
+                </div>
 
                 {/* Portfolio */}
                 <div className="relative group">
@@ -336,12 +320,13 @@ const PrasadTechHeader: React.FC<HeaderProps> = ({ isMainPage }) => {
 
                 {/* Contact Us */}
                 <div className="flex items-center space-x-1 hover:text-blue-600 transition-colors">
-                  <button
+                  {/* <button
                     onClick={() => goToSection("contact")}
                     className=" hover:text-blue-600"
                   >
                     Contact
-                  </button>
+                  </button> */}
+                    <NavLink to="/contact" className={({ isActive }) => `hover:to-blue-600 ${isActive ? 'text-blue-600' : ''}`}>Contact</NavLink>
                 </div>
 
                 {/* Contact Info */}
