@@ -62,7 +62,7 @@ const HeroSection: React.FC = () => {
           </div>
 
           {/* CTA Buttons */}
-          <div className="mt-10 flex flex-wrap gap-4 items-center">
+            <div className="mt-10 flex flex-wrap gap-4 items-center">
             <button onClick={()=>setContactFormVisibility(true)} className="px-8 py-4 rounded-md bg-white text-blue-900 font-semibold shadow-xl hover:bg-blue-50 hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-3 focus:outline-none focus:ring-4 focus:ring-white/30 active:scale-95">
               <HiOutlineDocumentReport className="text-blue-600 text-3xl" />
               Get Free Quotation
@@ -72,7 +72,13 @@ const HeroSection: React.FC = () => {
               Our Services
               <FaArrowRight className="text-white group-hover:text-blue-900 transition-colors group-hover:translate-x-1 transform duration-300" />
             </Link>
-          </div>
+              <Link to="/course" className="relative mt-4 inline-flex px-8 py-4 rounded-md border-2 border-white/80 text-white font-semibold bg-white/10 backdrop-blur-sm hover:bg-white hover:text-blue-900 hover:scale-105 transition-all duration-300 items-center gap-3 focus:outline-none focus:ring-4 focus:ring-white/30 active:scale-95 group">
+              <span>Digital Creator Course</span>
+              <FaArrowRight className="text-white group-hover:text-blue-900 transition-colors group-hover:translate-x-1 transform duration-300" />
+              <span className="absolute -top-3 -right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">Popular!</span>
+              </Link>
+            </div>
+          
 
           {/*pop up Contact form for free quotation */}
         {isContactFormVisible && (

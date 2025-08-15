@@ -31,11 +31,11 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-blue-900 text-white py-12">
       <div className="container mx-auto px-6 max-w-7xl">
-        <div className="flex flex-wrap gap-8 md:gap-12">
+        <div className="flex flex-wrap gap-3 md:gap-12">
           {/* Quick Links */}
           <div className="w-full sm:w-1/2 md:w-1/5 text-center sm:text-left">
-            <h3 className="text-xl font-semibold mb-6">Quick Links</h3>
-            <ul className="space-y-3 text-blue-200">
+            <h3 className="text-xl font-semibold md:mb-6">Quick Links</h3>
+            <ul className=" md:space-y-3 text-blue-200">
               {[
                 { label: "Home", href: "/" },
                 { label: "Services", href: "/services" },
@@ -62,8 +62,8 @@ const Footer: React.FC = () => {
 
           {/* Services */}
           <div className="w-full sm:w-1/2 md:w-1/4 text-center sm:text-left">
-            <h3 className="text-xl font-semibold mb-6">Services</h3>
-            <ul className="space-y-3 text-blue-200">
+            <h3 className="text-xl font-semibold md:mb-6">Services</h3>
+            <ul className="md:space-y-3 text-blue-200">
               {[
                 {
                   label: "Website Development",
@@ -104,28 +104,28 @@ const Footer: React.FC = () => {
 
           {/* Contact Info */}
           <div className="w-full sm:w-1/2 md:w-1/4 text-center sm:text-left">
-            <h3 className="text-xl font-semibold mb-6">Contact Us</h3>
+            <h3 className="text-xl font-semibold md:mb-6">Contact Us</h3>
             <address className="not-italic mb-4 text-blue-200">
               Prasad Info Tech Pvt. Ltd.
               <br />
               2nd Floor, InfoTech Building
               <br />
-              Main Road, Itahari, Sunsari, Nepal
+              Kathmandu, Nepal
             </address>
             <div className="flex flex-col gap-2 text-blue-200 mb-4 items-center sm:items-start">
-              <a
-                href="tel:025-1234567"
+              {/* <a
+                href="tel: 986-2282235"
                 className="flex items-center gap-2 hover:text-white transition-colors duration-200"
               >
                 <FaPhone />
-                025-1234567
-              </a>
+                986-2282235
+              </a> */}
               <a
-                href="tel:+977-9801234567"
+                href="tel:+977 986-2282235"
                 className="flex items-center gap-2 hover:text-white transition-colors duration-200"
               >
                 <FaPhone />
-                +977-9801234567
+                +977 986-2282235
               </a>
               <a
                 href="mailto:prasadinfotechinquiry@gmail.com"
