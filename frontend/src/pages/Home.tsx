@@ -7,6 +7,7 @@ import HeroSection from "../components/HeroSection";
 import IntroSection from "../components/IntroSection";
 import ChatWidget from "../components/ChatWidget";
 import { MessageCircle } from "lucide-react";
+import DigitalCreatorPromoSection from "../components/DigitalCreator";
 
 export default function Home() {
   // const [showButton, setShowButton] = useState(false);
@@ -32,6 +33,7 @@ export default function Home() {
       <div className="">
         <Header />
         <HeroSection />
+        <DigitalCreatorPromoSection/>
         <IntroSection />
         <FAQSection />
         <ContactSection />

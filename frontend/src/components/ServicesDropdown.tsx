@@ -1,5 +1,6 @@
 import React from "react";
 import { ChevronRight } from "lucide-react"; // optional icon package (lucide-react)
+import { Link } from "react-router-dom";
 
 const ServicesDropdown: React.FC = () => {
 
@@ -17,11 +18,11 @@ const ServicesDropdown: React.FC = () => {
           <div>
             <h3 className="font-bold text-gray-700 mb-2">Social Media</h3>
             <ul className="space-y-1 text-sm text-gray-600">
-              <li><a href="/services/social/facebook" className="hover:text-blue-600">Facebook Marketing</a></li>
-              <li><a href="/services/social/instagram" className="hover:text-blue-600">Instagram Marketing</a></li>
-              <li><a href="/services/social/influencer" className="hover:text-blue-600">Influencer Marketing</a></li>
-              <li><a href="/services/social/what-is" className="hover:text-blue-600">What is Social Media Marketing?</a></li>
-              <li><a href="/services/social/why" className="hover:text-blue-600">Why Choose This Service?</a></li>
+                <li><Link to="/services/facebook-marketing" className="hover:text-blue-600">Facebook Marketing</Link></li>
+                <li><Link to="/services/instagram-marketing" className="hover:text-blue-600">Instagram Marketing</Link></li>
+                <li><Link to="/services/influencer-marketing" className="hover:text-blue-600">Influencer Marketing</Link></li>
+              <li><a href="/services/what-is" className="hover:text-blue-600">What is Social Media Marketing?</a></li>
+              <li><a href="/services/why" className="hover:text-blue-600">Why Choose This Service?</a></li>
             </ul>
           </div>
 
@@ -29,7 +30,8 @@ const ServicesDropdown: React.FC = () => {
           <div>
             <h3 className="font-bold text-gray-700 mb-2">SEO</h3>
             <ul className="space-y-1 text-sm text-gray-600">
-              <li><a href="/services/seo" className="hover:text-blue-600">SEO Service</a></li>
+                <li><Link to="/services/seo-optimization" className="hover:text-blue-600">SEO Service</Link></li>
+
               <li><a href="/services/seo/what-is" className="hover:text-blue-600">What is SEO?</a></li>
               <li><a href="/services/seo/why" className="hover:text-blue-600">Why SEO Matters</a></li>
             </ul>
@@ -39,11 +41,13 @@ const ServicesDropdown: React.FC = () => {
           <div>
             <h3 className="font-bold text-gray-700 mb-2">Software Development</h3>
             <ul className="space-y-1 text-sm text-gray-600">
-              <li><a href="/services/dev/web" className="hover:text-blue-600">Website Development</a></li>
-              <li><a href="/services/dev/mobile" className="hover:text-blue-600">Mobile App Development</a></li>
-              <li><a href="/services/dev/software" className="hover:text-blue-600">Software Solutions</a></li>
-              <li><a href="/services/dev/what-is" className="hover:text-blue-600">What is Software Dev?</a></li>
-              <li><a href="/services/dev/why" className="hover:text-blue-600">Why Invest In It?</a></li>
+                <li><Link to="/services/website-development" className="hover:text-blue-600">Website Development</Link></li>
+
+              {/* <li><a href="/services/mobile" className="hover:text-blue-600">Mobile App Development</a></li> */}
+                <li><Link to="/services/software-solutions" className="hover:text-blue-600">Software Solutions</Link></li>
+
+              <li><a href="/services/what-is" className="hover:text-blue-600">What is Software Dev?</a></li>
+              <li><a href="/services/why" className="hover:text-blue-600">Why Invest In It?</a></li>
             </ul>
           </div>
 
@@ -51,10 +55,10 @@ const ServicesDropdown: React.FC = () => {
           <div>
             <h3 className="font-bold text-gray-700 mb-2">Graphic Design</h3>
             <ul className="space-y-1 text-sm text-gray-600">
-              <li><a href="/services/design/logo" className="hover:text-blue-600">Logo Design</a></li>
-              <li><a href="/services/design/branding" className="hover:text-blue-600">Branding Kit</a></li>
-              <li><a href="/services/design/what-is" className="hover:text-blue-600">What is Graphic Design?</a></li>
-              <li><a href="/services/design/why" className="hover:text-blue-600">Why You Need It</a></li>
+                <li><Link to="/services/logo-design" className="hover:text-blue-600">Logo Design</Link></li>
+                <li><Link to="/services/branding-kit" className="hover:text-blue-600">Branding Kit</Link></li>
+              <li><a href="/services/what-is" className="hover:text-blue-600">What is Graphic Design?</a></li>
+              <li><a href="/services/why" className="hover:text-blue-600">Why You Need It</a></li>
             </ul>
           </div>
         </div>

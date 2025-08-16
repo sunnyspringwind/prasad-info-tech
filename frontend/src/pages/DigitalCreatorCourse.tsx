@@ -3,6 +3,14 @@ import { Camera, Video, Users, Award, Clock, MapPin, Phone, Mail, Globe, Star, C
 import PrasadTechHeader from '../components/Header';
 import Footer from '../components/Footer';
 
+import internet from "../assets/img/digtel/internet.png";
+import laptop from "../assets/img/digtel/laptop.png";
+import mobile from "../assets/img/digtel/mobile.webp";
+import houseworker from "../assets/img/digtel/houseworker.jpg";
+import professional from "../assets/img/digtel/professional.png";
+import student from "../assets/img/digtel/student.avif";
+
+
 interface ModuleExpansionState {
   [key: number]: boolean;
 }
@@ -334,20 +342,20 @@ const DigitalCreatorCourse = () => {
                   <div className="text-center">
                     <div className="grid grid-cols-3 gap-4 mb-4">
                       <div className="bg-white p-4 rounded-lg shadow-sm">
-                      <div className="w-12 h-12 bg-blue-200 rounded-full mx-auto mb-2 flex items-center justify-center">
-                        <Users className="w-6 h-6 text-blue-700" />
+                      <div className="w-12 h-12 mx-auto mb-2">
+                      <img src={student} alt="Student" className="w-full h-full object-cover rounded-full"/> 
                       </div>
                       <p className="text-xs font-semibold text-blue-700">Students</p>
                       </div>
                       <div className="bg-white p-4 rounded-lg shadow-sm">
-                      <div className="w-12 h-12 bg-purple-200 rounded-full mx-auto mb-2 flex items-center justify-center">
-                        <Star className="w-6 h-6 text-purple-700" />
+                      <div className="w-12 h-12 mx-auto mb-2">
+                      <img src={houseworker} alt="Homemaker" className="w-full h-full object-cover rounded-full"/>
                       </div>
                       <p className="text-xs font-semibold text-purple-700">Homemakers</p>
                       </div>
                       <div className="bg-white p-4 rounded-lg shadow-sm">
-                      <div className="w-12 h-12 bg-green-200 rounded-full mx-auto mb-2 flex items-center justify-center">
-                        <Laptop className="w-6 h-6 text-green-700" />
+                      <div className="w-12 h-12 mx-auto mb-2">
+                      <img src={professional} alt="Professional" className="w-full h-full object-cover rounded-full"/>
                       </div>
                       <p className="text-xs font-semibold text-green-700">Professionals</p>
                       </div>
@@ -379,27 +387,21 @@ const DigitalCreatorCourse = () => {
                 {/* Visual placeholder for equipment illustration */}
                 <div className="bg-gradient-to-r from-purple-100 to-pink-100 rounded-lg p-6 mb-6 border-2 border-dashed border-purple-300">
                   <div className="text-center">
-                    <div className="flex justify-center space-x-6 mb-4">
-                      <div className="text-center">
-                        <div className="w-16 h-20 bg-gray-800 rounded-lg mx-auto mb-2 relative">
-                          <div className="w-8 h-8 bg-blue-500 rounded-full absolute top-2 left-1/2 transform -translate-x-1/2"></div>
-                        </div>
-                        <p className="text-xs font-semibold text-gray-600">📱 Mobile</p>
-                      </div>
-                      <div className="text-center">
-                        <div className="w-20 h-12 bg-gray-700 rounded mx-auto mb-2"></div>
-                        <p className="text-xs font-semibold text-gray-600">💻 Laptop</p>
-                      </div>
-                      <div className="text-center">
-                        <div className="flex space-x-1 mb-2">
-                          <div className="w-2 h-8 bg-green-500 rounded-full"></div>
-                          <div className="w-2 h-6 bg-green-400 rounded-full"></div>
-                          <div className="w-2 h-4 bg-green-300 rounded-full"></div>
-                        </div>
-                        <p className="text-xs font-semibold text-gray-600">📶 Internet</p>
-                      </div>
+                  <div className="flex justify-between items-center space-x-6 mb-4">
+                    <div className="text-center flex-1">
+                    <img src={mobile} alt="Mobile" className="w-16 h-20 object-contain mx-auto mb-2"/>
+                    <p className="text-xs font-semibold text-gray-600">📱 Mobile</p>
                     </div>
-                    <p className="text-sm text-gray-500 italic">🛠️ Required Equipment Visualization</p>
+                    <div className="text-center flex-1">
+                    <img src={laptop} alt="Laptop" className="w-20 h-16 object-contain mx-auto mb-2"/>
+                    <p className="text-xs font-semibold text-gray-600">💻 Laptop</p>
+                    </div>
+                    <div className="text-center flex-1">
+                    <img src={internet} alt="Internet" className="w-16 h-16 object-contain mx-auto mb-2"/>
+                    <p className="text-xs font-semibold text-gray-600">📶 Internet</p>
+                    </div>
+                  </div>
+                  <p className="text-sm text-gray-500 italic">🛠️ Required Equipment Visualization</p>
                   </div>
                 </div>
                 

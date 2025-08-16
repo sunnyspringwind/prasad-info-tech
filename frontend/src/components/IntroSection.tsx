@@ -1,8 +1,15 @@
 import AutoScrollSlider from "./AuoScrollSlider"
 import { FaBullhorn, FaSearch, FaFacebookF, FaLaptopCode, FaPalette, FaRegEdit } from 'react-icons/fa';
 
+import bigeducation from "../assets/img/clients/bigeducation.jpg";
+import hamrormade from "../assets/img/clients/hamrormade.jpg";
+import modularkitchen from "../assets/img/clients/modularkitchen.jpg";
+import riseofworld from "../assets/img/clients/riseofworld.jpg";
+import supreme from "../assets/img/clients/supreme.jpg";
+
+
 const IntroSection: React.FC = () => {
-    const partnerList = ['https://upload.wikimedia.org/wikipedia/commons/c/c4/WWE_official_logo.svg', "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSTWlnJCnn2ljYqv2t4XY9bM5U4pnohvXZRw&s", "https://s7d2.scene7.com/is/image/aeo/0437_5959_471_l1?$pdp-m-opt$", "https://hips.hearstapps.com/hmg-prod/images/ana-de-armas-1626771511.jpg"]
+    const partnerList = [bigeducation, hamrormade, modularkitchen, riseofworld, supreme,bigeducation, hamrormade, modularkitchen, riseofworld, supreme];
 
     
 const services = [

@@ -1,7 +1,7 @@
 // components/MobileServicesDropdown.tsx
 import React from "react";
 import { servicesData, type ServiceItem } from "../data/servicesData";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const MobileServicesDropdown: React.FC = () => {
   return (
@@ -21,9 +21,12 @@ const MobileServicesDropdown: React.FC = () => {
           {/* <h4 className="font-bold text-sm text-gray-700 mb-1">{service.catTitle}</h4> */}
           <ul className="space-y-1 text-sm text-gray-600">
             <li key={service.href}>
-              <a href={service.href} className="block hover:text-blue-600">
+                <Link
+                to={`/services/${service.slug}`}
+                className="block hover:text-blue-600"
+                >
                 {service.label}
-              </a>
+                </Link>
             </li>
           </ul>
         </div>

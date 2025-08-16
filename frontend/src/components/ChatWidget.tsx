@@ -39,7 +39,8 @@ const ChatWidget: React.FC<ChatWidgetProps> = ({ isOpen, onClose }) => {
   const quickReplies = [
     'SEO Services',
     'Social Media Marketing',
-    'Contact Support'
+    'Contact Support',
+    'Facebook Boosting'
   ];
 
   const botResponses: { [key: string]: string } = {
@@ -49,8 +50,10 @@ const ChatWidget: React.FC<ChatWidgetProps> = ({ isOpen, onClose }) => {
   'seo services': "We offer on-page and off-page SEO to help your website rank better. Are you looking for technical SEO, content strategy, or backlinking?",
   'graphic design': "Our creative team can design logos, branding kits, social media posts, and more. What do you need designed?",
   'contact support': "You can reach us via email, phone, or our contact form. You can call us on +977-986-2282235 or email us at prasadinfotechinquiry@gmail.com.",
+  'facebook boosting': "We can help you boost your Facebook posts and ads to reach a wider audience. Our team specializes in targeted advertising and audience optimization. Would you like to know more about our Facebook marketing packages?",
   'default': "Hi! 👋 Welcome to Prasad Info Tech. How can we assist you today? Try asking about our services like 'SEO', 'Website Development', or 'Design'."
 };
+
 
 
   const sendMessage = (text?: string) => {

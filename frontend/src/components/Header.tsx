@@ -339,7 +339,7 @@ const PrasadTechHeader: React.FC = () => {
                       className="flex hover:opacity-80"
                     >
                       <FaWhatsapp className="text-green-500" size={20} />
-                      <span>+977-9863992047</span>
+                      <span>+977-9862282235</span>
                     </a>
                   </div>
                 </div>

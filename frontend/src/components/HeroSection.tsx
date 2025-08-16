@@ -9,7 +9,7 @@ const HeroSection: React.FC = () => {
 
 
   return (
-    <section className="relative w-full min-h-screen overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-blue-600">
+    <section className="relative w-full min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
