@@ -1,7 +1,7 @@
 import { FaBullseye, FaHandshake, FaLightbulb, FaRocket } from "react-icons/fa";
 import Footer from "../components/Footer";
 import PrasadTechHeader from "../components/Header";
-import ceoImage from "../assets/ceo.jpg";
+import ceoImage from "../assets/ceo.webp";
 
 
 

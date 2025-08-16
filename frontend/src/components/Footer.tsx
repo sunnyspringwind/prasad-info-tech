@@ -8,6 +8,7 @@ import {
   FaInstagram,
   FaYoutube,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer: React.FC = () => {
 
@@ -67,36 +68,36 @@ const Footer: React.FC = () => {
               {[
                 {
                   label: "Website Development",
-                  href: "/service/website-development",
+                  href: "/services/website-development",
                 },
                 {
-                  label: "Search Engine Marketing",
-                  href: "/service/search-engine-marketing",
+                  label: "Facebook Marketing",
+                  href: "/services/facebook-marketing",
                 },
                 {
-                  label: "Social Media Marketing",
-                  href: "/service/social-media-marketing",
+                  label: "Instagram Marketing",
+                  href: "/services/instagram-marketing",
                 },
                 {
                   label: "Search Engine Optimization",
-                  href: "/service/search-engine-optimization",
+                  href: "/services/seo",
                 },
                 {
                   label: "Content Marketing",
-                  href: "/service/content-marketing",
+                  href: "/services/ppc-marketing",
                 },
                 {
                   label: "Graphic & Logo Design",
-                  href: "/service/email-marketing",
+                  href: "/services/logo-design",
                 },
               ].map(({ label, href }) => (
                 <li key={label}>
-                  <a
-                    href={href}
+                    <Link
+                    to={href}
                     className="hover:text-white transition-colors duration-200"
-                  >
+                    >
                     {label}
-                  </a>
+                    </Link>
                 </li>
               ))}
             </ul>
