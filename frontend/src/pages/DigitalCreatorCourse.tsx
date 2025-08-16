@@ -10,7 +10,7 @@ interface ModuleExpansionState {
 const DigitalCreatorCourse = () => {
   const [activeTab, setActiveTab] = useState('course');
   const [isVisible, setIsVisible] = useState(false);
-  const [enrollCount, setEnrollCount] = useState(127);
+  const [_enrollCount, setEnrollCount] = useState(127);
   const [expandedModules, setExpandedModules] = useState<ModuleExpansionState>({});
 
   useEffect(() => {
