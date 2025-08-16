@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Eye, Clock, TrendingUp, Search, Mail, Share2, BarChart3, Globe, DollarSign, Target, Zap } from 'lucide-react';
 import PrasadTechHeader from '../components/Header';
 import Footer from '../components/Footer';
