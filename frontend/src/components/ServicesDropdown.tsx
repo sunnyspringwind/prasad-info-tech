@@ -21,8 +21,9 @@ const ServicesDropdown: React.FC = () => {
                 <li><Link to="/services/facebook-marketing" className="hover:text-blue-600">Facebook Marketing</Link></li>
                 <li><Link to="/services/instagram-marketing" className="hover:text-blue-600">Instagram Marketing</Link></li>
                 <li><Link to="/services/influencer-marketing" className="hover:text-blue-600">Influencer Marketing</Link></li>
-              <li><a href="/services/what-is" className="hover:text-blue-600">What is Social Media Marketing?</a></li>
-              <li><a href="/services/why" className="hover:text-blue-600">Why Choose This Service?</a></li>
+                <li><Link to="/blog" className="hover:text-blue-600">What is Social Media Marketing?</Link></li>
+
+              <li><Link to="/blog" className="hover:text-blue-600">Why Choose This Service?</Link></li>
             </ul>
           </div>
 
@@ -32,9 +33,9 @@ const ServicesDropdown: React.FC = () => {
             <ul className="space-y-1 text-sm text-gray-600">
                 <li><Link to="/services/seo-optimization" className="hover:text-blue-600">SEO Service</Link></li>
 
-              <li><a href="/services/seo/what-is" className="hover:text-blue-600">What is SEO?</a></li>
-              <li><a href="/services/seo/why" className="hover:text-blue-600">Why SEO Matters</a></li>
-            </ul>
+                <li><Link to="/blog" className="hover:text-blue-600">What is SEO?</Link></li>
+                <li><Link to="/blog" className="hover:text-blue-600">Why SEO Matters</Link></li>
+              </ul>
           </div>
 
           {/* Software Development */}
@@ -46,9 +47,9 @@ const ServicesDropdown: React.FC = () => {
               {/* <li><a href="/services/mobile" className="hover:text-blue-600">Mobile App Development</a></li> */}
                 <li><Link to="/services/software-solutions" className="hover:text-blue-600">Software Solutions</Link></li>
 
-              <li><a href="/services/what-is" className="hover:text-blue-600">What is Software Dev?</a></li>
-              <li><a href="/services/why" className="hover:text-blue-600">Why Invest In It?</a></li>
-            </ul>
+                <li><Link to="/blog" className="hover:text-blue-600">What is Software Dev?</Link></li>
+                <li><Link to="/blog" className="hover:text-blue-600">Why Invest In It?</Link></li>
+              </ul>
           </div>
 
           {/* Graphic Design */}
@@ -57,9 +58,8 @@ const ServicesDropdown: React.FC = () => {
             <ul className="space-y-1 text-sm text-gray-600">
                 <li><Link to="/services/logo-design" className="hover:text-blue-600">Logo Design</Link></li>
                 <li><Link to="/services/branding-kit" className="hover:text-blue-600">Branding Kit</Link></li>
-              <li><a href="/services/what-is" className="hover:text-blue-600">What is Graphic Design?</a></li>
-              <li><a href="/services/why" className="hover:text-blue-600">Why You Need It</a></li>
-            </ul>
+              <li><Link to="/blog" className="hover:text-blue-600">What is Graphic Design?</Link></li>
+              <li><Link to="/blog" className="hover:text-blue-600">Why You Need It</Link></li></ul>
           </div>
         </div>
     </div>
