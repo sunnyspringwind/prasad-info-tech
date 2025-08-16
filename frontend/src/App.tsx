@@ -7,6 +7,7 @@ import ServicePage from "./pages/ServicePage"
 import AboutPage from "./pages/About"
 import CareersPage from "./pages/Career"
 import DigitalCreatorCourse from "./pages/DigitalCreatorCourse"
+import Blog from "./pages/Blog"
 
 function App() {
 
@@ -22,6 +23,8 @@ function App() {
           <Route path="/about" element={<AboutPage/>}/>
           <Route path="/career" element={<CareersPage/>}/>
           <Route path="/course" element={<DigitalCreatorCourse/>}/>
+          <Route path="/blog" element={<Blog/>}/>
+          
 
 
           {/* <Route path="/project-details/:id" element={<ProjectPage />} /> */}

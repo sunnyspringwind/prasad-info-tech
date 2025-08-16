@@ -130,18 +130,18 @@ const PrasadTechHeader: React.FC = () => {
                 {openDropdowns.resources && (
                   <div className="pl-4">
                     <div className="">
-                      <a
-                        href="/social-media-marketing"
+                        <NavLink
+                        to="/blog"
                         className="block py-1 text-sm text-gray-600 hover:text-blue-600"
-                      >
+                        >
                         Blog
-                      </a>
-                      <a
+                        </NavLink>
+                      {/* <a
                         href="/facebook-marketing"
                         className="block py-1 text-sm text-gray-600 hover:text-blue-600"
                       >
                         Downloads
-                      </a>
+                      </a> */}
                 
                     </div>
                   </div>
@@ -164,19 +164,18 @@ const PrasadTechHeader: React.FC = () => {
                 </button>
                 {openDropdowns.company && (
                   <div className="pl-4 ">
-                    <a
-                      href="/company"
+                    <NavLink
+                      to="/about"
                       className="block py-1 text-sm text-gray-600 hover:text-blue-600"
                     >
                       About us
-                    </a>
-                    <a
-                      href="/career"
+                    </NavLink>
+                    <NavLink
+                      to="/career" 
                       className="block py-1 text-sm text-gray-600 hover:text-blue-600"
                     >
                       Career
-                    </a>
-  
+                    </NavLink>
               
                   </div>
                 )}
@@ -278,18 +277,18 @@ const PrasadTechHeader: React.FC = () => {
                   </button>
                   <div className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                     <div className="py-2">
-                      <a
-                        href="/about"
+                        <NavLink
+                        to="/blog"
                         className="block px-4 py-2 hover:bg-gray-100 hover:text-blue-600 transition-colors"
-                      >
+                        >
                         Blog
-                      </a>
-                      <a
-                        href="/career"
+                        </NavLink>
+                      {/* <NavLink
+                        to="/downloads"
                         className="block px-4 py-2 hover:bg-gray-100 hover:text-blue-600 transition-colors"
                       >
                         Downloads
-                      </a>
+                      </NavLink> */}
                     </div>
                   </div>
                 </div>
@@ -302,18 +301,18 @@ const PrasadTechHeader: React.FC = () => {
                   </button>
                   <div className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                     <div className="py-2">
-                      <a
-                        href="/about"
+                        <NavLink
+                        to="/about"
                         className="block px-4 py-2 hover:bg-gray-100 hover:text-blue-600 transition-colors"
-                      >
+                        >
                         About
-                      </a>
-                      <a
-                        href="/career"
+                        </NavLink>
+                        <NavLink
+                        to="/career"
                         className="block px-4 py-2 hover:bg-gray-100 hover:text-blue-600 transition-colors"
-                      >
+                        >
                         Career
-                      </a>
+                        </NavLink>
                     </div>
                   </div>
                 </div>
@@ -333,7 +332,7 @@ const PrasadTechHeader: React.FC = () => {
                 <div className="flex items-center space-x-1 bg-blue-600 text-white px-4 py-2 rounded-lg">
                   <div className="flex space-x-2">
                     <a
-                      href="https://wa.me/9779863992047"
+                      href="https://wa.me/9779862282235"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex hover:opacity-80"
