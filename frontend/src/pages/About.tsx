@@ -1,6 +1,9 @@
 import { FaBullseye, FaHandshake, FaLightbulb, FaRocket } from "react-icons/fa";
 import Footer from "../components/Footer";
 import PrasadTechHeader from "../components/Header";
+import ceoImage from "../assets/ceo.jpg";
+
+
 
 const AboutPage = () => {
   return (<>
@@ -8,12 +11,27 @@ const AboutPage = () => {
     <div className="bg-white text-gray-800">
         
       {/* Hero Section */}
-      <section className="bg-blue-50 py-16 text-center">
+      <section className="bg-blue-50 py-16">
+        <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center gap-12">
+          <div className="lg:w-1/2 text-center lg:text-left">
         <h1 className="text-4xl font-bold mb-4">About Prasad Info Tech</h1>
-        <p className="text-lg max-w-2xl mx-auto">
-          We’re a forward-thinking digital marketing and software development agency
+        <p className="text-lg mb-6">
+          We're a forward-thinking digital marketing and software development agency
           committed to driving real growth for businesses in Nepal and beyond.
         </p>
+          </div>
+          <div className="lg:w-1/2">
+        <img 
+          src={ceoImage} 
+          alt="CEO of Prasad Info Tech" 
+          className="rounded-full w-64 h-64 mx-auto object-cover shadow-lg border-4 border-blue-100"
+        />
+        <div className="text-center mt-4">
+          <h3 className="font-semibold text-xl">Pawan Dhakal</h3>
+          <p className="text-gray-600">Founder</p>
+        </div>
+          </div>
+        </div>
       </section>
 
       {/* Who We Are */}
