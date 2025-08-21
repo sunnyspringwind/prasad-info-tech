@@ -97,10 +97,12 @@ console.log(currentService);
                 </p>
                 
                 <div className="flex flex-wrap gap-4 items-center">
-                  <div className="flex items-center gap-2 text-green-600 font-semibold">
-                    <DollarSign className="w-5 h-5" />
-                    {currentService.priceRange}
-                  </div>
+                  {currentService.priceRange && (
+                    <div className="flex items-center gap-2 text-green-600 font-semibold">
+                      <DollarSign className="w-5 h-5" />
+                      {currentService.priceRange}
+                    </div>
+                  )}
                   <div className="flex items-center gap-2 text-blue-600">
                     <Clock className="w-5 h-5" />
                     {currentService.duration}

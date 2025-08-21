@@ -104,11 +104,11 @@ const cardVariants = {
                 {/* Content with generous spacing */}
                 <div className="p-10">
                   {/* Price badge */}
-                  <div className="mb-6">
+                  {service.priceRange && <div className="mb-6">
                     <span className="inline-block px-4 py-2 bg-blue-50 text-blue-700 text-sm font-medium rounded-full">
                       {service.priceRange}
                     </span>
-                  </div>
+                  </div>}
 
                   <h3 className="text-2xl font-semibold text-gray-900 mb-4 tracking-tight">
                     {service.label}

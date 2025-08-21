@@ -18,6 +18,7 @@ interface ModuleExpansionState {
 const DigitalCreatorCourse = () => {
   const [activeTab, setActiveTab] = useState('course');
   const [isVisible, setIsVisible] = useState(false);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [_enrollCount, setEnrollCount] = useState(127);
   const [expandedModules, setExpandedModules] = useState<ModuleExpansionState>({});
 

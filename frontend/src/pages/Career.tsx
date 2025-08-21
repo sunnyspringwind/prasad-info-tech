@@ -17,6 +17,7 @@ import {
 } from 'lucide-react';
 import Footer from '../components/Footer';
 import PrasadTechHeader from '../components/Header';
+import { CustomTitleForm } from '../components/ProjectEnquiryForm';
 
 const CareersPage = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -30,7 +31,32 @@ const CareersPage = () => {
   ];
 
   const jobListings: Job[] = [
-    {
+    
+      {
+      id: 4,
+      title: 'Graphic Design Intern',
+      description: 'Perfect opportunity for design hobbyist, students and fresh graduates to gain real-world experience in Graphic design.',
+      location: 'Kathmandu, Nepal',
+      type: 'Internship',
+      experience: '0-1 year',
+      salary: 'Stipend',
+      category: 'internship',
+      status: 'open',
+      requirements: [
+        'Basic knowledge of Figma and design principles',
+        'Portfolio showcasing design projects (academic or personal)',
+        'Eagerness to learn and grow',
+        'Good communication skills',
+        'Available for 3-6 months internship'
+      ],
+      benefits: [
+        'Hands-on experience with real projects',
+        'Mentorship from experienced designers',
+        'Certificate upon completion',
+        'Potential for full-time employment',
+        'Flexible learning schedule'
+      ]
+    },{
       id: 1,
       title: 'Senior UI/UX Designer',
       description: 'We\'re looking for a creative and experienced UI/UX Designer to join our dynamic team and help create exceptional user experiences.',
@@ -103,31 +129,6 @@ const CareersPage = () => {
         'Creative freedom and innovative projects',
         'Work with diverse clients and industries',
         'Regular team outings and celebrations'
-      ]
-    },
-    {
-      id: 4,
-      title: 'UI/UX Design Intern',
-      description: 'Perfect opportunity for design students and fresh graduates to gain real-world experience in UI/UX design.',
-      location: 'Kathmandu, Nepal',
-      type: 'Internship',
-      experience: '0-1 year',
-      salary: 'Stipend',
-      category: 'internship',
-      status: 'open',
-      requirements: [
-        'Basic knowledge of Figma and design principles',
-        'Portfolio showcasing design projects (academic or personal)',
-        'Eagerness to learn and grow',
-        'Good communication skills',
-        'Available for 3-6 months internship'
-      ],
-      benefits: [
-        'Hands-on experience with real projects',
-        'Mentorship from experienced designers',
-        'Certificate upon completion',
-        'Potential for full-time employment',
-        'Flexible learning schedule'
       ]
     },
     {
@@ -273,6 +274,8 @@ const CareersPage = () => {
 
         {/* Apply Button */}
         <button
+        type='button'
+        onClick={toggleEnquiryForm}
           className={`inline-flex items-center justify-center w-full px-6 py-3 rounded-lg font-semibold transform transition-all duration-300 shadow-lg hover:shadow-xl ${
             job.status === 'open'
               ? 'bg-blue-600 text-white hover:bg-blue-700 hover:scale-105'
@@ -285,6 +288,12 @@ const CareersPage = () => {
       </div>
     </div>
   );
+
+  const [enquiryForm, setEnquiryForm] = useState(false);
+  
+  const toggleEnquiryForm = () => {
+    setEnquiryForm(prev => !prev);
+  }
 
   return (
     <>
@@ -379,6 +388,7 @@ const CareersPage = () => {
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {jobCategories.map((category) => (
                 <button
+                type='button'
                   key={category.id}
                   onClick={() => setActiveFilter(category.id)}
                   className={`flex items-center space-x-2 px-6 py-3 rounded-full font-medium transition-all duration-300 transform hover:scale-105 ${
@@ -404,17 +414,25 @@ const CareersPage = () => {
 
         {/* Call to Action Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r bg-blue-900">
-          <div className="max-w-4xl mx-auto text-center">
+            <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
               Don't see the perfect role?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
               We're always looking for talented individuals. Send us your resume and we'll keep you in mind for future opportunities.
             </p>
-            <button className="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-lg">
+            <button type='button' onClick={toggleEnquiryForm} className="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-lg">
               Send Your Resume
             </button>
-          </div>
+            {enquiryForm && (
+              <div className="fixed inset-0 z-50 flex items-center justify-center">
+              <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={toggleEnquiryForm}></div>
+              <div className="relative z-50 rounded-3xl sm:w-[590px] max-w-2xl border-2 border-gray-300 sm:max-h-screen overflow-y-auto bg-white">
+                <CustomTitleForm type={"Share Your Resume"} onClose={toggleEnquiryForm} showServices={false}/>
+              </div>
+              </div>
+            )}
+            </div>
         </section>
       </div>
     </div>

@@ -7,24 +7,6 @@ const DigitalCreatorPromoSection = () => {
   const [enrollCount, setEnrollCount] = useState(127);
   const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
-    setIsVisible(true);
-    
-    // Animate enrollment counter
-    const counterInterval = setInterval(() => {
-      setEnrollCount(prev => prev + Math.floor(Math.random() * 3));
-    }, 8000);
-
-    // Auto-rotate testimonials
-    const testimonialInterval = setInterval(() => {
-      setCurrentTestimonial(prev => (prev + 1) % testimonials.length);
-    }, 4000);
-
-    return () => {
-      clearInterval(counterInterval);
-      clearInterval(testimonialInterval);
-    };
-  }, []);
 
   const testimonials = [
     {
@@ -50,6 +32,7 @@ const DigitalCreatorPromoSection = () => {
     }
   ];
 
+  
   const courseHighlights = [
     {
       icon: <FaClock className="w-6 h-6" />,
@@ -78,6 +61,27 @@ const DigitalCreatorPromoSection = () => {
     { skill: "Social Media", image: "https://images.unsplash.com/photo-1611605698335-8b1569810432?w=300&h=200&fit=crop" }
   ];
 
+
+  useEffect(() => {
+    setIsVisible(true);
+    
+    // Animate enrollment counter
+    const counterInterval = setInterval(() => {
+      setEnrollCount(prev => prev + Math.floor(Math.random() * 3));
+    }, 8000);
+
+    // Auto-rotate testimonials
+    const testimonialInterval = setInterval(() => {
+      setCurrentTestimonial(prev => (prev + 1) % testimonials.length);
+    }, 4000);
+
+    return () => {
+      clearInterval(counterInterval);
+      clearInterval(testimonialInterval);
+    };
+  }, [testimonials.length]);
+
+
   return (
     <section className="relative w-full min-h-screen overflow-hidden bg-gradient-to-tl from-slate-900 via-blue-900 to-indigo-900">
       {/* Animated Background Elements */}
@@ -87,7 +91,7 @@ const DigitalCreatorPromoSection = () => {
         <div className="absolute -bottom-8 left-20 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse delay-500"></div>
       </div>
 
-      <div className="relative z-20 px-6 sm:px-12 lg:px-20 py-16">
+      <div className="relative px-6 sm:px-12 lg:px-20 py-16">
         {/* Header Section */}
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-red-500 to-pink-500 text-white px-6 py-3 rounded-full mb-8 shadow-lg animate-bounce">

@@ -13,8 +13,8 @@ import webdev2 from "./../assets/img/webdev2.png";
 // import mbdev2 from "./../assets/img/mobile app dev.webp";
 import influence1 from "./../assets/img/influemarketing.png";
 import influence2 from "./../assets/img/influencermkting.webp";
-import ppc1 from "./../assets/img/ppc.webp";
-import ppc2 from "./../assets/img/ppcsteps.webp";
+// import ppc1 from "./../assets/img/ppc.webp";
+// import ppc2 from "./../assets/img/ppcsteps.webp";
 import soft1 from "./../assets/img/softdev.webp";
 import soft2 from "./../assets/img/softdevmethod.webp";
 import brand1 from "./../assets/img/brand1.avif";
@@ -51,146 +51,88 @@ export type ServiceItem = {
 
 
 export const servicesData: ServiceItem[] = [
-  {
-  catTitle: "Social Media",
-  label: "Instagram Marketing",
-  slug: "instagram-marketing",
-  href: "/services/social/instagram",
-  img1: insta1,
-  img2: insta2,
-  desc1: "Grow your audience through targeted Instagram strategies.",
-  desc2: "We focus on visual storytelling, reel optimization, hashtag strategy, and influencer outreach to boost your Instagram presence.",
-  features: [
-    "Hashtag & content strategy",
-    "Influencer collaboration setup",
-    "Instagram Ads & reel production"
-  ],
-  priceRange: "Starts from NPR 12,000/month",
-  duration: "1-3 weeks per campaign",
-  technologies: ["Instagram Insights", "Meta Ads Manager", "Canva", "Reels Editor"],
-  benefits: [
-    "Higher brand visibility",
-    "Increased followers & engagement",
-    "Visual content that resonates"
-  ],
-  workProcess: [
-    {
-      step: 1,
-      title: "Brand & Audience Research",
-      desc: "We analyze your niche and audience behavior to form a winning strategy.",
-      duration: "1-2 days",
-      deliverables: ["Content calendar", "Visual direction", "Audience persona"]
-    },
-    {
-      step: 2,
-      title: "Strategy Execution",
-      desc: "Launch hashtag campaigns, influencer partnerships, and story/reel schedules.",
-      duration: "Ongoing",
-      deliverables: ["Story & reel templates", "Influencer shortlist", "Ad sets"]
-    },
-    {
-      step: 3,
-      title: "Optimization & Analytics",
-      desc: "Track performance, tweak hashtags, and refine visuals for maximum reach.",
-      duration: "Weekly",
-      deliverables: ["Engagement report", "Follower growth chart", "Strategy improvements"]
-    }
-  ],
-  faqs: [
-    { q: "Do you handle influencer coordination?", a: "Yes, we find, negotiate with, and brief relevant influencers for your campaigns." },
-    { q: "What if my content isn't ready?", a: "No worries — we help with visuals, reels, and templates tailored to your brand." }
-  ],
-  testimonials: [
-    { quote: "My Instagram exploded! Engagement doubled in 3 weeks!", author: "Pratiksha Joshi", role: "Fashion Blogger" }
-  ],
-  cta: "Get an Insta Plan",
-  metaTitle: "Instagram Marketing in Nepal – Boost Followers & Engagement",
-  metaDesc: "Grow your Instagram with targeted marketing, reels, and influencer partnerships. Starting NPR 12,000/month.",
-  isFeatured: true,
-  badge: "Trending",
-  icon: "📸",
-},
+  
+// {
+//   catTitle: "Social Media",
+//   label: "PPC Marketing",
+//   slug: "ppc-marketing",
+//   href: "/services/ads/ppc",
+//   img1: ppc1,
+//   img2: ppc2,
+//   desc1: "Maximize your ROI with high-converting pay-per-click campaigns.",
+//   desc2: "Our PPC experts craft Google Ads and display campaigns that drive clicks, conversions, and measurable growth — with full budget control.",
+//   features: [
+//     "Keyword research & bidding strategy",
+//     "Google & Bing Ads setup",
+//     "Landing page optimization",
+//     "A/B testing & performance tracking"
+//   ],
+//   priceRange: "Starts from NPR 15,000/month + ad spend",
+//   duration: "2-4 weeks to full campaign launch",
+//   technologies: ["Google Ads", "Google Analytics", "SEMrush", "Microsoft Ads", "Hotjar"],
+//   benefits: [
+//     "Immediate traffic boost",
+//     "High intent lead generation",
+//     "Full control over budget & targeting",
+//     "Detailed ad performance insights"
+//   ],
+//   workProcess: [
+//     {
+//       step: 1,
+//       title: "Research & Planning",
+//       desc: "We identify your goals, target audience, and keywords to plan a cost-effective campaign.",
+//       duration: "2-3 days",
+//       deliverables: ["Ad goals & funnel", "Keyword map", "Ad copy suggestions"]
+//     },
+//     {
+//       step: 2,
+//       title: "Campaign Setup",
+//       desc: "We configure the ad accounts, targeting, bidding, and conversion tracking across platforms.",
+//       duration: "3-5 days",
+//       deliverables: ["Live campaigns", "Conversion pixels", "Landing page recommendations"]
+//     },
+//     {
+//       step: 3,
+//       title: "Monitoring & Optimization",
+//       desc: "Track, analyze, and refine campaigns based on CTR, CPC, and conversion rates.",
+//       duration: "Weekly",
+//       deliverables: ["Performance reports", "Optimized bids & audiences", "A/B test results"]
+//     }
+//   ],
+//   faqs: [
+//     {
+//       q: "Do I need a large budget to run PPC campaigns?",
+//       a: "No. We work with any budget and optimize for the best return on your investment, starting from just NPR 5,000 in ad spend."
+//     },
+//     {
+//       q: "Can you help improve my existing Google Ads campaigns?",
+//       a: "Yes, we offer audits and revamp underperforming PPC campaigns to increase efficiency and ROI."
+//     }
+//   ],
+//   testimonials: [
+//     {
+//       quote: "Our sales jumped by 60% within the first month of PPC management!",
+//       author: "Sujan Bista",
+//       role: "Co-founder, GadgetHut"
+//     },
+//     {
+//       quote: "Finally a team that understands both performance and budget control. Highly recommended.",
+//       author: "Ritika Sharma",
+//       role: "Digital Strategist"
+//     }
+//   ],
+//   cta: "Launch My PPC Campaign",
+//   metaTitle: "PPC Marketing in Nepal – Google Ads Services for ROI Boost",
+//   metaDesc: "Drive instant traffic and sales with expert-managed PPC marketing campaigns. Starting at NPR 15,000/month + ad spend.",
+//   isFeatured: true,
+//   badge: "High ROI",
+//   icon: "💰",
+//   urgencyMessage: "Limited slots for ad account management this month!"
+// }
+// ,
 {
   catTitle: "Social Media",
-  label: "PPC Marketing",
-  slug: "ppc-marketing",
-  href: "/services/ads/ppc",
-  img1: ppc1,
-  img2: ppc2,
-  desc1: "Maximize your ROI with high-converting pay-per-click campaigns.",
-  desc2: "Our PPC experts craft Google Ads and display campaigns that drive clicks, conversions, and measurable growth — with full budget control.",
-  features: [
-    "Keyword research & bidding strategy",
-    "Google & Bing Ads setup",
-    "Landing page optimization",
-    "A/B testing & performance tracking"
-  ],
-  priceRange: "Starts from NPR 15,000/month + ad spend",
-  duration: "2-4 weeks to full campaign launch",
-  technologies: ["Google Ads", "Google Analytics", "SEMrush", "Microsoft Ads", "Hotjar"],
-  benefits: [
-    "Immediate traffic boost",
-    "High intent lead generation",
-    "Full control over budget & targeting",
-    "Detailed ad performance insights"
-  ],
-  workProcess: [
-    {
-      step: 1,
-      title: "Research & Planning",
-      desc: "We identify your goals, target audience, and keywords to plan a cost-effective campaign.",
-      duration: "2-3 days",
-      deliverables: ["Ad goals & funnel", "Keyword map", "Ad copy suggestions"]
-    },
-    {
-      step: 2,
-      title: "Campaign Setup",
-      desc: "We configure the ad accounts, targeting, bidding, and conversion tracking across platforms.",
-      duration: "3-5 days",
-      deliverables: ["Live campaigns", "Conversion pixels", "Landing page recommendations"]
-    },
-    {
-      step: 3,
-      title: "Monitoring & Optimization",
-      desc: "Track, analyze, and refine campaigns based on CTR, CPC, and conversion rates.",
-      duration: "Weekly",
-      deliverables: ["Performance reports", "Optimized bids & audiences", "A/B test results"]
-    }
-  ],
-  faqs: [
-    {
-      q: "Do I need a large budget to run PPC campaigns?",
-      a: "No. We work with any budget and optimize for the best return on your investment, starting from just NPR 5,000 in ad spend."
-    },
-    {
-      q: "Can you help improve my existing Google Ads campaigns?",
-      a: "Yes, we offer audits and revamp underperforming PPC campaigns to increase efficiency and ROI."
-    }
-  ],
-  testimonials: [
-    {
-      quote: "Our sales jumped by 60% within the first month of PPC management!",
-      author: "Sujan Bista",
-      role: "Co-founder, GadgetHut"
-    },
-    {
-      quote: "Finally a team that understands both performance and budget control. Highly recommended.",
-      author: "Ritika Sharma",
-      role: "Digital Strategist"
-    }
-  ],
-  cta: "Launch My PPC Campaign",
-  metaTitle: "PPC Marketing in Nepal – Google Ads Services for ROI Boost",
-  metaDesc: "Drive instant traffic and sales with expert-managed PPC marketing campaigns. Starting at NPR 15,000/month + ad spend.",
-  isFeatured: true,
-  badge: "High ROI",
-  icon: "💰",
-  urgencyMessage: "Limited slots for ad account management this month!"
-}
-,
-{
-  catTitle: "Social Media",
-  label: "Facebook Marketing",
+  label: "Facebook Boosting",
   slug: "facebook-marketing",
   href: "/services/social/facebook",
   img1: fb1,
@@ -202,7 +144,7 @@ export const servicesData: ServiceItem[] = [
     "Conversion tracking & optimization",
     "Page management & content scheduling"
   ],
-  priceRange: "Starts from NPR 15,000/month",
+  // priceRange: "Starts from NPR 15,000/month",
   duration: "1-3 weeks per campaign",
   technologies: ["Facebook Ads", "Meta Business Suite", "Pixel", "Canva"],
   benefits: [
@@ -253,9 +195,68 @@ export const servicesData: ServiceItem[] = [
   isFeatured: true,
   badge: "Meta Partner",
   icon: "📘",
-}
+},
 
-,
+{
+  catTitle: "Social Media",
+  label: "Instagram Boosting",
+  slug: "instagram-marketing",
+  href: "/services/social/instagram",
+  img1: insta1,
+  img2: insta2,
+  desc1: "Grow your audience through targeted Instagram strategies.",
+  desc2: "We focus on visual storytelling, reel optimization, hashtag strategy, and influencer outreach to boost your Instagram presence.",
+  features: [
+    "Hashtag & content strategy",
+    "Influencer collaboration setup",
+    "Instagram Ads & reel production"
+  ],
+  // priceRange: "Starts from NPR 12,000/month",
+  duration: "1-3 weeks per campaign",
+  technologies: ["Instagram Insights", "Meta Ads Manager", "Canva", "Reels Editor"],
+  benefits: [
+    "Higher brand visibility",
+    "Increased followers & engagement",
+    "Visual content that resonates"
+  ],
+  workProcess: [
+    {
+      step: 1,
+      title: "Brand & Audience Research",
+      desc: "We analyze your niche and audience behavior to form a winning strategy.",
+      duration: "1-2 days",
+      deliverables: ["Content calendar", "Visual direction", "Audience persona"]
+    },
+    {
+      step: 2,
+      title: "Strategy Execution",
+      desc: "Launch hashtag campaigns, influencer partnerships, and story/reel schedules.",
+      duration: "Ongoing",
+      deliverables: ["Story & reel templates", "Influencer shortlist", "Ad sets"]
+    },
+    {
+      step: 3,
+      title: "Optimization & Analytics",
+      desc: "Track performance, tweak hashtags, and refine visuals for maximum reach.",
+      duration: "Weekly",
+      deliverables: ["Engagement report", "Follower growth chart", "Strategy improvements"]
+    }
+  ],
+  faqs: [
+    { q: "Do you handle influencer coordination?", a: "Yes, we find, negotiate with, and brief relevant influencers for your campaigns." },
+    { q: "What if my content isn't ready?", a: "No worries — we help with visuals, reels, and templates tailored to your brand." }
+  ],
+  testimonials: [
+    { quote: "My Instagram exploded! Engagement doubled in 3 weeks!", author: "Pratiksha Joshi", role: "Fashion Blogger" }
+  ],
+  cta: "Get an Insta Plan",
+  metaTitle: "Instagram Marketing in Nepal – Boost Followers & Engagement",
+  metaDesc: "Grow your Instagram with targeted marketing, reels, and influencer partnerships. Starting NPR 12,000/month.",
+  isFeatured: true,
+  badge: "Trending",
+  icon: "📸",
+},
+
   {
     catTitle: "Social Media", 
     label: "Influencer Marketing",
@@ -272,7 +273,7 @@ export const servicesData: ServiceItem[] = [
       "Content creation guidance",
       "ROI optimization"
     ],
-    priceRange: "Starts from NPR 20,000/campaign",
+    // priceRange: "Starts from NPR 20,000/campaign",
     duration: "1-3 weeks per campaign",
     technologies: ["Instagram", "TikTok", "YouTube", "Facebook"],
     benefits: [
@@ -354,7 +355,7 @@ export const servicesData: ServiceItem[] = [
       "Local SEO optimization",
       "Competitor analysis"
     ],
-    priceRange: "NPR 18,000 – 60,000/month",
+    // priceRange: "NPR 18,000 – 60,000/month",
     duration: "2-6 months for results",
     technologies: ["Google Analytics", "SEMrush", "Ahrefs", "Search Console"],
     benefits: [
@@ -432,7 +433,7 @@ export const servicesData: ServiceItem[] = [
       "Security & performance optimization",
       "Analytics & tracking setup"
     ],
-    priceRange: "NPR 25,000 – 150,000",
+    // priceRange: "NPR 25,000 – 150,000",
     duration: "2–4 weeks",
     technologies: ["React", "Express.js", "Tailwind CSS", "WordPress", "Node.js"],
     benefits: [
@@ -574,8 +575,8 @@ export const servicesData: ServiceItem[] = [
     "Full rights & file formats",
     "Revisions until satisfaction"
   ],
-  priceRange: "NPR 5,000 – 20,000",
-  duration: "3–7 days",
+  priceRange: "NPR 1,000",
+  duration: "1–3 days",
   technologies: ["Illustrator", "Figma", "Photoshop"],
   benefits: [
     "Stronger brand recognition",
@@ -633,7 +634,7 @@ export const servicesData: ServiceItem[] = [
     "Social media and print-ready assets",
     "Typography, color scheme, icon set"
   ],
-  priceRange: "NPR 12,000 – 40,000",
+  // priceRange: "NPR 12,000 – 40,000",
   duration: "1–2 weeks",
   technologies: ["Figma", "Adobe InDesign", "Canva"],
   benefits: [

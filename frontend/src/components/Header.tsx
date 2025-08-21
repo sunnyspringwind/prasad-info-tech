@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { ChevronRight, Menu, X, Phone, Mail, Watch } from "lucide-react";
 import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
-import logo from "./../assets/img/logo.png";
+import logo from "/logo.webp";
+import tagline from "/tag.svg";
 import ServicesDropdown from "./ServicesDropdown";
 import MobileServicesDropdown from "./MobileServicesDropdown";
 
@@ -68,9 +69,10 @@ const PrasadTechHeader: React.FC = () => {
         {/* Mobile Header */}
         <div className="lg:hidden fixed top-0 left-0 right-0 z-50 ">
           <div className="flex items-center justify-between py-1 px-2">
-            <div className="logo">
-              <a href="/">
+            <div id="header-logo" >
+              <a className="flex" href="/">
                 <img src={logo} alt="Prasad tech logo" className={`p-1 h-14 sm:h-16`} />
+                <img src={tagline} alt="Prasad info tech" className={` p-1 h-14 sm:h-16 `} />
               </a>
             </div>
             <button onClick={toggleMobileMenu} className="p-2 bg-gray-200 rounded-full">
@@ -201,24 +203,28 @@ const PrasadTechHeader: React.FC = () => {
               </div>
               <div className="flex justify-center space-x-4">
                 <a
+                title="facebook-handler"
                   href="https://www.facebook.com/prasadinfotechnepal"
                   className="text-blue-400 hover:text-blue-600"
                 >
                   <FaFacebook size={20} />
                 </a>
                 <a
+                title="insta-handler"
                   href="https://www.instagram.com/prasadinfotechs"
                   className="text-blue-400 hover:text-blue-600"
                 >
                   <FaInstagram size={20} />
                 </a>
                 <a
+                title="contact-no"
                   href="tel:+977-986-2282235"
                   className="text-green-400 hover:text-green-300"
                 >
                   <Phone size={20} />
                 </a>
                 <a
+                title="mail-handler"
                   href="mailto:prasadinfotechinquiry@gmail.com"
                   className="text-red-400 hover:text-red-300"
                 >
@@ -234,8 +240,8 @@ const PrasadTechHeader: React.FC = () => {
           <div className="my-container mx-auto">
             <div className="flex items-center justify-between">
               {/* Logo */}
-              <div className="logo">
-                <a href="/">
+              <div>
+                <a className="flex" href="/">
                   <img
                     src={logo}
                     alt="Prasad tech logo"
@@ -243,6 +249,15 @@ const PrasadTechHeader: React.FC = () => {
                       scrolled
                         ? "w-16 h-auto transition-all duration-500 ease-in-out"
                         : "w-22 h-auto transition-all duration-500 ease-in-out"
+                    }`}
+                  />
+                   <img
+                    src={tagline}
+                    alt="Prasad info tech"
+                    className={`p-2 pb-4 pt-3 transform-gpu will-change-transform ${
+                      scrolled
+                        ? "h-19 transition-all duration-500 ease-in-out"
+                        : "h-21 transition-all duration-500 ease-in-out"
                     }`}
                   />
                 </a>
