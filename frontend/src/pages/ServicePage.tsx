@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react';
 import { ChevronDown, ChevronUp, Star, Clock, DollarSign, Users, CheckCircle, ArrowRight, Award, Shield, TrendingUp, MessageCircle, Play, List } from 'lucide-react';
 import { servicesData } from '../data/servicesData';
-import PrasadTechHeader from '../components/Header';
-import Footer from '../components/Footer';
 import { NavLink, useParams } from 'react-router-dom';
 import ProjectInquiryForm from '../components/ProjectEnquiryForm';
 
@@ -41,7 +39,6 @@ console.log(currentService);
 
   return (
     <div className="min-h-screen bg-white">
-      <PrasadTechHeader/>
       {/* Hero Section with Psychological Triggers */}
       <div className="relative bg-gradient-to-br from-white to-blue-100 overflow-hidden">
         
@@ -276,13 +273,13 @@ console.log(currentService);
               </div>
               
               {/* Process CTA */}
-              <div className="text-center mt-12 p-6 bg-blue-50 rounded-xl">
+              {/* <div className="text-center mt-12 p-6 bg-blue-50 rounded-xl">
                 <h4 className="text-xl font-bold text-gray-900 mb-2">Ready to Get Started?</h4>
                 <p className="text-gray-600 mb-4">Let's discuss your project and create a customized timeline for your success.</p>
                 <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
                   Schedule Free Consultation
                 </button>
-              </div>
+              </div> */}
             </div>
           )}
 
@@ -394,7 +391,6 @@ console.log(currentService);
           </p>
         </div>
       </div>
-      <Footer/>
     </div>
   );
 };

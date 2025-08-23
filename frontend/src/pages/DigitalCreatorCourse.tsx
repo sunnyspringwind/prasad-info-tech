@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react';
 import { Camera, Video, Users, Award, Clock, MapPin, Phone, Mail, Globe, Star, CheckCircle, PlayCircle, Smartphone, Laptop, Wifi } from 'lucide-react';
-import PrasadTechHeader from '../components/Header';
-import Footer from '../components/Footer';
 
 import internet from "../assets/img/digtel/internet.png";
 import laptop from "../assets/img/digtel/laptop.png";
@@ -215,8 +213,6 @@ const DigitalCreatorCourse = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white">
-      {/* Header */}
-     <PrasadTechHeader/>
 
       {/* Hero Section */}
       <section className={`py-16 px-4 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
@@ -722,7 +718,6 @@ const DigitalCreatorCourse = () => {
           </a>
         </div>
       </footer>
-      <Footer/>
 
       <style>{`
         .animate-fadeIn {

@@ -33,13 +33,15 @@ const HeroSection: React.FC = () => {
           </div>
 
           <h1 className="text-4xl sm:text-4xl lg:text-5xl font-bold leading-tight drop-shadow-lg mb-6">
-            <span className="text-white">Building Brands &</span>
+            <span className="text-white">Let’s Turn Your Business</span>
             <br />
-            <span className="text-blue-200">Digital Solutions,</span>
+            <span className="text-blue-200">into a  <span className="bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+           Success Story
+            </span></span>
             <br />
-            <span className="bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+            {/* <span className="bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
               Crafted with Precision
-            </span>
+            </span> */}
           </h1>
 
           <p className="mt-6 text-xl text-blue-100 drop-shadow-md leading-relaxed max-w-2xl">
@@ -131,14 +133,19 @@ const HeroSection: React.FC = () => {
         </div>
 
         {/* Right Illustration */}
-        <div className="flex-1 mt-12 lg:mt-0 max-w-lg lg:max-w-xl">
+        <div className="flex-1 mt-12 lg:mt-0 max-w-lg lg:max-w-xl hidden md:block">
           <div className="relative">
             {/* Main Illustration Container */}
             <div className="relative bg-white/10 backdrop-blur-lg rounded-3xl p-8 shadow-2xl border border-white/20">
               {/* Floating Elements */}
               <div className="absolute -top-4 -right-4 w-16 h-16 bg-blue-400 rounded-2xl rotate-12 shadow-xl animate-bounce delay-300"></div>
               <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-white rounded-xl rotate-45 shadow-lg animate-pulse"></div>
-
+              <div className="absolute -top-8 -right-8 bg-blue-500/20 backdrop-blur-sm rounded-full p-4 border border-white/30 animate-pulse">
+                <div className="text-yellow-300 font-bold">
+                  <span className="text-2xl">24/7</span>
+                  <div className="text-xs mt-1">Support</div>
+                </div>
+              </div>
               {/* Central Illustration */}
               <div className="text-center">
                 {/* Main Icon */}
@@ -202,7 +209,7 @@ const HeroSection: React.FC = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/60 animate-bounce">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/60 animate-bounce hidden lg:block">
         <div className="w-6 h-10 border-2 border-white/40 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-pulse"></div>
         </div>

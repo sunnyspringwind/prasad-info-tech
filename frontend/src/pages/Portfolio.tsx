@@ -1,7 +1,5 @@
 import { useState } from "react";
 import { ArrowRight } from "lucide-react";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
 
 const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState("All Projects");
@@ -95,8 +93,6 @@ const Portfolio = () => {
 
   return (
     <>
-      {" "}
-      <Header />{" "}
       <section className="bg-gradient-to-br from-blue-50 to-white py-16 px-6 md:px-12">
         <div className="container mx-auto px-4">
           {/* Header Section */}
@@ -201,7 +197,7 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
-      <Footer />
+
     </>
   );
 };

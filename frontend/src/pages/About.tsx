@@ -1,24 +1,57 @@
 import { FaBullseye, FaHandshake, FaLightbulb, FaRocket } from "react-icons/fa";
-import Footer from "../components/Footer";
-import PrasadTechHeader from "../components/Header";
 import ceoImage from "../assets/img/ceo.webp";
 
 
 
 const AboutPage = () => {
   return (<>
-  <PrasadTechHeader/>
     <div className="bg-white text-gray-800">
         
       {/* Hero Section */}
       <section className="bg-blue-50 py-16">
         <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center gap-12">
-          <div className="lg:w-1/2 text-center lg:text-left">
+          <div className="lg:w-3/4 text-center lg:text-left">
         <h1 className="text-4xl font-bold mb-4">About Prasad Info Tech</h1>
-        <p className="text-lg mb-6">
-          We're a forward-thinking digital marketing and software development agency
-          committed to driving real growth for businesses in Nepal and beyond.
-        </p>
+      <section className="max-w-4xl mx-auto px-4 py-12">
+  <p className="text-lg mb-10 text-gray-700 leading-relaxed">
+    We're a forward-thinking digital marketing and software development agency
+    committed to driving real growth for businesses in Nepal and beyond.
+  </p>
+
+  <div className="bg-white shadow-lg rounded-2xl p-8 border border-gray-100">
+    <h2 className="text-2xl font-bold text-blue-900 mb-6">About Our CEO</h2>
+    
+    <p className="text-gray-700 leading-relaxed mb-4">
+      At the helm of Prasad Info Tech is <span className="font-semibold">Mr.Pawan Dhakal</span>, 
+      a forward-thinking entrepreneur with a clear vision for helping businesses 
+      thrive in the digital era. With a strong focus on performance-driven digital 
+      marketing, he has guided Prasad Info Tech to become a trusted partner for 
+      brands seeking impactful online growth.
+    </p>
+
+   <div className="my-8 border-l-4 border-blue-900 pl-6 italic text-gray-600 relative">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="currentColor"
+    viewBox="0 0 24 24"
+    className="absolute -top-3 -left-3 w-8 h-8 text-blue-900 opacity-20"
+  >
+    <path d="M9 11H7a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h4v6a6 6 0 0 1-6 6H4v-2h1a4 4 0 0 0 4-4v-1zm10 0h-2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h4v6a6 6 0 0 1-6 6h-1v-2h1a4 4 0 0 0 4-4v-1z" />
+  </svg>
+  <p>
+    “Social media isn’t just about reach—it’s about creating meaningful
+    connections that drive real business results.”
+  </p>
+  <span className="block mt-2 font-semibold text-blue-900">
+    — Pawan Dhakal, Founder of Prasad Info Tech
+  </span>
+</div>
+
+
+   
+  </div>
+</section>
+
           </div>
           <div className="lg:w-1/2">
         <img 
@@ -28,26 +61,45 @@ const AboutPage = () => {
         />
         <div className="text-center mt-4">
           <h3 className="font-semibold text-xl">Pawan Dhakal</h3>
-          <p className="text-gray-600">Founder</p>
+          <p className="text-gray-600">Founder & Software Developer</p>
         </div>
           </div>
         </div>
       </section>
 
       {/* Who We Are */}
-      <section className="py-16 px-4 lg:px-20 grid lg:grid-cols-2 gap-12 items-center">
-        <div>
-          <h2 className="text-3xl font-semibold mb-4">Who We Are</h2>
-          <p className="text-gray-700 leading-relaxed">
-            Prasad Info Tech blends creativity with code, marketing with meaning.
-            Whether it’s crafting conversion-driven websites or building data-powered
-            campaigns, we believe in delivering value and impact to our clients.
-          </p>
-        </div>
-        <div className="rounded-xl overflow-hidden shadow-lg">
-          <img src="https://www.anshikamedia.com/wp-content/uploads/2023/12/our-team.png" alt="Our Team" className="w-full h-full object-cover" />
-        </div>
-      </section>
+     <section className="py-16 px-4 lg:px-20 grid lg:grid-cols-2 gap-12 items-center">
+  {/* Text Content */}
+  <div>
+    <h2 className="text-3xl font-semibold mb-4">Who We Are</h2>
+    <p className="text-gray-700 leading-relaxed mb-4">
+      Prasad Info Tech blends creativity with code, marketing with meaning. 
+      Whether it’s crafting conversion-driven websites or building data-powered campaigns, 
+      we believe in delivering measurable value and tangible results to our clients.
+    </p>
+    <p className="text-gray-700 leading-relaxed">
+      Our team is a carefully curated group of strategists, designers, developers, 
+      and marketers, united by a shared vision: to help businesses grow in the digital landscape. 
+      Every project is approached with precision, creativity, and a deep understanding of 
+      audience behavior, ensuring that campaigns are not just seen, but remembered.
+    </p>
+    <p className="text-gray-700 leading-relaxed">
+      At Prasad Info Tech, collaboration drives innovation. By combining diverse skills and perspectives, 
+      we transform ideas into impactful solutions that drive engagement, increase conversions, 
+      and elevate brands to new heights.
+    </p>
+  </div>
+
+  {/* Image */}
+  <div className="rounded-xl overflow-hidden shadow-lg">
+    <img 
+      src="https://www.anshikamedia.com/wp-content/uploads/2023/12/our-team.png" 
+      alt="Our Team" 
+      className="w-full h-full object-cover" 
+    />
+  </div>
+</section>
+
 
       {/* Vision, Mission, Values */}
       <section className="bg-blue-100 py-16 px-4 lg:px-20">
@@ -111,7 +163,6 @@ const AboutPage = () => {
         </a>
       </section>
     </div>
-    <Footer/>
     </>
   );
 };

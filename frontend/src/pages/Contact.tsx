@@ -9,8 +9,7 @@ import {
   FaTwitter,
   FaLinkedinIn,
 } from "react-icons/fa";
-import PrasadTechHeader from "../components/Header";
-import Footer from "../components/Footer";
+
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -44,7 +43,6 @@ const ContactPage = () => {
 
   return (
     <div className="min-h-screen bg-white">
-        <PrasadTechHeader />
       <div className="max-w-7xl mx-auto px-4 py-16">
         {/* Header */}
         <div className="text-center mb-16">
@@ -281,7 +279,6 @@ const ContactPage = () => {
           />
         </div>
       </div>
-      <Footer/>
     </div>
   );
 };

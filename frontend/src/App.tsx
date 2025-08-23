@@ -7,32 +7,34 @@ import ServicePage from "./pages/ServicePage"
 import AboutPage from "./pages/About"
 import CareersPage from "./pages/Career"
 import DigitalCreatorCourse from "./pages/DigitalCreatorCourse"
-import Blog from "./pages/Blog"
+import Blogs from "./pages/Blogs"
+import { Layout } from "./components/Layout"
+// import BlogPost from "./pages/BlogPost"
 
 function App() {
 
   return (
     <>
-      <>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/services/:slug" element={<ServicePage/>}/>
-          <Route path="/about" element={<AboutPage/>}/>
-          <Route path="/career" element={<CareersPage/>}/>
-          <Route path="/course" element={<DigitalCreatorCourse/>}/>
-          <Route path="/blog" element={<Blog/>}/>
-          
+       <Routes>
+  {/* Layout wrapper */}
+  <Route path="/" element={<Layout />}>
+    {/* Home is the index route inside Layout */}
+    <Route index element={<Home />} />
+    <Route path="portfolio" element={<Portfolio />} />
+    <Route path="services" element={<Services />} />
+    <Route path="services/:slug" element={<ServicePage />} />
+    <Route path="contact" element={<ContactPage />} />
+    <Route path="about" element={<AboutPage />} />
+    <Route path="career" element={<CareersPage />} />
+    <Route path="course" element={<DigitalCreatorCourse />} />
+    <Route path="blog" element={<Blogs />} />
+    {/* <Route path="blo" element={<BlogPost/>}/> */}
+  </Route>
 
+  {/* Catch-all route */}
+  <Route path="*" element={<Navigate to="/" />} />
+</Routes>
 
-          {/* <Route path="/project-details/:id" element={<ProjectPage />} /> */}
-                    {/* catch-all route for GitHub Pages */}
-          <Route path="*" element={<Navigate to='/' />}/>
-        </Routes>
-    </>
-  
     </>
   )
 }

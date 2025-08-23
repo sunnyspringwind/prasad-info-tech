@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { FaArrowRight, FaChevronRight } from "react-icons/fa6";
-import Footer from "../components/Footer";
-import PrasadTechHeader from "../components/Header";
 import { useNavigate } from "react-router-dom";
 import { servicesData } from "../data/servicesData";
 
@@ -48,7 +46,6 @@ const cardVariants = {
 
   return (
     <>
-    <PrasadTechHeader />
     <section className="bg-white py-24 px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         {/* Minimal Header */}
@@ -193,7 +190,6 @@ const cardVariants = {
         </motion.div>
       </div>
     </section>
-    <Footer/>
     </>
   );
 };

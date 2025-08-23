@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 import { ChevronRight, Menu, X, Phone, Mail, Watch } from "lucide-react";
 import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import logo from "/logo.webp";
-import tagline from "/tag.svg";
 import ServicesDropdown from "./ServicesDropdown";
 import MobileServicesDropdown from "./MobileServicesDropdown";
 
@@ -16,7 +15,6 @@ const PrasadTechHeader: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const [openDropdowns, setOpenDropdowns] = useState({
     services: false,
-    resources: false,
     company: false,
   });
 
@@ -67,15 +65,34 @@ const PrasadTechHeader: React.FC = () => {
         }`}
       >
         {/* Mobile Header */}
-        <div className="lg:hidden fixed top-0 left-0 right-0 z-50 ">
+        <div className="fixed top-0 left-0 right-0 z-50 ">
           <div className="flex items-center justify-between py-1 px-2">
-            <div id="header-logo" >
+            <div id="header-logo" className="lg:hidden">
               <a className="flex" href="/">
-                <img src={logo} alt="Prasad tech logo" className={`p-1 h-14 sm:h-16`} />
-                <img src={tagline} alt="Prasad info tech" className={` p-1 h-14 sm:h-16 `} />
-              </a>
+                <img
+                  src={logo}
+                  alt="Prasad tech logo"
+                  className={`p-1 h-14 sm:h-16`}
+                />
+                
+                <div
+                  className={`p-2 pt-2 transform-gpu will-change-transform flex flex-col ${
+                    scrolled
+                    ? "h-19 transition-all duration-500 ease-in-out"
+                    : "h-21 transition-all duration-500 ease-in-out"
+                  }`}
+                  >
+                  <span className="text-lg font-bold ">Prasad Info Tech</span>
+                  <span className="text-[10px] ">
+                    A PRASAD FOR YOUR BUSINESS SUCCESS
+                  </span>
+                  </div>
+                  </a>
             </div>
-            <button onClick={toggleMobileMenu} className="p-2 bg-gray-200 rounded-full">
+            <button
+              onClick={toggleMobileMenu}
+              className="p-2 bg-gray-200 rounded-full hidden md:block lg:hidden "
+            >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
@@ -87,68 +104,66 @@ const PrasadTechHeader: React.FC = () => {
             }`}
           >
             <div className="py-4 px-4">
-              <div className="py-2"><NavLink to="/" className={({ isActive }) => `hover:to-blue-600 ${isActive ? 'text-blue-600' : ''}`}>Home</NavLink></div>
-              
+              <div className="py-2">
+                <NavLink
+                  to="/"
+                  className={({ isActive }) =>
+                    `hover:to-blue-600 ${isActive ? "text-blue-600" : ""}`
+                  }
+                >
+                  Home
+                </NavLink>
+              </div>
 
               {/* Services */}
               <div className=" ">
                 <button
                   onClick={() => toggleDropdown("services")}
                   className={`flex items-center w-full text-left hover:to-blue-600 py-2 hover:text-blue-600 ${
-                  window.location.pathname.includes('/services') ? 'text-blue-600' : ''
+                    window.location.pathname.includes("/services")
+                      ? "text-blue-600"
+                      : ""
                   }`}
                 >
                   Services
                   <ChevronRight
-                  className={`transform transition-transform pt-1 ${
-                    openDropdowns.services ? "rotate-90" : ""
-                  }`}
-                  size={16}
-                  />
-                </button>
-                {openDropdowns.services && (
-                 <div className="overflow-y-auto"><MobileServicesDropdown/></div> 
-                )}
-              </div>
-
-              <div className=" hover:text-blue-600 py-2">                                  <NavLink to="/portfolio" className={({ isActive }) => `hover:to-blue-600 ${isActive ? 'text-blue-600' : ''}`}>Portfolio</NavLink>
-
-</div>
-
-              {/* Resources */}
-              <div className="">
-                <button
-                  onClick={() => toggleDropdown("resources")}
-                  className="flex items-center w-full text-left py-2 hover:text-blue-600"
-                >
-                 Resources
-                  <ChevronRight
                     className={`transform transition-transform pt-1 ${
-                      openDropdowns.resources ? "rotate-90" : ""
+                      openDropdowns.services ? "rotate-90" : ""
                     }`}
                     size={16}
                   />
                 </button>
-                {openDropdowns.resources && (
-                  <div className="pl-4">
-                    <div className="">
-                        <NavLink
-                        to="/blog"
-                        className="block py-1 text-sm text-gray-600 hover:text-blue-600"
-                        >
-                        Blog
-                        </NavLink>
-                      {/* <a
-                        href="/facebook-marketing"
-                        className="block py-1 text-sm text-gray-600 hover:text-blue-600"
-                      >
-                        Downloads
-                      </a> */}
-                
-                    </div>
+                {openDropdowns.services && (
+                  <div className="overflow-y-auto">
+                    <MobileServicesDropdown />
                   </div>
                 )}
               </div>
+
+              <div className=" hover:text-blue-600 py-2">
+                {" "}
+                <NavLink
+                  to="/portfolio"
+                  className={({ isActive }) =>
+                    `hover:to-blue-600 ${isActive ? "text-blue-600" : ""}`
+                  }
+                >
+                  Portfolio
+                </NavLink>
+              </div>
+
+                  <div className=" hover:text-blue-600 py-2">
+                {" "}
+                <NavLink
+                  to="/blog"
+                  className={({ isActive }) =>
+                    `hover:to-blue-600 ${isActive ? "text-blue-600" : ""}`
+                  }
+                >
+                  Blog
+                </NavLink>
+              </div>
+
 
               {/* About Company */}
               <div className="hover:text-blue-600">
@@ -173,17 +188,16 @@ const PrasadTechHeader: React.FC = () => {
                       About us
                     </NavLink>
                     <NavLink
-                      to="/career" 
+                      to="/career"
                       className="block py-1 text-sm text-gray-600 hover:text-blue-600"
                     >
                       Career
                     </NavLink>
-              
                   </div>
                 )}
               </div>
 
-                {/* Contact Section of the site */}
+              {/* Contact Section of the site */}
               <div className="">
                 {/* <button
                   onClick={() => goToSection("contact")}
@@ -191,7 +205,14 @@ const PrasadTechHeader: React.FC = () => {
                 >
                   Contact
                 </button> */}
-                <NavLink to="/contact" className={({ isActive }) => `hover:text-blue-600 ${isActive ? 'text-blue-600' : ''}`}>Contact</NavLink>
+                <NavLink
+                  to="/contact"
+                  className={({ isActive }) =>
+                    `hover:text-blue-600 ${isActive ? "text-blue-600" : ""}`
+                  }
+                >
+                  Contact
+                </NavLink>
               </div>
             </div>
 
@@ -203,28 +224,28 @@ const PrasadTechHeader: React.FC = () => {
               </div>
               <div className="flex justify-center space-x-4">
                 <a
-                title="facebook-handler"
+                  title="facebook-handler"
                   href="https://www.facebook.com/prasadinfotechnepal"
                   className="text-blue-400 hover:text-blue-600"
                 >
                   <FaFacebook size={20} />
                 </a>
                 <a
-                title="insta-handler"
+                  title="insta-handler"
                   href="https://www.instagram.com/prasadinfotechs"
                   className="text-blue-400 hover:text-blue-600"
                 >
                   <FaInstagram size={20} />
                 </a>
                 <a
-                title="contact-no"
+                  title="contact-no"
                   href="tel:+977-986-2282235"
                   className="text-green-400 hover:text-green-300"
                 >
                   <Phone size={20} />
                 </a>
                 <a
-                title="mail-handler"
+                  title="mail-handler"
                   href="mailto:prasadinfotechinquiry@gmail.com"
                   className="text-red-400 hover:text-red-300"
                 >
@@ -251,7 +272,7 @@ const PrasadTechHeader: React.FC = () => {
                         : "w-22 h-auto transition-all duration-500 ease-in-out"
                     }`}
                   />
-                   <img
+                  {/* <img
                     src={tagline}
                     alt="Prasad info tech"
                     className={`p-2 pb-4 pt-3 transform-gpu will-change-transform ${
@@ -259,7 +280,19 @@ const PrasadTechHeader: React.FC = () => {
                         ? "h-19 transition-all duration-500 ease-in-out"
                         : "h-21 transition-all duration-500 ease-in-out"
                     }`}
-                  />
+                  /> */}
+                  <div
+                    className={`p-2 pb-4 pt-3 transform-gpu will-change-transform ${
+                      scrolled
+                        ? "h-19 transition-all duration-500 ease-in-out"
+                        : "h-21 transition-all duration-500 ease-in-out"
+                    }`}
+                  >
+                    <h1 className="text-2xl font-bold ">Prasad Info Tech</h1>
+                    <span className="text-[12px]">
+                      A PRASAD FOR YOUR BUSINESS SUCCESS
+                    </span>
+                  </div>
                 </a>
               </div>
 
@@ -267,46 +300,56 @@ const PrasadTechHeader: React.FC = () => {
               <nav className="flex items-center space-x-4 pb-3 text-[15px]">
                 {/* Home */}
                 <div className="hover:text-blue-600">
-                  <NavLink to="/" className={({ isActive }) => `hover:to-blue-600 ${isActive ? 'text-blue-600' : ''}`}>Home</NavLink>
+                  <NavLink
+                    to="/"
+                    className={({ isActive }) =>
+                      `hover:to-blue-600 ${isActive ? "text-blue-600" : ""}`
+                    }
+                  >
+                    Home
+                  </NavLink>
                 </div>
 
                 {/* Our Services Dropdown */}
                 <div className="relative">
-                  <NavLink to="/services" className={({ isActive }) => `hover:to-blue-600 ${isActive ? 'text-blue-600' : ''}`}>
+                  <NavLink
+                    to="/services"
+                    className={({ isActive }) =>
+                      `hover:to-blue-600 ${isActive ? "text-blue-600" : ""}`
+                    }
+                  >
                     <ServicesDropdown />
                   </NavLink>
                 </div>
 
                 {/* Portfolio */}
                 <div className="relative group">
-                    <NavLink to="/portfolio" className={({ isActive }) => `flex items-center space-x-1 hover:text-blue-600 transition-colors ${isActive ? 'text-blue-600' : ''}`}>
+                  <NavLink
+                    to="/portfolio"
+                    className={({ isActive }) =>
+                      `flex items-center space-x-1 hover:text-blue-600 transition-colors ${
+                        isActive ? "text-blue-600" : ""
+                      }`
+                    }
+                  >
                     Portfolio
-                    </NavLink>
+                  </NavLink>
                 </div>
 
-                {/* Resources Dropdown */}
-                <div className="relative group">
-                  <button className="flex items-center space-x-1 hover:text-blue-600 transition-colors">
-                    <span>Resources</span>
-                    <ChevronRight className="w-4 h-4 pt-1 transform group-hover:rotate-90 transition-transform" />
-                  </button>
-                  <div className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                    <div className="py-2">
-                        <NavLink
-                        to="/blog"
-                        className="block px-4 py-2 hover:bg-gray-100 hover:text-blue-600 transition-colors"
-                        >
-                        Blog
-                        </NavLink>
-                      {/* <NavLink
-                        to="/downloads"
-                        className="block px-4 py-2 hover:bg-gray-100 hover:text-blue-600 transition-colors"
-                      >
-                        Downloads
-                      </NavLink> */}
-                    </div>
-                  </div>
+                {/* Blog Dropdown */}
+                  <div className="relative group">
+                  <NavLink
+                    to="/blog"
+                    className={({ isActive }) =>
+                      `flex items-center space-x-1 hover:text-blue-600 transition-colors ${
+                        isActive ? "text-blue-600" : ""
+                      }`
+                    }
+                  >
+                    Blog
+                  </NavLink>
                 </div>
+               
 
                 {/* About Us Dropdown */}
                 <div className="relative group">
@@ -316,18 +359,18 @@ const PrasadTechHeader: React.FC = () => {
                   </button>
                   <div className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                     <div className="py-2">
-                        <NavLink
+                      <NavLink
                         to="/about"
                         className="block px-4 py-2 hover:bg-gray-100 hover:text-blue-600 transition-colors"
-                        >
+                      >
                         About
-                        </NavLink>
-                        <NavLink
+                      </NavLink>
+                      <NavLink
                         to="/career"
                         className="block px-4 py-2 hover:bg-gray-100 hover:text-blue-600 transition-colors"
-                        >
+                      >
                         Career
-                        </NavLink>
+                      </NavLink>
                     </div>
                   </div>
                 </div>
@@ -340,7 +383,14 @@ const PrasadTechHeader: React.FC = () => {
                   >
                     Contact
                   </button> */}
-                    <NavLink to="/contact" className={({ isActive }) => `hover:to-blue-600 ${isActive ? 'text-blue-600' : ''}`}>Contact</NavLink>
+                  <NavLink
+                    to="/contact"
+                    className={({ isActive }) =>
+                      `hover:to-blue-600 ${isActive ? "text-blue-600" : ""}`
+                    }
+                  >
+                    Contact
+                  </NavLink>
                 </div>
 
                 {/* Contact Info */}
@@ -367,4 +417,3 @@ const PrasadTechHeader: React.FC = () => {
 };
 
 export default PrasadTechHeader;
-

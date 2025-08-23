@@ -6,6 +6,11 @@ const faqs = [
     answer:
       "Digital marketing is the strategic process of promoting your brand, products, or services using digital channels such as search engines, social media, email, and websites to engage targeted audiences, generate leads, and drive measurable business growth.",
   },
+
+  {
+    question: "What is Facebook Boosting?",
+    answer: "Facebook Boosting is a paid advertising feature that allows you to promote your Facebook posts to reach a wider audience beyond your organic followers. When you boost a post, you can target specific demographics, interests, and locations, making it an effective way to increase post engagement, brand visibility, and website traffic.",
+    },
   {
     question: "What are the key Digital Marketing channels?",
     answer:
@@ -42,9 +47,9 @@ const FAQItem: React.FC<{
   return (
     <div className="border-b border-gray-500 last:border-none">
       <button
+        type="button"
         className="w-full flex justify-between items-center py-4 text-left text-black font-semibold hover:text-blue-600 transition-colors"
         onClick={onClick}
-        aria-expanded={isOpen}
       >
         <span>{question}</span>
         <svg

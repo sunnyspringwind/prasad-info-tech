@@ -15,8 +15,7 @@ import {
   CheckCircle,
   Lightbulb
 } from 'lucide-react';
-import Footer from '../components/Footer';
-import PrasadTechHeader from '../components/Header';
+
 import { CustomTitleForm } from '../components/ProjectEnquiryForm';
 
 const CareersPage = () => {
@@ -297,7 +296,6 @@ const CareersPage = () => {
 
   return (
     <>
-    <PrasadTechHeader/>
     <div className="flex-grow">
       <div className="bg-gradient-to-br from-gray-50 to-white min-h-screen">
         {/* Hero Section */}
@@ -436,7 +434,6 @@ const CareersPage = () => {
         </section>
       </div>
     </div>
-      <Footer/>
     </>
   );
 };

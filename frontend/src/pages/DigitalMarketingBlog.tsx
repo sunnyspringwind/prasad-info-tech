@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react';
 import { Eye, Clock, TrendingUp, Search, Mail, Share2, BarChart3, Globe, DollarSign, Target, Zap } from 'lucide-react';
-import PrasadTechHeader from '../components/Header';
-import Footer from '../components/Footer';
 import { NavLink } from 'react-router-dom';
 
 const Blog = () => {
@@ -53,9 +51,7 @@ const Blog = () => {
   ];
 
   return (
-    <>
-      <PrasadTechHeader />
-      
+    <>      
       {/* Hero Section */}
       <div className="relative overflow-hidden bg-gradient-to-br from-indigo-600 via-purple-600 to-purple-800 text-white py-20">
         {/* Animated background pattern */}
@@ -394,8 +390,6 @@ const Blog = () => {
           </div>
         </div>
       </div>
-
-      <Footer />
     </>
   );
 };

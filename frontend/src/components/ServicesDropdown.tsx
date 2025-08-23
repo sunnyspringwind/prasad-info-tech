@@ -13,7 +13,7 @@ const ServicesDropdown: React.FC = () => {
         Services
         <ChevronRight className="w-4 h-4 pt-1 transform group-hover:rotate-90 transition-transform" />
       </button>
-        <div className="absolute -left-0 top-full mt-2 w-[600px] bg-white shadow-lg border border-gray-200 rounded-lg p-6 grid grid-cols-2 gap-6 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all transition-200">
+        <div className="absolute -left-0 top-full mt-2 w-[550px] bg-white shadow-lg border border-gray-200 rounded-lg p-6 grid grid-cols-2 gap-6 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all transition-200">
           {/* Social Media */}
           <div>
             <h3 className="font-bold text-gray-700 mb-2">Social Media</h3>
