@@ -9,6 +9,7 @@ import CareersPage from "./pages/Career"
 import DigitalCreatorCourse from "./pages/DigitalCreatorCourse"
 import Blogs from "./pages/Blogs"
 import { Layout } from "./components/Layout"
+import { BlogPostPage } from "./pages/BlogPost"
 // import BlogPost from "./pages/BlogPost"
 
 function App() {
@@ -28,7 +29,7 @@ function App() {
     <Route path="career" element={<CareersPage />} />
     <Route path="course" element={<DigitalCreatorCourse />} />
     <Route path="blog" element={<Blogs />} />
-    {/* <Route path="blo" element={<BlogPost/>}/> */}
+    <Route path="blog/:slug" element={<BlogPostPage/>}/>
   </Route>
 
   {/* Catch-all route */}

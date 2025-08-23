@@ -6,6 +6,7 @@ import IntroSection from "../components/IntroSection";
 import ChatWidget from "../components/ChatWidget";
 import { MessageCircle } from "lucide-react";
 import DigitalCreatorPromoSection from "../components/DigitalCreator";
+import TestimonialsSection from "../components/Testimonials";
 
 export default function Home() {
   // const [showButton, setShowButton] = useState(false);
@@ -32,6 +33,7 @@ export default function Home() {
         <HeroSection />
         <DigitalCreatorPromoSection/>
         <IntroSection />
+        <TestimonialsSection/>
         <FAQSection />
         <ContactSection />
         <button type="button" onClick={openChatbot} className="fixed bottom-24 right-8 z-30 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-300 flex items-center gap-2">

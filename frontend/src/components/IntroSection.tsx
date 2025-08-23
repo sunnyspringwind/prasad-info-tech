@@ -1,16 +1,9 @@
-import AutoScrollSlider from "./AuoScrollSlider"
 import { FaBullhorn, FaSearch, FaFacebookF, FaLaptopCode, FaPalette, FaRegEdit } from 'react-icons/fa';
 
-import bigeducation from "../assets/img/clients/bigeducation.jpg";
-import hamrormade from "../assets/img/clients/hamrormade.jpg";
-import modularkitchen from "../assets/img/clients/modularkitchen.jpg";
-import riseofworld from "../assets/img/clients/riseofworld.jpg";
-import supreme from "../assets/img/clients/supreme.jpg";
+import PartnersSection from "./PartnerList";
 
 
 const IntroSection: React.FC = () => {
-    const partnerList = [bigeducation, hamrormade, modularkitchen, riseofworld, supreme,bigeducation, hamrormade, modularkitchen, riseofworld, supreme];
-
     
 const services = [
   {
@@ -69,8 +62,8 @@ const services = [
       </div>
     </section>
            <div className="p-6">
-      <h1 className=" md:text-4xl mx-auto font-bold mb-4 text-center text-blue-700">Our Clients</h1>
-      <AutoScrollSlider imageUrls={partnerList} speed={40} />
+      {/* <AutoScrollSlider imageUrls={partnerList} speed={40} /> */}
+      <PartnersSection/>
     </div>
         </div>)
 }

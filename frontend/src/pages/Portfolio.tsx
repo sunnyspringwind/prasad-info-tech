@@ -26,7 +26,7 @@ const Portfolio = () => {
       title: "HealthCare Plus",
       category: "Branding & Visuals",
       image:
-        "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        "https://images.unsplash.com/photo-1631507623112-0092cef9c70d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
       href: "/portfolio/healthcare",
     },
     {
@@ -74,7 +74,7 @@ const Portfolio = () => {
       title: "Manufacturing Co.",
       category: "Branding & Visuals",
       image:
-        "https://images.unsplash.com/photo-1565514158740-5d4a6ab14fa3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        "https://images.unsplash.com/photo-1593106410288-caf65eca7c9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
       href: "/portfolio/manufacturing",
     },
   ];
@@ -182,14 +182,14 @@ const Portfolio = () => {
           </div>
 
           {/* Load More Section */}
-          <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 mt-12">
+          {/* <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 mt-12">
             <button className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg">
               Load More Projects
             </button>
             <button className="px-8 py-3 border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105">
               View All Work
             </button>
-          </div>
+          </div> */}
 
           {/* Results Counter */}
           <div className="text-center text-blue-600 font-medium mt-6">
