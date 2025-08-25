@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { X, Send, User } from 'lucide-react'
+import { Send, X, } from 'lucide-react'
 
 interface Message {
   id: number;
@@ -87,9 +87,10 @@ const ChatWidget: React.FC<ChatWidgetProps> = ({ isOpen, onClose }) => {
   const sendBotResponse = (userMessage: string) => {
     const lowerMessage = userMessage.toLowerCase();
     let response = botResponses.default;
-    
-    for (let key in botResponses) {
-      if (lowerMessage.includes(key)) {
+    const splitMsg = lowerMessage.split(" ")
+    for (const key in botResponses) {
+      const keyValues = key.split(" ");
+      if (splitMsg.includes(keyValues[0])) {
         response = botResponses[key];
         break;
       }
@@ -105,6 +106,7 @@ const ChatWidget: React.FC<ChatWidgetProps> = ({ isOpen, onClose }) => {
     setMessages(prev => [...prev, botMessage]);
   };
 
+  // FOR TEXT RESPONSE
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
@@ -123,14 +125,15 @@ const ChatWidget: React.FC<ChatWidgetProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed bottom-4 right-4 z-50 w-full max-w-sm h-[screen] bg-white/95 backdrop-blur-xl rounded-3xl shadow-2xl overflow-hidden border border-white/20 animate-in slide-in-from-bottom-5 duration-500">
+    <div className="fixed bottom-15 right-1  md:right-4 md:bottom-4 z-50 w-full max-w-sm h-[screen] bg-white/95 backdrop-blur-xl rounded-3xl shadow-2xl overflow-hidden border border-white/20 animate-in slide-in-from-bottom-5 duration-500">
       {/* Header */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-5 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent"></div>
         <div className="relative z-10 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center font-bold text-lg">
-           <User/>
+            <div className="w-10 h-10 overflow-hidden rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center font-bold text-lg">
+           {/* <User/> */}
+           <img src='/boticon.webp' className='object-contain scale-110' />
             </div>
             <div>
               <h3 className="font-semibold text-lg">Client Support</h3>

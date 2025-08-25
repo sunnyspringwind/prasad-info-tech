@@ -46,8 +46,8 @@ export default function Home() {
           </button>
         )} */}
 
-        <ChatWidget isOpen={isChatOpen} onClose={() => setIsChatOpen(false)} />
-      </div>
+        <ChatWidget isOpen={isChatOpen} onClose={() => setIsChatOpen(false)} /></div>
+     
     </>
   );
 }

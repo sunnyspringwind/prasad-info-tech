@@ -81,8 +81,8 @@ const ContactPage = () => {
                   <h3 className="font-semibold text-gray-900 mb-1">
                     Phone Number
                   </h3>
-                  <p className="text-gray-600">025-1234567</p>
-                  <p className="text-gray-600">+977-9801234567</p>
+                  {/* <p className="text-gray-600">025-1234567</p> */}
+                  <p className="text-gray-600">+977 986-2282235</p>
                 </div>
               </div>
 
@@ -110,10 +110,10 @@ const ContactPage = () => {
                   <h3 className="font-semibold text-gray-900 mb-1">
                     Office Address
                   </h3>
-                  <p className="text-gray-600">
+                  {/* <p className="text-gray-600">
                     2nd Floor, InfoTech Building, Main Road
-                  </p>
-                  <p className="text-gray-600">Itahari, Sunsari, Nepal</p>
+                  </p> */}
+                  <p className="text-gray-600">Bagbazzar, Kathmandu, Nepal</p>
                 </div>
               </div>
 
@@ -129,7 +129,7 @@ const ContactPage = () => {
                   <p className="text-gray-600">
                     Sunday – Friday: 9:00 AM – 6:00 PM
                   </p>
-                  <p className="text-gray-600">Saturday: 10:00 AM – 4:00 PM</p>
+                  <p className="text-gray-600">Saturday: 10:00 AM – 3:00 PM</p>
                 </div>
               </div>
             </div>
@@ -141,7 +141,7 @@ const ContactPage = () => {
               </h3>
               <div className="flex space-x-4">
                 <a
-                  href="https://www.facebook.com/prasadinfotech"
+                  href="https://www.facebook.com/prasadinfotechnepal"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white hover:bg-blue-700 transform hover:scale-110 transition"

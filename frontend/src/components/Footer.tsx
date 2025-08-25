@@ -108,10 +108,10 @@ const Footer: React.FC = () => {
             <h3 className="text-xl font-semibold md:mb-6">Contact Us</h3>
             <address className="not-italic mb-4 text-blue-200">
               Prasad Info Tech Pvt. Ltd.
+              {/* <br /> */}
+              {/* 2nd Floor, InfoTech Building */}
               <br />
-              2nd Floor, InfoTech Building
-              <br />
-              Kathmandu, Nepal
+              Bagbazar, Kathmandu, Nepal
             </address>
             <div className="flex flex-col gap-2 text-blue-200 mb-4 items-center sm:items-start">
               {/* <a

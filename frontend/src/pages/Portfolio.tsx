@@ -1,82 +1,92 @@
 import { useState } from "react";
 import { ArrowRight } from "lucide-react";
 
+import portfoliosite from "../assets/img/projects/portfoliosite.png";
+import sltradesuppliers from "../assets/img/projects/sltradesuppliers.png";
+import dmarketing1 from "../assets/img/projects/dmarketing1.png";
+import nephub from "../assets/img/projects/nephub.png";
+import frontline from "../assets/img/projects/frontline.png";
+import hamroreadymade from "../assets/img/projects/hamroreadymade.jpg";
+
 const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState("All Projects");
 
   const portfolioItems = [
-    {
-      id: 1,
-      title: "TechCorp Solutions",
-      category: "Web & App Development",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-      href: "/portfolio/techcorp",
-    },
+    // {
+    //   id: 1,
+    //   title: "TechCorp Solutions",
+    //   category: "Web & App Development",
+    //   image:
+    //     "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    //   href: "/portfolio/techcorp",
+    // },
     {
       id: 2,
-      title: "Global Trade Enterprise",
-      category: "Digital Marketing",
+      title: "Ashish Limbu",
+      category: "Web & App Development",
       image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        portfoliosite,
+      projectUrl: "https://ashishlimbu.info.np/",
       href: "/portfolio/global-trade",
     },
     {
       id: 3,
-      title: "HealthCare Plus",
+      title: "Hamro Readymade",
       category: "Branding & Visuals",
+      projectUrl: "https://www.instagram.com/hamro_readymade/",
       image:
-        "https://images.unsplash.com/photo-1631507623112-0092cef9c70d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-      href: "/portfolio/healthcare",
+hamroreadymade,      href: "/portfolio/healthcare",
     },
     {
       id: 4,
-      title: "EduTech Academy",
+      title: "Nepal Knowledge Hub",
       category: "Web & App Development",
+      projectUrl: "https://nephub.netlify.app/",
       image:
-        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-      href: "/portfolio/edutech",
+nephub,      href: "/portfolio/edutech",
     },
     {
       id: 5,
-      title: "Restaurant Chain Pro",
+      title: "Sargram Brass Band Baja",
       category: "Digital Marketing",
+      projectUrl: "https://www.facebook.com/61565420495956/videos/529791592800476",
       image:
-        "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+       dmarketing1,
       href: "/portfolio/restaurant",
     },
-    {
-      id: 6,
-      title: "Financial Services Group",
-      category: "Branding & Visuals",
-      image:
-        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-      href: "/portfolio/financial",
-    },
+    // {
+    //   id: 6,
+    //   title: "Financial Services Group",
+    //   category: "Branding & Visuals",
+    //   image:
+    //     "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    //   href: "/portfolio/financial",
+    // },
     {
       id: 7,
-      title: "Real Estate Ventures",
+      title: "Suvalaxmi Trade Suppliers",
       category: "Web & App Development",
+      projectUrl: "https://www.sltradesuppliers.com.np/",
       image:
-        "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+       sltradesuppliers,
       href: "/portfolio/real-estate",
     },
     {
       id: 8,
-      title: "Fashion Forward",
+      title: "Frontline Recruitment Pvt. Ltd.",
       category: "Digital Marketing",
+      projectUrl: "https://www.facebook.com/profile.php?id=61573850259740",
       image:
-        "https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-      href: "/portfolio/fashion",
+frontline,      href: "/portfolio/fashion",
     },
-    {
-      id: 9,
-      title: "Manufacturing Co.",
-      category: "Branding & Visuals",
-      image:
-        "https://images.unsplash.com/photo-1593106410288-caf65eca7c9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-      href: "/portfolio/manufacturing",
-    },
+    // {
+    //   id: 9,
+    //   title: "Manufacturing Co.",
+    //   category: "Branding & Visuals",
+    //   image:
+    //     "https://images.unsplash.com/photo-1593106410288-caf65eca7c9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    //   href: "/portfolio/manufacturing",
+    // },
   ];
 
   const filterCategories = [
@@ -146,15 +156,19 @@ const Portfolio = () => {
             {filteredItems.map((item) => (
               <div
                 key={item.id}
+              
                 className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden"
               >
                 <div className="relative overflow-hidden">
-                  <img
+                 
+                    <img
                     alt={item.title}
                     className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
                     src={item.image}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                 
+                 
                 </div>
 
                 <div className="p-6">
@@ -168,13 +182,13 @@ const Portfolio = () => {
                   </h4>
 
                   <div className="flex justify-center">
-                    <a
-                      href={item.href}
+                    {item.projectUrl && <a
+                      href={item.projectUrl}
                       className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
                     >
                       View Project
                       <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                    </a>
+                    </a>}
                   </div>
                 </div>
               </div>
