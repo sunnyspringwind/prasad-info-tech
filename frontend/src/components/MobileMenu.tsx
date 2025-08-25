@@ -13,7 +13,7 @@ export const MobileMenu: React.FC = () => {
   const inactiveLink = "text-white hover:bg-blue-600";
 
   return (
-    <section className="sm:hidden fixed bottom-0 left-0 right-0 z-50 bg-blue-900 shadow-lg">
+    <section className="sm:hidden w-full fixed bottom-0 left-0 right-0 z-50 bg-blue-900 shadow-lg">
       {/* Expandable more section */}
       {showMore && (
         <div className="bg-blue-800 border-t border-blue-700">
@@ -67,55 +67,68 @@ export const MobileMenu: React.FC = () => {
       )}
 
       {/* Bottom fixed navigation */}
-      <div id="mobile-menu" className="p-2">
-        <ul className="flex justify-between items-center text-sm">
-          <li>
+ <div id="mobile-menu" className="">
+        <ul className="flex justify-around items-center">
+          <li className="flex-1">
             <NavLink
               to="/"
               className={({ isActive }) =>
-                `${baseLink} ${isActive ? activeLink : inactiveLink}`
+                `flex flex-col items-center justify-center min-h-[60px] px-1 xs:px-2 py-2 rounded-md transition-colors duration-200 ${
+                  isActive ? activeLink : inactiveLink
+                }`
               }
             >
-              <FaHome /> Home
+              <FaHome className="text-base xs:text-lg mb-1" />
+              <span className="text-[10px] leading-tight">Home</span>
             </NavLink>
           </li>
-          <li>
+          <li className="flex-1">
             <NavLink
               to="/course"
               className={({ isActive }) =>
-                `${baseLink} ${isActive ? activeLink : inactiveLink}`
+                `flex flex-col items-center justify-center min-h-[60px] px-1 xs:px-2 py-2 rounded-md transition-colors duration-200 ${
+                  isActive ? activeLink : inactiveLink
+                }`
               }
             >
-              <FaBook /> Course
+              <FaBook className="text-base xs:text-lg mb-1" />
+              <span className="text-[10px] leading-tight">Course</span>
             </NavLink>
           </li>
-          <li>
+          <li className="flex-1">
             <NavLink
               to="/services"
               className={({ isActive }) =>
-                `${baseLink} ${isActive ? activeLink : inactiveLink}`
+                `flex flex-col items-center justify-center min-h-[60px] px-1 xs:px-2 py-2 rounded-md transition-colors duration-200 ${
+                  isActive ? activeLink : inactiveLink
+                }`
               }
             >
-              <FaServicestack /> Services
+              <FaServicestack className="text-base xs:text-lg mb-1" />
+              <span className="text-[10px] leading-tight">Services</span>
             </NavLink>
           </li>
-          <li>
+          <li className="flex-1">
             <NavLink
               to="/contact"
               className={({ isActive }) =>
-                `${baseLink} ${isActive ? activeLink : inactiveLink}`
+                `flex flex-col items-center justify-center min-h-[60px] px-1 xs:px-2 py-2 rounded-md transition-colors duration-200 ${
+                  isActive ? activeLink : inactiveLink
+                }`
               }
             >
-              <FaEnvelope /> Contact
+              <FaEnvelope className="text-base xs:text-lg mb-1" />
+              <span className="text-[10px] leading-tight">Contact</span>
             </NavLink>
           </li>
-          <li>
+          <li className="flex-1">
             <button
-            type="button"
+              type="button"
               onClick={toggleShowMore}
-              className="flex items-center gap-1 px-3 py-2 rounded-md text-white hover:bg-blue-600 transition-colors"
+              className="flex flex-col items-center justify-center min-h-[60px] px-1 xs:px-2 py-2 rounded-md text-white hover:bg-blue-600 transition-colors w-full"
             >
-              <FaBars /> More
+              <FaBars className="text-base xs:text-lg mb-1" />
+              <span className="text-[10px] leading-tight">More</span>
             </button>
           </li>
         </ul>
@@ -123,3 +136,7 @@ export const MobileMenu: React.FC = () => {
     </section>
   );
 };
+
+
+
+
