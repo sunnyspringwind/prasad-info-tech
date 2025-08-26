@@ -7,7 +7,7 @@ import supreme from "../assets/img/clients/supreme.jpg";
 import kalihomedecor from "../assets/img/clients/kalihomedecor.svg"
 import frontline from "../assets/img/clients/frontline.jpg"
 import sargrambrass from "../assets/img/clients/sargambrass.jpg"
-import paceluxury from "../assets/img/clients/paceluxury.png"
+import paceluxury from "../assets/img/clients/paceluxury.webp"
 
 
 interface Partner {

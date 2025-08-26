@@ -11,7 +11,7 @@ import webdev1 from "./../assets/img/webdev.webp";
 import webdev2 from "./../assets/img/webdev2.png";
 // import mbdev1 from "./../assets/img/mobileappdev.webp";
 // import mbdev2 from "./../assets/img/mobile app dev.webp";
-import influence1 from "./../assets/img/influemarketing.png";
+import influence1 from "./../assets/img/influemarketing.webp";
 import influence2 from "./../assets/img/influencermkting.webp";
 // import ppc1 from "./../assets/img/ppc.webp";
 // import ppc2 from "./../assets/img/ppcsteps.webp";

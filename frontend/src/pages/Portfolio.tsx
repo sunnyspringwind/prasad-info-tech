@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { ArrowRight } from "lucide-react";
 
-import portfoliosite from "../assets/img/projects/portfoliosite.png";
-import sltradesuppliers from "../assets/img/projects/sltradesuppliers.png";
-import dmarketing1 from "../assets/img/projects/dmarketing1.png";
-import nephub from "../assets/img/projects/nephub.png";
-import frontline from "../assets/img/projects/frontline.png";
+import portfoliosite from "../assets/img/projects/portfoliosite.webp";
+import sltradesuppliers from "../assets/img/projects/sltradesuppliers.webp";
+import dmarketing1 from "../assets/img/projects/dmarketing1.webp";
+import nephub from "../assets/img/projects/nephub.webp";
+import frontline from "../assets/img/projects/frontline.webp";
 import hamroreadymade from "../assets/img/projects/hamroreadymade.jpg";
 
 const Portfolio = () => {
