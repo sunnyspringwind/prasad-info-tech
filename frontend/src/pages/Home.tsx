@@ -5,8 +5,9 @@ import HeroSection from "../components/HeroSection";
 import IntroSection from "../components/IntroSection";
 import ChatWidget from "../components/ChatWidget";
 import { MessageCircle } from "lucide-react";
-import DigitalCreatorPromoSection from "../components/DigitalCreator";
+// import DigitalCreatorPromoSection from "../components/DigitalCreator";
 import TestimonialsSection from "../components/Testimonials";
+import { CourseSection } from "../components/CourseSection";
 
 export default function Home() {
   // const [showButton, setShowButton] = useState(false);
@@ -31,7 +32,8 @@ export default function Home() {
     <>
       <div className="">
         <HeroSection />
-        <DigitalCreatorPromoSection/>
+        {/* <DigitalCreatorPromoSection/> */}
+        <CourseSection/>
         <IntroSection />
         <TestimonialsSection/>
         <FAQSection />

@@ -142,8 +142,8 @@ const HeroSection: React.FC = () => {
               <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-white rounded-xl rotate-45 shadow-lg animate-pulse"></div>
               <div className="absolute -top-8 -right-8 bg-blue-500/20 backdrop-blur-sm rounded-full p-4 border border-white/30 animate-pulse">
                 <div className="text-yellow-300 font-bold">
-                  <span className="text-2xl">24/7</span>
-                  <div className="text-xs mt-1">Support</div>
+                    <span className="text-2xl font-bold animate-pulse text-yellow-300 drop-shadow-[0_0_5px_rgba(255,255,255,0.7)]">24/7</span>
+                    <div className="text-xs mt-1 text-yellow-300">Support</div>
                 </div>
               </div>
               {/* Central Illustration */}

@@ -10,6 +10,7 @@ import DigitalCreatorCourse from "./pages/DigitalCreatorCourse"
 import Blogs from "./pages/Blogs"
 import { Layout } from "./components/Layout"
 import { BlogPostPage } from "./pages/BlogPost"
+import AIVideoCourse from "./pages/AiVideoCreatorCourse"
 // import BlogPost from "./pages/BlogPost"
 
 function App() {
@@ -27,7 +28,8 @@ function App() {
     <Route path="contact" element={<ContactPage />} />
     <Route path="about" element={<AboutPage />} />
     <Route path="career" element={<CareersPage />} />
-    <Route path="course" element={<DigitalCreatorCourse />} />
+    <Route path="course/digital-creator" element={<DigitalCreatorCourse />} />
+    <Route path="course/ai-video-mastery" element={<AIVideoCourse />} />
     <Route path="blog" element={<Blogs />} />
     <Route path="blog/:slug" element={<BlogPostPage/>}/>
   </Route>
