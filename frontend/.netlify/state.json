@@ -1,0 +1,19 @@
+{
+	"geolocation": {
+		"data": {
+			"city": "Biratnagar",
+			"country": {
+				"code": "NP",
+				"name": "Nepal"
+			},
+			"subdivision": {
+				"code": "P1",
+				"name": "Koshi"
+			},
+			"timezone": "Asia/Kathmandu",
+			"latitude": 26.459,
+			"longitude": 87.2708
+		},
+		"timestamp": 1752999359940
+	}
+}

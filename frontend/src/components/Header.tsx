@@ -282,14 +282,14 @@ const PrasadTechHeader: React.FC = () => {
                     }`}
                   /> */}
                   <div
-                    className={`p-2 pb-4 pt-3 transform-gpu will-change-transform ${
+                    className={`p-2 pb-4 pt-3 transform-gpu will-change-transform hover:text-blue-600  ${
                       scrolled
                         ? "h-19 transition-all duration-500 ease-in-out"
                         : "h-21 transition-all duration-500 ease-in-out"
                     }`}
                   >
-                    <h1 className="text-2xl font-bold ">Prasad Info Tech</h1>
-                    <span className="text-[12px]">
+                    <h1 className="text-2xl font-bold">Prasad Info Tech</h1>
+                    <span className="text-[12px] font-semibold text-gray-700">
                       A PRASAD FOR YOUR BUSINESS SUCCESS
                     </span>
                   </div>
@@ -297,100 +297,120 @@ const PrasadTechHeader: React.FC = () => {
               </div>
 
               {/* Navigation */}
-              <nav className="flex items-center space-x-4 pb-3 text-[15px]">
+              <nav className="flex items-center space-x-1 pb-3 text-[15px]">
                 {/* Home */}
-                <div className="hover:text-blue-600">
+                <div className="relative group">
                   <NavLink
-                    to="/"
-                    className={({ isActive }) =>
-                      `hover:to-blue-600 ${isActive ? "text-blue-600" : ""}`
-                    }
+                  to="/"
+                  className={({ isActive }) =>
+                    `flex items-center hover:bg-blue-50 rounded-md px-3 py-2 transition-all duration-300 ${
+                    isActive ? "text-blue-600" : ""
+                    }`
+                  }
                   >
-                    Home
+                  Home
                   </NavLink>
+                  <div className="absolute left-0 bottom-0 w-full h-0.5 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                 </div>
 
                 {/* Our Services Dropdown */}
-                <div className="relative">
+                <div className="relative group">
                   <NavLink
-                    to="/services"
+                  to="/services"
+                  className={({ isActive }) =>
+                    `flex items-center hover:bg-blue-50 rounded-md px-3 py-2 transition-all duration-300 ${
+                    isActive ? "text-blue-600" : ""
+                    }`
+                  }
+                  > <ServicesDropdown />
+                  </NavLink>
+                  
+                  <div className="absolute left-0 bottom-0 w-full h-0.5 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                </div>
+
+                 {/* Courses */}
+                <div className="relative group">
+                  <NavLink
+                    to="/courses"
                     className={({ isActive }) =>
-                      `hover:to-blue-600 ${isActive ? "text-blue-600" : ""}`
+                      `flex items-center hover:bg-blue-50 rounded-md px-3 py-2 transition-all duration-300 ${
+                        isActive ? "text-blue-600" : ""
+                      }`
                     }
                   >
-                    <ServicesDropdown />
+                    Courses
                   </NavLink>
+                  <div className="absolute left-0 bottom-0 w-full h-0.5 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                 </div>
 
                 {/* Portfolio */}
                 <div className="relative group">
                   <NavLink
-                    to="/portfolio"
-                    className={({ isActive }) =>
-                      `flex items-center space-x-1 hover:text-blue-600 transition-colors ${
-                        isActive ? "text-blue-600" : ""
-                      }`
-                    }
+                  to="/portfolio"
+                  className={({ isActive }) =>
+                    `flex items-center hover:bg-blue-50 rounded-md px-3 py-2 transition-all duration-300 ${
+                    isActive ? "text-blue-600" : ""
+                    }`
+                  }
                   >
-                    Portfolio
+                  Portfolio
                   </NavLink>
+                  <div className="absolute left-0 bottom-0 w-full h-0.5 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                 </div>
 
                 {/* Blog Dropdown */}
-                  <div className="relative group">
+                <div className="relative group">
                   <NavLink
-                    to="/blog"
-                    className={({ isActive }) =>
-                      `flex items-center space-x-1 hover:text-blue-600 transition-colors ${
-                        isActive ? "text-blue-600" : ""
-                      }`
-                    }
+                  to="/blog"
+                  className={({ isActive }) =>
+                    `flex items-center hover:bg-blue-50 rounded-md px-3 py-2 transition-all duration-300 ${
+                    isActive ? "text-blue-600" : ""
+                    }`
+                  }
                   >
-                    Blog
+                  Blog
                   </NavLink>
+                  <div className="absolute left-0 bottom-0 w-full h-0.5 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                 </div>
-               
 
                 {/* About Us Dropdown */}
                 <div className="relative group">
-                  <button className="flex items-center space-x-1 hover:text-blue-600 transition-colors">
-                    <span>Company</span>
-                    <ChevronRight className="w-4 h-4 pt-1 transform group-hover:rotate-90 transition-transform" />
+                  <button className="flex items-center hover:bg-blue-50 rounded-md px-3 py-2 transition-all duration-300">
+                  <span>Company</span>
+                  <ChevronRight className="w-4 h-4 pt-1 transform group-hover:rotate-90 transition-transform" />
                   </button>
+                  <div className="absolute left-0 bottom-0 w-full h-0.5 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                   <div className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                    <div className="py-2">
-                      <NavLink
-                        to="/about"
-                        className="block px-4 py-2 hover:bg-gray-100 hover:text-blue-600 transition-colors"
-                      >
-                        About
-                      </NavLink>
-                      <NavLink
-                        to="/career"
-                        className="block px-4 py-2 hover:bg-gray-100 hover:text-blue-600 transition-colors"
-                      >
-                        Career
-                      </NavLink>
-                    </div>
+                  <div className="py-2">
+                    <NavLink
+                    to="/about"
+                    className="block px-4 py-2 hover:bg-gray-100 hover:text-blue-600 transition-colors"
+                    >
+                    About
+                    </NavLink>
+                    <NavLink
+                    to="/career"
+                    className="block px-4 py-2 hover:bg-gray-100 hover:text-blue-600 transition-colors"
+                    >
+                    Career
+                    </NavLink>
+                  </div>
                   </div>
                 </div>
 
                 {/* Contact Us */}
-                <div className="flex items-center space-x-1 hover:text-blue-600 transition-colors">
-                  {/* <button
-                    onClick={() => goToSection("contact")}
-                    className=" hover:text-blue-600"
-                  >
-                    Contact
-                  </button> */}
+                <div className="relative group">
                   <NavLink
                     to="/contact"
                     className={({ isActive }) =>
-                      `hover:to-blue-600 ${isActive ? "text-blue-600" : ""}`
+                      `flex items-center hover:bg-blue-50 rounded-md px-3 py-2 transition-all duration-300 ${
+                        isActive ? "text-blue-600" : ""
+                      }`
                     }
                   >
                     Contact
                   </NavLink>
+                  <div className="absolute left-0 bottom-0 w-full h-0.5 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                 </div>
 
                 {/* Contact Info */}

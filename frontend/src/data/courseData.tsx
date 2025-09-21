@@ -1,11 +1,14 @@
 import { FaClock, FaUsers, FaCertificate, FaTools } from "react-icons/fa";
 import type { Course } from "../components/CoursePromoTemplete";
+import type { CourseCardProps } from "../components/CourseCard";
+import aivideocreator from "../assets/img/courses/aivideocreator.webp"
+import digitalcreator from "../assets/img/courses/digitalcreator.webp"
 
 export const courses: Course[] = [
   {
     title: (
       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-white mb-6">
-        <span className="text-white">१५ दिनमा बन्नुहोस्</span><br />
+        <span className="text-white">15 दिनमा बन्नुहोस्</span><br />
         <span className="bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
           Digital Creator
         </span><br />
@@ -21,8 +24,8 @@ export const courses: Course[] = [
     courseHighlights: [
       {
         icon: <FaClock className="w-6 h-6" />,
-        title: "१५ दिन मात्र",
-        description: "दैनिक १ घण्टा अभ्यास",
+        title: "15 दिन मात्र",
+        description: "दैनिक 1 घण्टा अभ्यास",
         color: "from-red-500 to-pink-500"
       },
       {
@@ -48,7 +51,7 @@ export const courses: Course[] = [
       {
         name: "सुनिता श्रेष्ठ",
         role: "गृहिणी, काठमाडौं",
-        text: "१५ दिनमै YouTube मा आफ्नो पहिलो भिडियो अपलोड गरें। अब घरबाटै कमाउने सपना देख्दैछु!",
+        text: "15 दिनमै YouTube मा आफ्नो पहिलो भिडियो अपलोड गरें। अब घरबाटै कमाउने सपना देख्दैछु!",
         rating: 5,
         image: "https://www.lensnepal.com/files/profiles/sunita-thakur.jpg"
       },
@@ -74,14 +77,14 @@ export const courses: Course[] = [
     },
     cta: {
       text: "कोर्स विवरण हेर्नुहोस्",
-      link: "/course/digital-creator",
+      link: "/courses/digital-creator",
         phone: "+977 986-2282235"
     }
   },
   {
     title: (
       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-white mb-6">
-        <span className="text-white">६ दिनमै बन्नुहोस्</span><br />
+        <span className="text-white">6 दिनमै बन्नुहोस्</span><br />
         <span className="bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
           AI Video Creator
         </span><br />
@@ -92,14 +95,14 @@ export const courses: Course[] = [
       <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
         🎬 <span className="font-semibold text-white">From Zero to Pro</span> — 
         AI-powered video ads, branding, editing & freelancing सिक्नुहोस्।
-        <span className="font-semibold text-white"> ६ दिनमै आफ्नो करियर सुरु गर्नुहोस्!</span>
+        <span className="font-semibold text-white"> 6 दिनमै आफ्नो करियर सुरु गर्नुहोस्!</span>
       </p>
     ),
     courseHighlights: [
       {
         icon: <FaClock className="w-6 h-6" />,
-        title: "६ दिन मात्र",
-        description: "दैनिक १.५ घण्टा Live Class + Projects",
+        title: "6 दिन मात्र",
+        description: "दैनिक 1.5 घण्टा Live Class + Projects",
         color: "from-red-500 to-pink-500"
       },
       {
@@ -134,7 +137,7 @@ export const courses: Course[] = [
         role: "Freelancer",
         rating: 5,
         image: "https://randomuser.me/api/portraits/women/65.jpg",
-        text: "यो ६ दिनको कोर्स लिएपछि मैले Fiverr मा आफ्नो पहिलो AI Video Ad Service सुरु गरेकी छु।"
+        text: "यो 6 दिनको कोर्स लिएपछि मैले Fiverr मा आफ्नो पहिलो AI Video Ad Service सुरु गरेकी छु।"
       },
       {
         name: "Dipesh Tamang",
@@ -158,8 +161,53 @@ export const courses: Course[] = [
     },
     cta: {
       text: "कोर्स विवरण हेर्नुहोस्",
-      link: "/course/ai-video-mastery",
+      link: "/courses/ai-video-mastery",
       phone: "+977 986-2282235"
     }
   }
 ];
+
+
+
+// course overview card data
+export const courseOverview: CourseCardProps[] = [
+  {
+  title: "15 दिनमा बन्नुहोस् Digital Creator मोबाइलबाटै!",
+  instructor: "Prakash Sharma",
+  level: "Beginner",
+  duration: "15 days (1 hr/day)",
+  students: 128,
+  originalPrice: 9999,
+  discount: 50,
+  technologies: ["Facebook", "Instagram", "YouTube", "Canva", "CapCut"],
+  highlights: [
+    "15 दिन मात्र — दैनिक 1 घण्टा अभ्यास",
+    "सबैका लागि — कुनै अनुभव चाहिँदैन",
+    "Certificate — प्रमाणित योग्यता सहित"
+  ],
+  category: "Digital Media",
+  imageUrl: digitalcreator,
+  courseLink: "/courses/digital-creator"
+}
+,
+{
+  title: "6 दिनमै बन्नुहोस् AI Video Creator VOE 3, Canva & CapCut संग",
+  instructor: "Sujata Koirala",
+  level: "Intermediate",
+  duration: "6 days (1.5 hrs/day)",
+  students: 8,
+  originalPrice: 10999,
+  discount: 37,
+  technologies: ["VOE 3", "Canva Pro", "CapCut Pro", "ChatGPT"],
+  highlights: [
+    "6 दिन मात्र — दैनिक 1.5 घण्टा Live Class + Projects",
+    "Premium Tools — VOE 3, Canva Pro, CapCut Pro, ChatGPT",
+    "सबैका लागि — Students, Freelancers, Social Media Managers, Housewives",
+    "Certificate — Completion प्रमाणपत्र सहित"
+  ],
+  category: "AI & Video",
+  imageUrl: aivideocreator,
+  courseLink: "/courses/ai-video-mastery"
+}
+
+]

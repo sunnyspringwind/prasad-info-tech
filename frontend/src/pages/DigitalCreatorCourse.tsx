@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
-import { Camera, Video, Users, Award, Clock, MapPin, Phone, Mail, Globe, Star, CheckCircle, PlayCircle, Smartphone, Laptop, Wifi } from 'lucide-react';
-
+import { useNavigate } from 'react-router-dom';
+import { Camera, Video, Users, Award, Clock, Phone, Star, CheckCircle, PlayCircle, Smartphone, Laptop, Wifi } from 'lucide-react';
+import { courseOverview } from '../data/courseData';
 import internet from "../assets/img/digtel/internet.png";
 import laptop from "../assets/img/digtel/laptop.png";
 import mobile from "../assets/img/digtel/mobile.webp";
@@ -14,11 +15,52 @@ interface ModuleExpansionState {
 }
 
 const DigitalCreatorCourse = () => {
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('course');
   const [isVisible, setIsVisible] = useState(false);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [_enrollCount, setEnrollCount] = useState(127);
   const [expandedModules, setExpandedModules] = useState<ModuleExpansionState>({});
+  const {originalPrice, discount = 0} = courseOverview[0];
+   const discountedPrice =   Math.round(originalPrice * (1 - discount / 100))
+  // Enrollment form state
+  const [formData, setFormData] = useState({
+    studentName: '',
+    email: '',
+    phone: '',
+    preferredMode: ''
+  });
+  const [loading, setLoading] = useState(false);
+
+  // Handle enrollment form submission
+  const handleEnrollment = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      // Store enrollment data
+      const enrollmentData = {
+        ...formData,
+        course: 'Digital Creator Course',
+        price: discountedPrice,
+        duration: '15 days',
+        experience: "beginner",
+        
+        originalPrice: originalPrice,
+        discount: discount,
+        timestamp: new Date().toISOString()
+      };
+
+      localStorage.setItem('enrollmentData', JSON.stringify(enrollmentData));
+      
+      // Navigate to payment page
+      navigate('/payment-confirmation');
+    } catch (error) {
+      console.error('Enrollment error:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   useEffect(() => {
     setIsVisible(true);
@@ -302,7 +344,7 @@ const DigitalCreatorCourse = () => {
               { id: 'course', label: 'कोर्स विवरण' },
               { id: 'curriculum', label: 'पाठ्यक्रम' },
               { id: 'benefits', label: 'फाइदाहरू' },
-              { id: 'contact', label: 'सम्पर्क' }
+              { id: 'enroll', label: 'नामांकन गर्नुहोस्' }
             ].map((tab) => (
               <button
                 key={tab.id}
@@ -639,64 +681,109 @@ const DigitalCreatorCourse = () => {
             </div>
           )}
 
-          {/* Contact */}
-          {activeTab === 'contact' && (
+          {/* Enrollment */}
+          {activeTab === 'enroll' && (
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 animate-fadeIn">
               <div className="bg-white rounded-xl p-8 shadow-lg">
-                <h3 className="text-2xl font-bold mb-6 text-blue-600">सम्पर्क जानकारी</h3>
+                <h3 className="text-2xl font-bold mb-6 text-blue-600">Course Enrollment</h3>
                 <div className="space-y-6">
-                  <div className="flex items-center space-x-4">
-                    <MapPin className="w-6 h-6 text-blue-600" />
-                    <div>
-                      <p className="font-semibold">Prasad Info Tech</p>
-                      <p className="text-gray-600">Kathmandu, Nepal</p>
+                  <div className="bg-blue-50 p-6 rounded-lg">
+                    <h4 className="font-bold text-blue-800 mb-2">Professional Digital Creator Course</h4>
+                     <div className="bg-gradient-to-r from-green-50 to-green-100 p-6 rounded-lg border border-green-200">
+                    <h4 className="font-bold text-green-800 mb-4">Pricing Details</h4>
+                    <div className="space-y-2">
+                      <div className="flex justify-between items-center">
+                        <span className="text-gray-600">Original Price:</span>
+                        <span className="text-gray-500 line-through">{originalPrice}</span>
+                      </div>
+                     <div className="flex justify-between items-center">
+                        <span className="text-gray-600">Discount ({discount}):</span>
+                        <span className="text-green-600 font-semibold">{discountedPrice}</span>
+                      </div>
+                      <div className="border-t border-green-300 pt-2">
+                        <div className="flex justify-between items-center">
+                          <span className="text-lg font-bold text-gray-800">Final Price:</span>
+                          <span className="text-2xl font-bold text-green-600">₹{originalPrice-discountedPrice}</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <div className="flex items-center space-x-4">
-                    <Phone className="w-6 h-6 text-blue-600" />
-                    <div>
-                      <p className="font-semibold">+977 986-2282235</p>
-                      <p className="text-gray-600">अफरको लागि सम्पर्क गर्नुहोस्</p>
+                  </div>
+                  
+                  <div className="space-y-4">
+                    <div className="flex items-start space-x-3">
+                      <CheckCircle className="w-5 h-5 text-green-500 mt-0.5" />
+                      <span className="text-sm">12 Weeks Comprehensive Training</span>
                     </div>
-                  </div>
-                  <div className="flex items-center space-x-4">
-                    <Globe className="w-6 h-6 text-blue-600" />
-                    <p className="text-blue-600">prasadinfotech.netlify.app</p>
-                  </div>
-                  <div className="flex items-center space-x-4">
-                    <Mail className="w-6 h-6 text-blue-600" />
-                    <p className="text-blue-600">prasadinfotechinquiry@gmail.com</p>
+                    <div className="flex items-start space-x-3">
+                      <CheckCircle className="w-5 h-5 text-green-500 mt-0.5" />
+                      <span className="text-sm">Professional Portfolio Development</span>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <CheckCircle className="w-5 h-5 text-green-500 mt-0.5" />
+                      <span className="text-sm">Industry Tools & Software Access</span>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <CheckCircle className="w-5 h-5 text-green-500 mt-0.5" />
+                      <span className="text-sm">Certificate of Completion</span>
+                    </div>
                   </div>
                 </div>
               </div>
 
               <div className="bg-white rounded-xl p-8 shadow-lg">
-                <h3 className="text-2xl font-bold mb-6 text-blue-600">Quick Inquiry</h3>
-                <div className="space-y-4">
+                <h3 className="text-2xl font-bold mb-6 text-blue-600">नामांकन गर्नुहोस्</h3>
+                <form onSubmit={handleEnrollment} className="space-y-4">
                   <input
                     type="text"
-                    placeholder="तपाईंको नाम"
+                    placeholder="तपाईंको पूरा नाम"
+                    value={formData.studentName}
+                    onChange={(e) => setFormData({...formData, studentName: e.target.value})}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    required
+                  />
+                  <input
+                    type="email"
+                    placeholder="Email Address"
+                    value={formData.email}
+                    onChange={(e) => setFormData({...formData, email: e.target.value})}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    required
                   />
                   <input
                     type="tel"
                     placeholder="फोन नम्बर"
+                    value={formData.phone}
+                    onChange={(e) => setFormData({...formData, phone: e.target.value})}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    required
                   />
-                  <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                    <option>In-person (Itahari)</option>
-                    <option>Online (Zoom)</option>
-                  </select>
-                  <textarea
-                    placeholder="तपाईंको प्रश्न वा टिप्पणी"
-                    rows={4}
+                  <select 
+                    value={formData.preferredMode}
+                    onChange={(e) => setFormData({...formData, preferredMode: e.target.value})}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  />
-                  <button
-                    className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                    required
                   >
-                    Message पठाउनुहोस्
+                    <option value="">Class Mode Select गर्नुहोस्</option>
+                    <option value="online">Online (Zoom)</option>
+                    <option value="in-person">In-person (Itahari)</option>
+                  </select>
+                  <button
+                    type="submit"
+                    disabled={loading}
+                    className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-4 rounded-lg font-bold hover:from-blue-700 hover:to-blue-800 transition-all duration-200 shadow-lg disabled:opacity-50"
+                  >
+                    {loading ? 'Processing...' : `Enroll Now - Rs. ${discountedPrice}`}
                   </button>
+                </form>
+                
+                <div className="mt-6 text-center">
+                  <p className="text-sm text-gray-600 mb-2">Secure Payment Options Available</p>
+                  <div className="flex justify-center space-x-4 text-xs text-gray-500">
+                    <span>💳 Bank Transfer</span>
+                    <span>📱 Mobile Banking</span>
+                    <span>💰 eSewa</span>
+                  </div>
                 </div>
               </div>
             </div>

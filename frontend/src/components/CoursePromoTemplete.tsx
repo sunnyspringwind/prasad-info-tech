@@ -151,16 +151,16 @@ return (
         {/* Stats */}
         {course.stats && (
           <div className="grid grid-cols-3 gap-4">
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center border border-white/20 hover:bg-white/20 transition-all">
-              <div className="text-3xl font-bold text-yellow-400 mb-2">{course.stats.students ?? 0}</div>
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl py-6 sm:p-6 text-center border border-white/20 hover:bg-white/20 transition-all">
+              <div className="text-xl sm:text-3xl font-bold text-yellow-400 mb-2">{course.stats.students ?? 0}</div>
               <div className="text-blue-200 text-sm">Students</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center border border-white/20 hover:bg-white/20 transition-all">
-              <div className="text-3xl font-bold text-green-400 mb-2">{course.stats.rating ?? 4.9}</div>
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl py-6 sm:p-6 text-center border border-white/20 hover:bg-white/20 transition-all">
+              <div className="text-xl sm:text-3xl font-bold text-green-400 mb-2">{course.stats.rating ?? 4.9}</div>
               <div className="text-blue-200 text-sm">Rating</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center border border-white/20 hover:bg-white/20 transition-all">
-              <div className="text-3xl font-bold text-purple-400 mb-2">{course.stats.successRate ?? "100%"}</div>
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl py-6 sm:p-6 text-center border border-white/20 hover:bg-white/20 transition-all">
+              <div className="text-xl sm:text-3xl font-bold text-purple-400 mb-2">{course.stats.successRate ?? "100%"}</div>
               <div className="text-blue-200 text-sm">Success</div>
             </div>
           </div>

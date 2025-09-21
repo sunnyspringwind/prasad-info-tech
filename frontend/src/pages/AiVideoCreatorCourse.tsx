@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Camera, Video, Award, Clock, CheckCircle, PlayCircle, Smartphone, Laptop, Wifi, Mail, Phone, MapPin, Globe, Star } from 'lucide-react';
-
+import { Camera, Video, Award, Clock, CheckCircle, PlayCircle, Smartphone, Laptop, Wifi, Phone, Star } from 'lucide-react';
+import { courseOverview } from '../data/courseData';
 // import internet from "../assets/img/digtel/internet.png";
 // import laptop from "../assets/img/digtel/laptop.png";
 // import mobile from "../assets/img/digtel/mobile.webp";
@@ -17,6 +17,9 @@ const AIVideoCourse = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [_enrollCount, setEnrollCount] = useState(127);
   const [expandedModules, setExpandedModules] = useState<ModuleExpansionState>({});
+                    const {originalPrice, discount = 0} = courseOverview[1];
+                 const discountedPrice =   Math.round(originalPrice * (1 - discount / 100))
+
 
   useEffect(() => {
     setIsVisible(true);
@@ -169,7 +172,7 @@ const AIVideoCourse = () => {
               { id: 'course', label: 'Course Details' },
               { id: 'curriculum', label: 'Curriculum' },
               { id: 'benefits', label: 'Outcomes' },
-              { id: 'contact', label: 'Contact' }
+              { id: 'enroll', label: 'Enroll Now' }
             ].map(tab => (
               <button
                 key={tab.id}
@@ -217,19 +220,46 @@ const AIVideoCourse = () => {
               <h3 className="text-3xl font-bold text-center text-blue-600 mb-6">6-Day Curriculum</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {courseModules.map((module) => (
-                  <div key={module.day} className="bg-white p-6 rounded-xl shadow-lg cursor-pointer" onClick={() => toggleModule(module.day)}>
-                    <div className="flex justify-between items-center mb-3">
-                      <h4 className="font-bold text-gray-800">{module.title}</h4>
-                      <div className={`transform transition-transform ${expandedModules[module.day] ? 'rotate-180' : ''}`}>
-                        <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                        </svg>
+                  <div key={module.day} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer" onClick={() => toggleModule(module.day)}>
+                    {/* Day Indicator Header */}
+                    <div className="bg-gradient-to-r from-blue-600 to-blue-500 text-white p-4">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center space-x-3">
+                          <div className="bg-white/20 rounded-full p-2">
+                            <span className="text-lg font-bold">Day {module.day}</span>
+                          </div>
+                          <div className="text-white/90">
+                            {module.icon}
+                          </div>
+                        </div>
+                        <div className={`transform transition-transform ${expandedModules[module.day] ? 'rotate-180' : ''}`}>
+                          <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </div>
                       </div>
                     </div>
-                    <div className={`transition-all overflow-hidden ${expandedModules[module.day] ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
-                      <ul className="list-disc pl-5 text-gray-700">
-                        {module.subtopics.map((sub, idx) => <li key={idx}>{sub}</li>)}
-                      </ul>
+                    
+                    {/* Module Content */}
+                    <div className="p-6">
+                      <h4 className="font-bold text-gray-800 mb-3 text-lg">{module.title}</h4>
+                      <div className={`transition-all overflow-hidden ${expandedModules[module.day] ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+                        <ul className="space-y-2 text-gray-700">
+                          {module.subtopics.map((sub, idx) => (
+                            <li key={idx} className="flex items-start space-x-2">
+                              <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                              <span className="text-sm leading-relaxed">{sub}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      
+                      {/* Collapse indicator when closed */}
+                      {!expandedModules[module.day] && (
+                        <div className="mt-3 text-blue-600 text-sm font-medium">
+                          Click to view topics →
+                        </div>
+                      )}
                     </div>
                   </div>
                 ))}
@@ -253,30 +283,178 @@ const AIVideoCourse = () => {
             </div>
           )}
 
-          {/* Contact */}
-          {activeTab === 'contact' && (
+          {/* Enroll Now */}
+          {activeTab === 'enroll' && (
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 animate-fadeIn">
-              <div className="bg-white rounded-xl p-8 shadow-lg">
-                <h3 className="text-2xl font-bold mb-6 text-blue-600">Contact Information</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-4"><MapPin className="w-6 h-6 text-blue-600" /><span>Kathmandu, Nepal</span></div>
-                  <div className="flex items-center space-x-4"><Phone className="w-6 h-6 text-blue-600" /><span>+977 986-2282235</span></div>
-                  <div className="flex items-center space-x-4"><Mail className="w-6 h-6 text-blue-600" /><span>prasadinfotechinquiry@gmail.com</span></div>
-                  <div className="flex items-center space-x-4"><Globe className="w-6 h-6 text-blue-600" /><span>prasadinfotech.netlify.app</span></div>
+              {/* Enrollment Form */}
+              <div className="bg-white rounded-xl p-8 shadow-lg order-2 lg:order-1">
+                <div className="text-center mb-8">
+                  <div className="bg-blue-100 p-4 rounded-full w-20 h-20 mx-auto mb-4">
+                    <Award className="w-12 h-12 text-blue-600 mx-auto" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-blue-600 mb-2">Enroll in AI Video Creator Course</h3>
+                  <p className="text-gray-600">Fill out the form to secure your spot in our 6-day intensive program</p>
                 </div>
+
+                <form className="space-y-6" onSubmit={(e) => {
+                  e.preventDefault();
+                  // Redirect to payment page with course details
+                  const formData = new FormData(e.target as HTMLFormElement);
+                  const enrollmentData = {
+                    course: 'AI Video Creator',
+                    price: (discount ? discountedPrice : originalPrice),
+                    originalPrice: originalPrice,
+                    duration: '6 days',
+                    studentName: formData.get('studentName'),
+                    email: formData.get('email'),
+                    phone: formData.get('phone'),
+                    enrollmentDate: new Date().toISOString()
+                  };
+                  
+                  // Store enrollment data and redirect to payment
+                  localStorage.setItem('enrollmentData', JSON.stringify(enrollmentData));
+                  window.location.href = '/payment-confirmation';
+                }}>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-semibold text-gray-700 mb-2">Full Name *</label>
+                      <input
+                        type="text"
+                        name="studentName"
+                        required
+                        placeholder="Enter your full name"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-semibold text-gray-700 mb-2">Email Address *</label>
+                      <input
+                        type="email"
+                        name="email"
+                        required
+                        placeholder="your.email@example.com"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">Phone Number *</label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      required
+                      placeholder="+977 98X-XXXXXXX"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">Course Type</label>
+                    <div className="grid grid-cols-2 gap-4">
+                      <label className="flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-blue-300 transition-colors">
+                        <input type="radio" name="preferredMode" value="online" className="text-blue-600" required />
+                        <div className="ml-3">
+                          <div className="font-semibold text-gray-700">Online</div>                        </div>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                    <div className="flex items-center space-x-2 mb-2">
+                      <CheckCircle className="w-5 h-5 text-blue-600" />
+                      <span className="font-semibold text-blue-800">Course Guarantee</span>
+                    </div>
+                    <p className="text-sm text-blue-700">
+                      30-day support after course completion • Certificate included • Practical skills-focused curriculum
+                    </p>
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white py-4 px-6 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                  >
+                    Proceed to Payment →
+                  </button>
+                </form>
               </div>
 
-              <div className="bg-white rounded-xl p-8 shadow-lg">
-                <h3 className="text-2xl font-bold mb-6 text-blue-600">Quick Inquiry</h3>
-                <div className="space-y-4">
-                  <input type="text" placeholder="Your Name" className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500" />
-                  <input type="tel" placeholder="Phone Number" className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500" />
-                  <select className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500">
-                    <option>In-person</option>
-                    <option>Online</option>
-                  </select>
-                  <textarea placeholder="Your Question or Comment" rows={4} className="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500" />
-                  <button className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700">Send Message</button>
+              {/* Course Summary */}
+              <div className="bg-gradient-to-br from-blue-50 to-white rounded-xl p-8 shadow-lg border border-blue-100 order-1 lg:order-2">
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-gray-800 mb-2">Course Summary</h3>
+                  <div className="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
+                </div>
+
+                <div className="space-y-6">
+                  <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                    <h4 className="font-bold text-gray-800 mb-4 flex items-center">
+                      <Video className="w-5 h-5 text-blue-600 mr-2" />
+                      AI Video Creator Bootcamp
+                    </h4>
+                    <div className="grid grid-cols-2 gap-4 text-sm">
+                      <div>
+                        <span className="text-gray-500">Duration:</span>
+                        <div className="font-semibold text-gray-800">6 Days Intensive</div>
+                      </div>
+                      <div>
+                        <span className="text-gray-500">Daily Time:</span>
+                        <div className="font-semibold text-gray-800">1.5 hours</div>
+                      </div>
+                      <div>
+                        <span className="text-gray-500">Level:</span>
+                        <div className="font-semibold text-gray-800">Beginner to Pro</div>
+                      </div>
+                      <div>
+                        <span className="text-gray-500">Certificate:</span>
+                        <div className="font-semibold text-gray-800">Included</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-gradient-to-r from-green-50 to-green-100 p-6 rounded-lg border border-green-200">
+                    <h4 className="font-bold text-green-800 mb-4">Pricing Details</h4>
+                    <div className="space-y-2">
+                      <div className="flex justify-between items-center">
+                        <span className="text-gray-600">Original Price:</span>
+                        <span className="text-gray-500 line-through">{originalPrice}</span>
+                      </div>
+                     <div className="flex justify-between items-center">
+                        <span className="text-gray-600">Discount ({discount}):</span>
+                        <span className="text-green-600 font-semibold">{discountedPrice}</span>
+                      </div>
+                      <div className="border-t border-green-300 pt-2">
+                        <div className="flex justify-between items-center">
+                          <span className="text-lg font-bold text-gray-800">Final Price:</span>
+                          <span className="text-2xl font-bold text-green-600">₹{originalPrice-discountedPrice}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                    <h4 className="font-bold text-gray-800 mb-4">What's Included</h4>
+                    <div className="space-y-3">
+                      {[
+                        'VOE 3 Premium access guide',
+                        'Canva Pro techniques',
+                        'CapCut advanced editing',
+                        'ChatGPT prompt engineering',
+                        'Portfolio building session',
+                        'Monetization strategies'
+                      ].map((item, idx) => (
+                        <div key={idx} className="flex items-center space-x-3">
+                          <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                          <span className="text-sm text-gray-700">{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="bg-blue-600 p-6 rounded-lg text-white text-center">
+                    <h4 className="font-bold mb-2">Limited Time Offer</h4>
+                    <p className="text-sm text-blue-100">Only 8 seats available for this batch!</p>
+                  </div>
                 </div>
               </div>
             </div>

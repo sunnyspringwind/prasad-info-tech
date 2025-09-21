@@ -11,6 +11,8 @@ import Blogs from "./pages/Blogs"
 import { Layout } from "./components/Layout"
 import { BlogPostPage } from "./pages/BlogPost"
 import AIVideoCourse from "./pages/AiVideoCreatorCourse"
+import { CoursesPage } from "./pages/Course"
+import PaymentConfirmation from "./pages/PaymentConfirmation"
 // import BlogPost from "./pages/BlogPost"
 
 function App() {
@@ -28,10 +30,13 @@ function App() {
     <Route path="contact" element={<ContactPage />} />
     <Route path="about" element={<AboutPage />} />
     <Route path="career" element={<CareersPage />} />
-    <Route path="course/digital-creator" element={<DigitalCreatorCourse />} />
-    <Route path="course/ai-video-mastery" element={<AIVideoCourse />} />
+    <Route path="courses" element={<CoursesPage/>}/>
+    <Route path="courses/digital-creator" element={<DigitalCreatorCourse />} />
+    <Route path="courses/ai-video-mastery" element={<AIVideoCourse />} />
     <Route path="blog" element={<Blogs />} />
+    <Route path="/payment-confirmation" element={<PaymentConfirmation />} />
     <Route path="blog/:slug" element={<BlogPostPage/>}/>
+
   </Route>
 
   {/* Catch-all route */}

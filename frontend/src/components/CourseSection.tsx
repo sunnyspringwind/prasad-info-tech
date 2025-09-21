@@ -6,7 +6,7 @@ import CoursePromoTemplete, { type Course } from "./CoursePromoTemplete";
 
 export const CourseSection: React.FC = () => {
   const [currentCourse, setCurrentCourse] = useState<Course>(courses[0]);
-  const [isSelected, setIsSelected] = useState(0 | 1);
+  const [isSelected, setIsSelected] = useState(0);
 
   const toggleCourseFlags = (idx: number) => {
     setCurrentCourse(courses[idx]);
