@@ -12,9 +12,7 @@ interface EnrollmentData {
   email: string;
   phone: string;
   experience: string;
-  goals: string;
   preferredMode: string;
-  enrollmentDate: string;
 }
 
 const PaymentConfirmation = () => {
@@ -112,7 +110,6 @@ const PaymentConfirmation = () => {
         discount: Math.round(((enrollmentData.originalPrice - enrollmentData.price) / enrollmentData.originalPrice) * 100),
         duration: enrollmentData.duration,
         timestamp: new Date().toISOString(),
-        paymentProof: paymentProof
       };
 
       // Send email via Netlify function

@@ -173,7 +173,7 @@ export const courses: Course[] = [
 export const courseOverview: CourseCardProps[] = [
   {
   title: "15 दिनमा बन्नुहोस् Digital Creator मोबाइलबाटै!",
-  instructor: "Prakash Sharma",
+  instructor: "Pawan Dhakal",
   level: "Beginner",
   duration: "15 days (1 hr/day)",
   students: 128,
@@ -192,7 +192,7 @@ export const courseOverview: CourseCardProps[] = [
 ,
 {
   title: "6 दिनमै बन्नुहोस् AI Video Creator VOE 3, Canva & CapCut संग",
-  instructor: "Sujata Koirala",
+  instructor: "Pawan Dhakal",
   level: "Intermediate",
   duration: "6 days (1.5 hrs/day)",
   students: 8,

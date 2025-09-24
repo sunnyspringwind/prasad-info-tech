@@ -139,6 +139,18 @@ const PrasadTechHeader: React.FC = () => {
                   </div>
                 )}
               </div>
+              {/* Courses */}
+                <div className=" hover:text-blue-600 py-2">
+                {" "}
+                <NavLink
+                  to="/courses"
+                  className={({ isActive }) =>
+                    `hover:to-blue-600 ${isActive ? "text-blue-600" : ""}`
+                  }
+                >
+                  Courses
+                </NavLink>
+              </div>
 
               <div className=" hover:text-blue-600 py-2">
                 {" "}

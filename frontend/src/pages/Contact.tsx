@@ -9,6 +9,7 @@ import {
   FaTwitter,
   FaLinkedinIn,
 } from "react-icons/fa";
+import Toast from "../components/Toast";
 
 
 const ContactPage = () => {
@@ -18,6 +19,12 @@ const ContactPage = () => {
     email: "",
     phone: "",
     message: "",
+  });
+
+  const [toast, setToast] = useState({
+    show: false,
+    message: "",
+    type: "success" as "success" | "error"
   });
 
   const handleInputChange = (
@@ -30,19 +37,50 @@ const ContactPage = () => {
     }));
   };
 
-  const handleSubmit = () => {
-    console.log("Form submitted:", formData);
-    setFormData({
+  const isValidData: () => string | true = () => {
+    const entries = Object.entries(formData);
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const emptyFields = entries.filter(([_, value]) => value.trim()=== "").map(([key])=> key);
+    return (emptyFields.length > 0) ? `${emptyFields[0]} cannot be empty.` : true
+    }
+
+  const handleSubmit = async () => {
+    try {
+      const validation = isValidData()
+    if (typeof validation === "string")
+      return setToast({show: true, message: validation, type: "error"})
+      const res = await fetch("/.netlify/functions/sendEmail", {
+        method: "POST",
+        headers: {
+          'Content-Type': "application/json"
+        },
+           body: JSON.stringify(formData),
+      });
+
+      if (res.ok)
+        setFormData({
       firstName: "",
       lastName: "",
       email: "",
       phone: "",
       message: "",
     });
+        return setToast({show: true, message: "Got your message we will reach you soon.", type: "success"})
+    } catch (error: unknown) {
+      if(error instanceof Error)
+        console.log(error)
+    }
   };
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Toast Notification */}
+      <Toast
+        show={toast.show}
+        message={toast.message}
+        type={toast.type}
+        onClose={() => setToast({ show: false, message: '', type: 'success' })}
+      />
       <div className="max-w-7xl mx-auto px-4 py-16">
         {/* Header */}
         <div className="text-center mb-16">

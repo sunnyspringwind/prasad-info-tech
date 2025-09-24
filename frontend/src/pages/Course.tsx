@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 import CourseCard from "../components/CourseCard"
 import { courseOverview } from "../data/courseData"
 
@@ -55,7 +55,9 @@ export const CoursesPage: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
                     {courseOverview.map((course, idx) => (
                         <div key={idx} className="h-full">
+                            <Link to={course.courseLink}>
                             <CourseCard {...course} />
+                            </Link>
                         </div>
                     ))}
                 </div>

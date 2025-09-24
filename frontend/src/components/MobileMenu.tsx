@@ -84,7 +84,7 @@ export const MobileMenu: React.FC = () => {
           </li>
           <li className="flex-1">
             <NavLink
-              to="/course"
+              to="/courses"
               className={({ isActive }) =>
                 `flex flex-col items-center justify-center min-h-[60px] px-1 xs:px-2 py-2 rounded-md transition-colors duration-200 ${
                   isActive ? activeLink : inactiveLink

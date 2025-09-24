@@ -15,6 +15,7 @@ interface ModuleExpansionState {
 const AIVideoCourse = () => {
   const [activeTab, setActiveTab] = useState('course');
   const [isVisible, setIsVisible] = useState(false);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [_enrollCount, setEnrollCount] = useState(127);
   const [expandedModules, setExpandedModules] = useState<ModuleExpansionState>({});
                     const {originalPrice, discount = 0} = courseOverview[1];
@@ -377,6 +378,10 @@ const AIVideoCourse = () => {
                     Proceed to Payment →
                   </button>
                 </form>
+                 <div className="col-span-full bg-yellow-50 p-6 rounded-xl border-2 border-dashed border-yellow-400 text-gray-700 mt-6">
+                <h4 className="font-bold mb-2">Terms & Conditions</h4>
+                <p>Practical skills will be taught, but income is not guaranteed. Student effort, practice, and marketing determine success. Fees are non-refundable once course starts.</p>
+              </div>
               </div>
 
               {/* Course Summary */}
@@ -457,9 +462,11 @@ const AIVideoCourse = () => {
                   </div>
                 </div>
               </div>
+              
             </div>
           )}
         </div>
+        
       </div>
 
       {/* CTA Footer */}

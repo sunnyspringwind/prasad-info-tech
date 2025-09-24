@@ -38,7 +38,7 @@ const handler = async (event: NetlifyEvent): Promise<NetlifyResponse> => {
   }
   try {
     const enrollmentData = JSON.parse(event.body);
-    
+    const contactData = JSON.parse(event.body);
     // Destructure the enrollment data
     const {
       studentName,
@@ -52,8 +52,9 @@ const handler = async (event: NetlifyEvent): Promise<NetlifyResponse> => {
       discount,
       duration,
       timestamp,
-      paymentProof
     } = enrollmentData;
+
+    const { firstName, lastName, message } = contactData;
 
     const oauth2Client = new google.auth.OAuth2(
       process.env.GOOGLE_CLIENT_ID!,
@@ -63,6 +64,17 @@ const handler = async (event: NetlifyEvent): Promise<NetlifyResponse> => {
 
     oauth2Client.setCredentials({
       refresh_token: process.env.GOOGLE_REFRESH_TOKEN,
+    });
+
+    // Enable automatic token refresh
+    oauth2Client.on("tokens", (tokens) => {
+      if (tokens.refresh_token) {
+        // Store the new refresh token if provided
+        console.log("New refresh token received");
+      }
+      if (tokens.access_token) {
+        console.log("New access token received");
+      }
     });
 
     const accessToken = await oauth2Client.getAccessToken();
@@ -80,15 +92,15 @@ const handler = async (event: NetlifyEvent): Promise<NetlifyResponse> => {
     } as SMTPTransport.Options);
 
     // Format the enrollment date
-    const enrollmentDate = new Date(timestamp).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit'
+    const enrollmentDate = new Date(timestamp).toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
     });
 
-    const mailOptions = {
+    const enrollMailOptions = {
       from: process.env.USER_MAIL,
       to: process.env.USER_MAIL,
       replyTo: email,
@@ -253,11 +265,15 @@ const handler = async (event: NetlifyEvent): Promise<NetlifyResponse> => {
                 </div>
                 <div class="info-item">
                   <div class="info-label">Preferred Mode</div>
-                  <div class="info-value">${preferredMode === 'online' ? '💻 Online (Zoom)' : '🏢 In-Person (Itahari)'}</div>
+                  <div class="info-value">${
+                    preferredMode === "online"
+                      ? "💻 Online (Zoom)"
+                      : "🏢 In-Person (Itahari)"
+                  }</div>
                 </div>
                 <div class="info-item">
                   <div class="info-label">Experience Level</div>
-                  <div class="info-value">${experience || 'Not specified'}</div>
+                  <div class="info-value">${experience || "Not specified"}</div>
                 </div>
                 <div class="info-item">
                   <div class="info-label">Enrollment Date</div>
@@ -299,7 +315,7 @@ const handler = async (event: NetlifyEvent): Promise<NetlifyResponse> => {
             <div class="payment-status">
               <strong>⏳ Payment Verification Pending</strong>
               <div style="margin-top: 8px; font-size: 14px;">
-                ${paymentProof ? 'Payment proof uploaded and will be verified within 24 hours.' : 'Awaiting payment proof submission.'}
+                Payment proof uploaded and will be verified within 24 hours.
               </div>
             </div>
 
@@ -328,8 +344,25 @@ const handler = async (event: NetlifyEvent): Promise<NetlifyResponse> => {
       `,
     };
 
+    const contactMailOptions = {
+      from: process.env.USER_MAIL,
+      to: process.env.USER_MAIL,
+      replyTo: email,
+      subject: `🎓 New Course Enrollment: ${course} - ${studentName}`,
+      html: `
+<p><strong>Name:</strong> ${firstName} ${lastName}</p>
+<p><strong>Email:</strong> ${email}</p>
+<p><strong>Phone:</strong> ${phone}</p>
+<p><strong>Message:</strong><br/>${message}</p>
+  `,
+    };
+
     // Send admin notification email
-    await transporter.sendMail(mailOptions);
+
+  if (!message && !lastName && !firstName)
+    await transporter.sendMail(enrollMailOptions);
+  else
+    await transporter.sendMail(contactMailOptions);
 
     // Send confirmation email to student
     // const studentMailOptions = {
@@ -450,7 +483,7 @@ const handler = async (event: NetlifyEvent): Promise<NetlifyResponse> => {
     //         <div class="welcome-message">
     //           <h2 style="margin: 0 0 10px 0; color: #059669;">Dear ${studentName},</h2>
     //           <p style="margin: 0; font-size: 16px;">
-    //             Thank you for enrolling in our <strong>${course}</strong>! 
+    //             Thank you for enrolling in our <strong>${course}</strong>!
     //             We're excited to have you join our learning community.
     //           </p>
     //         </div>
@@ -527,19 +560,24 @@ const handler = async (event: NetlifyEvent): Promise<NetlifyResponse> => {
 
     // await transporter.sendMail(studentMailOptions);
     const jres = jsonResponse(
-      { 
-        success: true, 
-        message: "Enrollment verification sent successfully! We'll confirm your registration shortly." 
+      {
+        success: true,
+        message:
+          "Enrollment verification sent successfully! We'll confirm your registration shortly.",
       },
       200
     );
     return jres;
   } catch (error) {
     console.error("Error sending enrollment emails:", error);
-    return jsonResponse({ 
-      success: false, 
-      error: "Failed to send enrollment emails. Please try again or contact support." 
-    }, 400);
+    return jsonResponse(
+      {
+        success: false,
+        error:
+          "Failed to send enrollment emails. Please try again or contact support.",
+      },
+      400
+    );
   }
 };
 
