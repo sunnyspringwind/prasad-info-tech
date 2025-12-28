@@ -29,7 +29,7 @@ export const AchievementsCarousel: React.FC<AchievementsCarouselProps> = ({
             Our Achievements
           </h2>
           <p className="text-gray-600 mt-3 max-w-2xl mx-auto">
-            Highlights from our journey of growth, innovation, and excellence.
+             Milestones that reflect our commitment to innovation, growth, and meaningful impact to society.
           </p>
         </header>
 
