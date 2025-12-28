@@ -1,6 +1,7 @@
 import { FaBullseye, FaHandshake, FaLightbulb, FaRocket } from "react-icons/fa";
 import ceoImage from "../assets/img/ceo.webp";
 import TeamMemberCard from "../components/TeamMemberCard";
+import AchievementSection2 from "../components/AcheivementsSection2";
 
 const AboutPage = () => {
   return (
@@ -124,22 +125,37 @@ const AboutPage = () => {
             <TeamMemberCard
               image={ceoImage}
               name="Pawan Dhakal"
-              position="CEO & Founder"
+              position="CEO & Founder of Prasad Info Tech"
             />
             <TeamMemberCard
               image= "https://scontent.fbir1-1.fna.fbcdn.net/v/t1.6435-9/80548014_167433181306854_7620389086917820416_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeGTsE_v6smi0kRCdg7u2KGe2IiuSPmGHdLYiK5I-YYd0no15m9SDg53s2qBYvclxkDzwIfat7Qym9_ov28f9seV&_nc_ohc=ghh4ujWYJsQQ7kNvwHp2YtW&_nc_oc=AdlBPGVH3brg2orEf4lMWfR50xyZ2lLSVlDBQlvYDJ0Se-N4iX2X17Ft2udfzkcxfxuSeiLWKSEHHk4XK0R5KphJ&_nc_zt=23&_nc_ht=scontent.fbir1-1.fna&_nc_gid=wmp-NZVQimtM77lz3SShng&oh=00_AfnrC7KDdRn8ZtTXH2OtWUgLd3CTia5Q6-xCkOsx7Av10A&oe=6978386C"
               name="Ocean Poudel"
-              position="Marketing Head"
+              position="Marketing Head of Prasad Info Tech"
             />
-            {/* <TeamMemberCard
-              image="https://plus.unsplash.com/premium_photo-1668896122554-2a4456667f65?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cmFuZG9tJTIwZ2lybHxlbnwwfHwwfHx8MA%3D%3D"
-              name="Aleesa Pradhan"
-              position="UI/UX Designer"
-            /> */}
+            <TeamMemberCard
+              image="/sista.webp"
+              name="Ankita Dhakal"
+              position="Social Media Handler of Prasad Info Tech"
+            />
+             <TeamMemberCard
+              image="/shakya.webp"
+              name="Nasala Shakya"
+              position="Graphic Designer of Prasad Info Tech"
+            />
+                <TeamMemberCard
+              image="/bro.webp"
+              name="Abhishek Dhakal"
+              position="Drone Operator of Prasad Info Tech"
+            />
+            <TeamMemberCard
+              image="/nisha.webp"
+              name="Nisha Bhattrai"
+              position="Graphic Design Intern of Prasad Info Tech"
+            />
             <TeamMemberCard
               image="https://scontent.fbir1-1.fna.fbcdn.net/v/t1.6435-9/153847965_1317329248667718_7227303938825811602_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeGYLQ43KQms-tT2Simk4w6YKHbRGQ2EEH0odtEZDYQQfUNTzZtJn3nxb6yujQLIuN9lTWD8qo044Ngawe6Og009&_nc_ohc=hkrG2o3vk8oQ7kNvwEUzIYj&_nc_oc=AdmlkeiADE1wY8W1500MacSZGNvejDk8aL_4olpIf4HtlbkcO9OE-OR2aSXQqER5_MvPBVzbklzRHcJQT5_tLOpa&_nc_zt=23&_nc_ht=scontent.fbir1-1.fna&_nc_gid=sq7J9CZ3HqKimzxH60kGAw&oh=00_AfmPPH0YWEMHg4dr0PEd8lzGvJMiwuyzIMajfViFETOC6w&oe=69781FA7"
               name="Ashish Limbu"
-              position="Full-Stack Intern"
+              position="Full-Stack Intern of Prasad Info Tech"
             />
           </div>
         </section>
@@ -214,6 +230,9 @@ const AboutPage = () => {
               </p>
             </div>
           </div>
+        </section>
+        <section>
+          <AchievementSection2/>
         </section>
 
         {/* CTA */}
