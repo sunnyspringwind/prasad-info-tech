@@ -1,5 +1,6 @@
 import { FaBullseye, FaHandshake, FaLightbulb, FaRocket } from "react-icons/fa";
 import ceoImage from "../assets/img/ceo.webp";
+import TeamMemberCard from "../components/TeamMemberCard";
 
 const AboutPage = () => {
   return (
@@ -23,17 +24,19 @@ const AboutPage = () => {
                   <h2 className="text-2xl font-bold text-blue-900 mb-6">
                     About Our CEO
                   </h2>
-  <div className="lg:w-1/2 block lg:hidden">
-              <img
-                src={ceoImage}
-                alt="CEO of Prasad Info Tech"
-                className="rounded-full w-64 h-64 mx-auto object-cover shadow-lg border-4 border-blue-100"
-              />
-              <div className="text-center mt-4">
-                <h3 className="font-semibold text-xl">Pawan Dhakal</h3>
-                <p className="text-gray-600">Founder & Software Developer</p>
-              </div>
-            </div>
+                  <div className="lg:w-1/2 block lg:hidden">
+                    <img
+                      src={ceoImage}
+                      alt="CEO of Prasad Info Tech"
+                      className="rounded-full w-64 h-64 mx-auto object-cover shadow-lg border-4 border-blue-100"
+                    />
+                    <div className="text-center mt-4">
+                      <h3 className="font-semibold text-xl">Pawan Dhakal</h3>
+                      <p className="text-gray-600">
+                        Founder & Software Developer
+                      </p>
+                    </div>
+                  </div>
                   <p className="text-gray-700 leading-relaxed mb-4">
                     At the helm of Prasad Info Tech is{" "}
                     <span className="font-semibold">Mr.Pawan Dhakal</span>, a
@@ -112,6 +115,31 @@ const AboutPage = () => {
               src="https://www.anshikamedia.com/wp-content/uploads/2023/12/our-team.png"
               alt="Our Team"
               className="w-full h-full object-cover"
+            />
+          </div>
+        </section>
+        <section className="py-16 px-4 lg:px-20">
+          <h2 className="text-3xl font-semibold mb-8">Our Team</h2>
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <TeamMemberCard
+              image={ceoImage}
+              name="Pawan Dhakal"
+              position="CEO & Founder"
+            />
+            <TeamMemberCard
+              image= "https://scontent.fbir1-1.fna.fbcdn.net/v/t1.6435-9/80548014_167433181306854_7620389086917820416_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeGTsE_v6smi0kRCdg7u2KGe2IiuSPmGHdLYiK5I-YYd0no15m9SDg53s2qBYvclxkDzwIfat7Qym9_ov28f9seV&_nc_ohc=ghh4ujWYJsQQ7kNvwHp2YtW&_nc_oc=AdlBPGVH3brg2orEf4lMWfR50xyZ2lLSVlDBQlvYDJ0Se-N4iX2X17Ft2udfzkcxfxuSeiLWKSEHHk4XK0R5KphJ&_nc_zt=23&_nc_ht=scontent.fbir1-1.fna&_nc_gid=wmp-NZVQimtM77lz3SShng&oh=00_AfnrC7KDdRn8ZtTXH2OtWUgLd3CTia5Q6-xCkOsx7Av10A&oe=6978386C"
+              name="Ocean Poudel"
+              position="Marketing Head"
+            />
+            <TeamMemberCard
+              image="https://plus.unsplash.com/premium_photo-1668896122554-2a4456667f65?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cmFuZG9tJTIwZ2lybHxlbnwwfHwwfHx8MA%3D%3D"
+              name="Aleesa Pradhan"
+              position="UI/UX Designer"
+            />
+            <TeamMemberCard
+              image="https://scontent.fbir1-1.fna.fbcdn.net/v/t1.6435-9/153847965_1317329248667718_7227303938825811602_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeGYLQ43KQms-tT2Simk4w6YKHbRGQ2EEH0odtEZDYQQfUNTzZtJn3nxb6yujQLIuN9lTWD8qo044Ngawe6Og009&_nc_ohc=hkrG2o3vk8oQ7kNvwEUzIYj&_nc_oc=AdmlkeiADE1wY8W1500MacSZGNvejDk8aL_4olpIf4HtlbkcO9OE-OR2aSXQqER5_MvPBVzbklzRHcJQT5_tLOpa&_nc_zt=23&_nc_ht=scontent.fbir1-1.fna&_nc_gid=sq7J9CZ3HqKimzxH60kGAw&oh=00_AfmPPH0YWEMHg4dr0PEd8lzGvJMiwuyzIMajfViFETOC6w&oe=69781FA7"
+              name="Ashish Limbu"
+              position="Full-Stack Intern"
             />
           </div>
         </section>
