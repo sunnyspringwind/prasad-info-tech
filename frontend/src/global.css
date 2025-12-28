@@ -43,6 +43,7 @@
 
   /* blog page css */
 .blog-section { margin-bottom: 1.75rem; line-height: 1.7; }
+.blog-section h2 {font: bold; color: yellow; font-weight: 800; background: #000; border-radius:20%; text-align: center;}
 .blog-image-wrapper { margin: 1rem 0; text-align: center; }
 .blog-image { max-width: 100%; border-radius: 12px; }
 .cta-box { padding: 1rem; border-radius: 12px; background: #f5f7ff; }

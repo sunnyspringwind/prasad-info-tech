@@ -24,11 +24,12 @@ export const blogData: BlogPost[] = [
     author: "Prasad Info Tech",
     readTime: "6 min read",
     content: `
+    <div class="blog-section intro">
       <h2>Why Facebook Boosting Matters</h2>
       <p>Is your business not growing as expected? Are you struggling to attract new customers, increase sales, or build your brand presence online?</p>
       <p>At Prasad Info Tech, we specialize in Facebook Ads & Boosting to help your business gain visibility on the platforms where your customers spend the most time — Facebook & Instagram.</p>
-
-      <h3>Why Facebook Boosting with Us?</h3>
+      <br>
+      <h2>Why Facebook Boosting with Us?</h2>
       <ul>
         <li>80% of people in Nepal use Facebook/Instagram actively</li>
         <li>Your customers are already scrolling — we help your business appear to them</li>
@@ -36,6 +37,7 @@ export const blogData: BlogPost[] = [
         <li>No fake likes or risky shortcuts</li>
         <li>Tailored strategies for your business goals</li>
       </ul>
+      </div>
 
       <h3>Who Can Benefit?</h3>
       <p>We support a wide range of businesses including:</p>
@@ -80,7 +82,7 @@ export const blogData: BlogPost[] = [
     author: "Prasad Info Tech",
     readTime: "8 min read",
     content: `
-      <div class="intro-section">
+      <div class="blog-section">
         <h2>🌐 Why SEO is Critical for Nepali Businesses</h2>
         <p>With over 18 million internet users in Nepal and 95% of them using Google for searches, SEO isn't optional—it's essential. Local businesses that rank on the first page of Google receive 67% more clicks than those on page two.</p>
         
@@ -300,7 +302,7 @@ export const blogData: BlogPost[] = [
     readTime: "7 min read",
     content: `
 
-      <div class="intro-section">
+      <div class="blog-section">
         <h2>🌟 The Design Revolution in Nepal</h2>
         <p>Nepal's design landscape is experiencing unprecedented growth. With 73% of consumers making purchase decisions based on visual appeal alone, graphic design has become the cornerstone of successful branding. From traditional businesses in Asan Bazaar to tech startups in Lazimpat, everyone is embracing cutting-edge design trends.</p>
         
@@ -587,7 +589,7 @@ export const blogData: BlogPost[] = [
     content: `
     
 
-      <div class="intro-section">
+      <div class="blog-section">
         <h2>🚀 The Digital Revolution in Nepal</h2>
         <p>Nepal's business landscape is rapidly digitizing. Companies that embrace smart software investments are outperforming competitors by 3:1 margin. With the government's Digital Nepal Framework and increasingheader">
         <h1>🎯 Complete SEO Guide for Nepali Businesses: 10 Proven Strategies for 2025</h1>
@@ -815,8 +817,8 @@ export const blogData: BlogPost[] = [
     author: "Prasad Info Tech",
     readTime: "7 min read",
     content: `
-      <div class="blog-header">
-        <h1>🎨 2025 Graphic Design Revolution: Trends Transforming Nepali Brands</h1>
+      <div class="blog-section">
+        <h2>🎨 2025 Graphic Design Revolution: Trends Transforming Nepali Brands</h2>
         <div class="meta-info">
           <span>📅 August 18, 2025</span> • <span>👤 Prasad Info Tech</span> • <span>⏱️ 7 min read</span>
         </div>
