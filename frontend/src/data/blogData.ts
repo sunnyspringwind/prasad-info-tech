@@ -279,9 +279,9 @@ export const blogData: BlogPost[] = [
           <h3>🚀 Ready to Boost Your Rankings?</h3>
           <p>Contact Prasad Info Tech for professional SEO services tailored for Nepali businesses. We've helped over 100+ local businesses increase their online visibility by 300%.</p>
           <ul>
-            <li>📞 <strong>Call:</strong> +977-XXXX-XXXX</li>
+            <li>📞 <strong>Call:</strong> +977-9862282235</li>
             <li>📧 <strong>Email:</strong> info@prasadinfotech.com</li>
-            <li>🌐 <strong>Website:</strong> www.prasadinfotech.com</li>
+            <li>🌐 <strong>Website:</strong> www.prasadinfotech.com.np</li>
           </ul>
         </div>
       </div>
@@ -575,7 +575,7 @@ export const blogData: BlogPost[] = [
   },
 
    {
-    id: 5,
+    id: 4,
     slug: "software-investment-guide",
     title: "💡 Smart Software Investment Strategy for Nepali Businesses: ROI-Driven Digital Transformation Guide",
     excerpt: "Discover how strategic software investments can boost productivity by 40%, reduce costs by 30%, and accelerate growth for Nepali businesses. Complete guide with ROI calculations and implementation roadmap.",
@@ -795,9 +795,9 @@ export const blogData: BlogPost[] = [
           <h3>🚀 Ready to Boost Your Rankings?</h3>
           <p>Contact Prasad Info Tech for professional SEO services tailored for Nepali businesses. We've helped over 100+ local businesses increase their online visibility by 300%.</p>
           <ul>
-            <li>📞 <strong>Call:</strong> +977-XXXX-XXXX</li>
+            <li>📞 <strong>Call:</strong> +977-9862282235</li>
             <li>📧 <strong>Email:</strong> info@prasadinfotech.com</li>
-            <li>🌐 <strong>Website:</strong> www.prasadinfotech.com</li>
+            <li>🌐 <strong>Website:</strong> www.prasadinfotech.com.np</li>
           </ul>
         </div>
       </div>
@@ -805,7 +805,7 @@ export const blogData: BlogPost[] = [
   },
 
   {
-    id: 3,
+    id: 5,
     slug: "graphic-design-trends",
     title: "🎨 2025 Graphic Design Revolution: Trends Transforming Nepali Brands",
     excerpt: "From AI-powered design tools to bold Nepali typography fusion - discover the cutting-edge design trends that are reshaping brand identity across Nepal in 2025.",
@@ -1087,9 +1087,9 @@ export const blogData: BlogPost[] = [
           
           <div class="contact-info">
             <ul>
-              <li>📞 <strong>Call:</strong> +977-XXXX-XXXX</li>
+              <li>📞 <strong>Call:</strong> +977-9862282235</li>
               <li>📧 <strong>Email:</strong> design@prasadinfotech.com</li>
-              <li>🌐 <strong>Portfolio:</strong> www.prasadinfotech.com/portfolio</li>
+              <li>🌐 <strong>Portfolio:</strong> www.prasadinfotech.com.np/portfolio</li>
               <li>💬 <strong>WhatsApp:</strong> Quick consultation available</li>
             </ul>
           </div>
@@ -1097,6 +1097,453 @@ export const blogData: BlogPost[] = [
       </div>
     `
   },
+
+  {
+  id: 6,
+  slug: "digital-marketing-nepal-2025",
+  title: "Why Every Business in Nepal Needs Digital Marketing in 2025",
+  excerpt: "Digital marketing has become essential for Nepali businesses in 2025. Learn how online marketing helps brands reach more customers, increase sales, and grow faster with measurable results.",
+  imageUrl: "/digimarketing.webp",
+  category: "Digital Marketing",
+  date: "November 28, 2025",
+  author: "Prasad Info Tech",
+  readTime: "6 min read",
+  content: `
+  <div class="blog-section intro" style="margin-bottom: 2rem; line-height: 1.7;">
+  <h2>🚀 Why Every Business in Nepal Needs Digital Marketing in 2025</h2>
+  <p>
+    In today’s digital world, having an online presence is no longer optional for businesses in Nepal. Digital marketing helps businesses reach the right audience, generate quality leads, and increase sales at a lower cost compared to traditional marketing methods.
+  </p>
+
+  <figure style="margin: 1rem 0; text-align: center;">
+    <img 
+      src="https://scontent.fbir1-1.fna.fbcdn.net/v/t39.30808-6/473648532_122159146472322904_3476967913277409489_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHcO_dbtN2VisLA1VS_OOIKtx7MhSV8KVy3HsyFJXwpXFz_yyYGcvPSY24l7qKVt_BxRH1MLAmYvaIAWewZtUbX&_nc_ohc=xc-KNRFGjbUQ7kNvwGLB2Ab&_nc_oc=AdmADzDw9f0g-FNu40WtphKqgkT8eRNt4relOuPliMoDoDKiSo31nz2a4qz6ZB75x3YP8h3nMwHSm1DK0SkkxbIP&_nc_zt=23&_nc_ht=scontent.fbir1-1.fna&_nc_gid=3ulK0ehqHI7GC5SD8OBESQ&oh=00_AfkFvgsBklsDfj95l18o_KywbVHJi63EWyUQw26PZZ9rMw&oe=69568F57 " 
+      alt="Digital marketing dashboard" 
+      style="max-width: 100%; border-radius: 12px;"
+    />
+    <figcaption>Digital marketing dashboard example</figcaption>
+  </figure>
+</div>
+
+<div class="blog-section company" style="margin-bottom: 2rem;">
+  <h3>🏢 About Prasad Info Tech – Your Trusted Digital Marketing Partner</h3>
+  <p>
+    <strong>Prasad Info Tech</strong> is a government-registered IT and digital marketing company in Nepal providing professional marketing solutions for small, medium, and large businesses.
+  </p>
+  <p>
+    Whether you need <strong>Facebook boosting, social media promotions, or a complete digital growth strategy</strong>, our team helps your brand grow faster and reach the right customers.
+  </p>
+  <p>
+    📌 Connect with us on Facebook: 
+    <a href="https://www.facebook.com/prasadinfotechnepal" target="_blank" rel="noopener noreferrer">
+      Prasad Info Tech Nepal
+    </a>
+  </p>
+</div>
+
+<div class="blog-section services" style="margin-bottom: 2rem;">
+  <h3>🎯 Digital Marketing Services That Help Your Business Grow</h3>
+  <p>With modern digital tools and advertising platforms, businesses in Nepal can target customers based on:</p>
+  <ul>
+    <li>📍 Location</li>
+    <li>👥 Age group</li>
+    <li>💡 Interests & behavior</li>
+    <li>📱 Device & platform usage</li>
+  </ul>
+
+  <p>Our core services include:</p>
+  <ul>
+    <li>📘 Social Media Marketing</li>
+    <li>📢 Facebook & Instagram Ads</li>
+    <li>🎥 Video Marketing & Brand Promotion</li>
+    <li>🌐 Website Design & Development</li>
+  </ul>
+</div>
+
+<div class="blog-section benefits" style="margin-bottom: 2rem;">
+  <h3>📊 Measurable & Transparent Marketing Results</h3>
+  <p>Unlike traditional marketing, digital marketing provides real-time performance insights. You can track:</p>
+  <ul>
+    <li>🖱️ Clicks & website visits</li>
+    <li>📩 Leads & inquiries</li>
+    <li>💰 Sales & conversions</li>
+    <li>📈 Engagement & reach</li>
+  </ul>
+  <p>This makes online marketing <strong>more efficient, transparent, and ROI-driven</strong>.</p>
+</div>
+
+<div class="blog-section conclusion" style="margin-bottom: 2rem;">
+  <h3>🌟 Digital Marketing — The Smartest Investment for Nepali Businesses</h3>
+  <p>
+    If you want to grow your business in Nepal in 2025, digital marketing is one of the smartest long-term investments you can make. It helps build your brand, increase visibility, and attract customers who are actively searching for your products and services.
+  </p>
+
+  <div class="cta-box" style="padding: 1rem; background-color: #f5f7ff; border-radius: 12px; margin-top: 1rem;">
+    <h4>🚀 Grow Your Business with Prasad Info Tech</h4>
+    <p>Get in touch with us for professional and result-driven digital marketing solutions.</p>
+    <ul>
+      <li>
+        📘 <strong>Facebook:</strong>
+        <a href="https://www.facebook.com/prasadinfotechnepal" target="_blank" rel="noopener noreferrer">
+          Prasad Info Tech Nepal
+        </a>
+      </li>
+      <li>
+        🌐 <strong>Website:</strong>
+        <a href="https://prasadinfotech.com.np" target="_blank" rel="noopener noreferrer">
+          prasadinfotech.com.np
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="blog-section keywords" style="margin-bottom: 2rem;">
+  <h4>🔎 SEO Keywords</h4>
+  <p>
+    <em>Digital Marketing Company in Nepal, Online Marketing Services Nepal, Business Promotion Nepal, IT Company in Nepal</em>
+  </p>
+</div>
+
+`
+},
+{
+  id: 7,
+  slug: "facebook-boosting-ads-nepal-2025",
+  title: "Facebook Boosting & Ads: The Best Way to Grow Your Business in Nepal",
+  excerpt: "Facebook boosting and ads are the most powerful ways for Nepali businesses to reach customers, increase engagement, and generate leads in 2025. Learn how Facebook ads help brands grow faster with targeted campaigns.",
+  imageUrl: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=2400&q=80",
+  category: "Digital Marketing",
+  date: "August 28, 2025",
+  author: "Prasad Info Tech",
+  readTime: "6 min read",
+  content: `
+   <div class="blog-section intro" style="margin-bottom: 2rem; line-height: 1.7;">
+  <h2>📢 Facebook Boosting & Ads: The Best Way to Grow Your Business in Nepal</h2>
+  <p>
+    Facebook is one of the most powerful digital marketing platforms in Nepal. With millions of active users across the country, 
+    <strong>Facebook boosting and ads</strong> help businesses reach potential customers quickly, increase brand visibility, and generate real leads.
+  </p>
+</div>
+
+<div class="blog-section services" style="margin-bottom: 2rem;">
+  <h3>🎯 Professional Facebook Boosting Services in Nepal</h3>
+  <p>
+    At <strong>Prasad Info Tech</strong>, we provide professional 
+    <strong>Facebook boosting and advertising services in Nepal</strong> for businesses that want measurable and result-driven growth.
+  </p>
+  <p>Our Facebook ads allow you to target the right audience based on:</p>
+  <ul>
+    <li>📍 Location & city</li>
+    <li>👥 Age group & demographics</li>
+    <li>💡 Interests & behavior</li>
+    <li>🛍️ Buying intent & activity</li>
+  </ul>
+
+  <p>
+    Connect with us on Facebook: 
+    <a href="https://www.facebook.com/prasadinfotechnepal" target="_blank" rel="noopener noreferrer">
+      Prasad Info Tech Nepal
+    </a>
+  </p>
+
+  <figure style="margin: 1rem 0; text-align: center;">
+    <img 
+      src="https://scontent.fbir1-1.fna.fbcdn.net/v/t39.30808-6/600352056_122204223602322904_5460812269415382193_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEuoUqxhUusroX-8_bQM_PYqr9pNYlwQQSqv2k1iXBBBO8D_iNZQgmBWQ4024P0YkR4cksfm6TX8J2Tnwue7rNB&_nc_ohc=LdvmguwGCNMQ7kNvwHlTLV5&_nc_oc=AdnRNbOI5c_GTZHok48GbV07ilNgbIdd4Yuq6cz5XjtZf1N3DD3Vl1F6UxUzmw5ZCgaJ1LfeC1PDAdp1zXBWSWEw&_nc_zt=23&_nc_ht=scontent.fbir1-1.fna&_nc_gid=xLhktdyWnrQLhBM5hjAdrA&oh=00_Afn3fJwEzQp7k0qKbBugorcBjcn4NPg8_RGYIc82nIjiCA&oe=695698AB" 
+      alt="Business owner checking engagement and ad metrics" 
+      style="max-width: 100%; border-radius: 12px;"
+    />
+    <figcaption>Checking engagement and ad metrics online</figcaption>
+  </figure>
+</div>
+
+<div class="blog-section benefits" style="margin-bottom: 2rem;">
+  <h3>🚀 Why Facebook Ads Are Effective for Nepali Businesses</h3>
+  <p>
+    Whether your goal is to increase brand awareness or drive conversions, Facebook ads deliver fast and scalable results. They are:
+  </p>
+  <ul>
+    <li>💰 Cost-effective compared to traditional marketing</li>
+    <li>📈 Result-focused with measurable performance</li>
+    <li>🎨 Engaging with creative visuals and messages</li>
+    <li>🎯 Highly targeted for the right audience</li>
+  </ul>
+  <p>
+    Our expert team creates <strong>engaging ad content</strong>, designs high-quality creatives, sets up audience targeting, and manages campaigns for <strong>maximum ROI</strong>.
+  </p>
+</div>
+
+<div class="blog-section usecases" style="margin-bottom: 2rem;">
+  <h3>📌 Who Should Use Facebook Boosting?</h3>
+  <p>Facebook boosting is ideal for businesses and organizations such as:</p>
+  <ul>
+    <li>🏪 Local businesses & shops</li>
+    <li>🛒 Online stores & eCommerce</li>
+    <li>🏫 Educational institutes</li>
+    <li>🏠 Real estate & service providers</li>
+  </ul>
+
+  <figure style="margin: 1rem 0; text-align: center;">
+    <img 
+      src="https://scontent.fbir1-1.fna.fbcdn.net/v/t39.30808-6/473648532_122159146472322904_3476967913277409489_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHcO_dbtN2VisLA1VS_OOIKtx7MhSV8KVy3HsyFJXwpXFz_yyYGcvPSY24l7qKVt_BxRH1MLAmYvaIAWewZtUbX&_nc_ohc=xc-KNRFGjbUQ7kNvwGLB2Ab&_nc_oc=AdmADzDw9f0g-FNu40WtphKqgkT8eRNt4relOuPliMoDoDKiSo31nz2a4qz6ZB75x3YP8h3nMwHSm1DK0SkkxbIP&_nc_zt=23&_nc_ht=scontent.fbir1-1.fna&_nc_gid=3ulK0ehqHI7GC5SD8OBESQ&oh=00_AfkFvgsBklsDfj95l18o_KywbVHJi63EWyUQw26PZZ9rMw&oe=69568F57" 
+      alt="Promotional ad creative or service-based Facebook post" 
+      style="max-width: 100%; border-radius: 12px;"
+    />
+    <figcaption>Promotional ad creative or service-based Facebook post</figcaption>
+  </figure>
+</div>
+
+<div class="blog-section conclusion" style="margin-bottom: 2rem;">
+  <h3>🌟 Grow Your Business Faster With Facebook Ads</h3>
+  <p>
+    If you want to increase engagement, attract more customers, and boost sales, Facebook ads are one of the best marketing strategies for businesses in Nepal.
+  </p>
+
+  <div class="cta-box" style="padding: 1rem; background-color: #f5f7ff; border-radius: 12px; margin-top: 1rem;">
+    <h4>🚀 Get Expert Facebook Marketing Support</h4>
+    <p>Let <strong>Prasad Info Tech</strong> manage your Facebook campaigns for better results and higher returns.</p>
+    <ul>
+      <li>
+        📘 <strong>Facebook:</strong>
+        <a href="https://www.facebook.com/prasadinfotechnepal" target="_blank" rel="noopener noreferrer">
+          Prasad Info Tech Nepal
+        </a>
+      </li>
+      <li>
+        🌐 <strong>Website:</strong>
+        <a href="https://www.prasadinfotech.com.np" target="_blank" rel="noopener noreferrer">
+          prasadinfotech.com.np
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="blog-section keywords" style="margin-bottom: 2rem;">
+  <h4>🔎 SEO Keywords</h4>
+  <p>
+    <em>Facebook Boosting Service in Nepal, Facebook Ads Agency Nepal, Social Media Marketing Nepal, Lead Generation Nepal</em>
+  </p>
+</div>
+
+  `
+},
+  {
+  id: 8,
+  slug: "video-marketing-nepal",
+  title: "How Video Marketing Helps Businesses Stand Out in Nepal",
+  excerpt: "Video marketing increases engagement, trust, and conversion rates. Learn how Nepali businesses can grow using promotional videos and reels.",
+  imageUrl: "https://blog.thomasnet.com/hubfs/shutterstock_441100558.jpg",
+  category: "Digital Marketing",
+  date: "September 15, 2025",
+  author: "Prasad Info Tech",
+  readTime: "6 min read",
+  content: `
+    <div class="intro-section" style="margin-bottom: 2rem; line-height: 1.7;">
+      <h2>🎥 How Video Marketing Helps Businesses Stand Out in Nepal</h2>
+      <p>
+        Video content is the most engaging form of digital marketing today. Businesses using video marketing get higher engagement, more trust, and better conversion rates.
+      </p>
+
+      <figure style="margin: 1rem 0; text-align: center;">
+        <img 
+          src="/videoev.png" 
+          alt="Business video marketing example" 
+          style="max-width: 100%; border-radius: 12px;"
+        />
+        <figcaption>Example of promotional video for business growth</figcaption>
+      </figure>
+    </div>
+
+    <div class="company-section" style="margin-bottom: 2rem;">
+      <h3>🏢 About Prasad Info Tech – Your Video Marketing Partner</h3>
+      <p>
+        <strong>Prasad Info Tech</strong> is a video production and business promotion company in Nepal. We create professional promotional videos, short reels, and social media videos that help businesses communicate their message clearly.
+      </p>
+    </div>
+
+    <div class="services-section" style="margin-bottom: 2rem;">
+      <h3>📌 Ideal Uses for Video Marketing</h3>
+      <ul>
+        <li>🎯 Brand promotion</li>
+        <li>🚀 Product launches</li>
+        <li>📱 Facebook & Instagram ads</li>
+        <li>📖 Business storytelling</li>
+      </ul>
+
+      <p>
+        Short videos and reels perform extremely well on Facebook, Instagram, and YouTube. A well-made video builds trust and increases customer interest.
+      </p>
+    </div>
+
+    <div class="conclusion-section" style="margin-bottom: 2rem;">
+      <h3>🌟 Professional Video Marketing in Nepal</h3>
+      <p>
+        If you want your business to look professional and modern, video marketing is the best solution.
+      </p>
+
+      <div class="cta-box" style="padding: 1rem; background-color: #f5f7ff; border-radius: 12px; margin-top: 1rem;">
+        <h4>🚀 Boost Your Business With Video Marketing</h4>
+        <p>Let <strong>Prasad Info Tech</strong> produce videos and reels that increase engagement and conversions.</p>
+        <ul>
+          <li>
+            📘 <strong>Facebook:</strong>
+            <a href="https://www.facebook.com/prasadinfotechnepal" target="_blank" rel="noopener noreferrer">Prasad Info Tech Nepal</a>
+          </li>
+          <li>
+            🌐 <strong>Website:</strong>
+            <a href="https://www.prasadinfotech.com.np" target="_blank" rel="noopener noreferrer">prasadinfotech.com.np</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="keywords-section" style="margin-bottom: 2rem;">
+      <h4>🔎 SEO Keywords</h4>
+      <p><em>Video Marketing Nepal, Promotional Videos Nepal, Social Media Videos Nepal, Business Promotion Nepal</em></p>
+    </div>
+  `
+},
+
+{
+  id: 9,
+  slug: "drone-video-nepal",
+  title: "Drone Video & Photography for Business Promotion in Nepal",
+  excerpt: "Drone videos and photography help Nepali businesses look premium and professional. Learn how drone marketing boosts engagement.",
+  imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTta6QpCPL1yVdvV1u02CvyXohCjEh6L3VC9A&s",
+  category: "Digital Marketing",
+  date: "October 1, 2025",
+  author: "Prasad Info Tech",
+  readTime: "5 min read",
+  content: `
+    <div class="intro-section" style="margin-bottom: 2rem; line-height: 1.7;">
+      <h2>🚁 Drone Video & Photography for Business Promotion in Nepal</h2>
+      <p>
+        Drone video shooting is becoming very popular for business promotion in Nepal. Aerial drone shots make your business look premium, professional, and trustworthy.
+      </p>
+
+      <figure style="margin: 1rem 0; text-align: center;">
+        <img 
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTta6QpCPL1yVdvV1u02CvyXohCjEh6L3VC9A&s" 
+          alt="Drone business marketing example" 
+          style="max-width: 100%; border-radius: 12px;"
+        />
+        <figcaption>Drone video capturing business or property</figcaption>
+      </figure>
+    </div>
+
+    <div class="services-section" style="margin-bottom: 2rem;">
+      <h3>🎯 Professional Drone Video & Photography Services</h3>
+      <p>
+        At <strong>Prasad Info Tech</strong>, we provide professional 
+        <strong>drone video shooting and photography services</strong> for businesses, hotels, real estate, events, and construction projects.
+      </p>
+
+      <p>Drone videos are ideal for:</p>
+      <ul>
+        <li>🏢 Real estate marketing</li>
+        <li>🏨 Hotel & resort promotion</li>
+        <li>🎉 Event coverage</li>
+        <li>🏗️ Construction progress videos</li>
+      </ul>
+    </div>
+
+    <div class="conclusion-section" style="margin-bottom: 2rem;">
+      <p>
+        Drone content increases engagement and makes your brand stand out from competitors. Combined with digital marketing and Facebook ads, drone videos bring powerful results.
+      </p>
+      <p>Choose professional drone shooting services in Nepal to promote your business creatively.</p>
+
+      <div class="cta-box" style="padding: 1rem; background-color: #f5f7ff; border-radius: 12px; margin-top: 1rem;">
+        <h4>🚀 Promote Your Business With Drone Videos</h4>
+        <ul>
+          <li>
+            📘 <strong>Facebook:</strong>
+            <a href="https://www.facebook.com/prasadinfotechnepal" target="_blank" rel="noopener noreferrer">Prasad Info Tech Nepal</a>
+          </li>
+          <li>
+            🌐 <strong>Website:</strong>
+            <a href="https://www.prasadinfotech.com.np" target="_blank" rel="noopener noreferrer">prasadinfotech.com.np</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="keywords-section" style="margin-bottom: 2rem;">
+      <h4>🔎 SEO Keywords</h4>
+      <p><em>Drone Video Shooting Nepal, Drone Photography Nepal, Business Promotion Services Nepal</em></p>
+    </div>
+  `
+},
+
+{
+  id: 10,
+  slug: "registered-it-company-nepal",
+  title: "Why Choose a Government Registered IT Company in Nepal for Your Business",
+  excerpt: "A government-registered IT company provides trust, transparency, and professional services for your business growth in Nepal.",
+  imageUrl: "https://www.bloghandy.com/cdn-cgi/image/format=webp,fit=scale-down,width=1520/https://assets.bloghandy.com/blogs/60swToJy9pLet2NTM5Ng/CompanyRegistrationinNepal.png",
+  category: "IT Services",
+  date: "August 5, 2025",
+  author: "Prasad Info Tech",
+  readTime: "4 min read",
+  content: `
+    <div class="intro-section" style="margin-bottom: 2rem; line-height: 1.7;">
+      <h2>🏛️ Why Choose a Government Registered IT Company in Nepal</h2>
+      <p>
+        Choosing the right IT company is very important for business growth. A government registered IT company provides trust, transparency, and professional service.
+      </p>
+
+      <figure style="margin: 1rem 0; text-align: center;">
+        <img 
+          src="https://scontent.fbir1-1.fna.fbcdn.net/v/t39.30808-6/469659126_122152898786322904_8034756345626665194_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeH5l79u5vzV0JUg1ip8zUhgxpT92uPaJ1XGlP3a49onVX9qeUuFikCXIjP-YRZlYH5xsaPUKnghtu0QhEcHYcG_&_nc_ohc=svWH2HcMIeAQ7kNvwEa7_aC&_nc_oc=AdnM2cpAiKP5XqbmFtftDUNGA69jjV7-UbtJ3RpQyJa-2ynoQpL5u2BedAKKgdQluMHjYo4DEIkf29htjYYQ3Tqr&_nc_zt=23&_nc_ht=scontent.fbir1-1.fna&_nc_gid=MOsZchKTeh9HGMZeplrpTA&oh=00_AfmkxFasQNqsRKxflGXj03D3SMj4y5jPm605lAQhSI-5KQ&oe=69568197" 
+          alt="Registered IT company office" 
+          style="max-width: 100%; border-radius: 12px;"
+        />
+        <figcaption>Professional registered IT services in Nepal</figcaption>
+      </figure>
+    </div>
+
+    <div class="company-section" style="margin-bottom: 2rem;">
+      <p>
+        <strong>Prasad Info Tech</strong> is an officially registered IT and digital marketing company in Nepal, and we provide <em>official PAN bills</em> for all services. 
+        We offer complete business solutions including web development, digital marketing, Facebook ads, video production, and business promotion.
+      </p>
+
+      <p>Working with a professional IT company ensures:</p>
+      <ul>
+        <li>✅ Legal and trusted services</li>
+        <li>💰 Transparent pricing</li>
+        <li>👨‍💻 Professional support</li>
+        <li>📈 Long-term business growth</li>
+      </ul>
+    </div>
+
+    <div class="conclusion-section" style="margin-bottom: 2rem;">
+      <p>If you want reliable digital services in Nepal, choose a trusted and registered IT company that understands your business goals.</p>
+
+      <div class="cta-box" style="padding: 1rem; background-color: #f5f7ff; border-radius: 12px; margin-top: 1rem;">
+        <h4>🚀 Partner With a Trusted IT Company</h4>
+        <ul>
+          <li>
+            📘 <strong>Facebook:</strong>
+            <a href="https://www.facebook.com/prasadinfotechnepal" target="_blank" rel="noopener noreferrer">Prasad Info Tech Nepal</a>
+          </li>
+          <li>
+            🌐 <strong>Website:</strong>
+            <a href="https://www.prasadinfotech.com.np" target="_blank" rel="noopener noreferrer">prasadinfotech.com.np</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="keywords-section" style="margin-bottom: 2rem;">
+      <h4>🔎 SEO Keywords</h4>
+      <p><em>Government Registered IT Company Nepal, Trusted IT Services Nepal, Business IT Solutions Nepal</em></p>
+    </div>
+  `
+
+}
+
 
 ];
 
