@@ -1,5 +1,6 @@
 import { FaBullseye, FaHandshake, FaLightbulb, FaRocket } from "react-icons/fa";
 import ceoImage from "../assets/img/ceo.webp";
+import ocean from "../assets/img/ocean.webp";
 import TeamMemberCard from "../components/TeamMemberCard";
 import AchievementSection2 from "../components/AcheivementsSection2";
 
@@ -128,7 +129,7 @@ const AboutPage = () => {
               position="CEO & Founder of Prasad Info Tech"
             />
             <TeamMemberCard
-              image= "https://scontent.fbir1-1.fna.fbcdn.net/v/t1.6435-9/80548014_167433181306854_7620389086917820416_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeGTsE_v6smi0kRCdg7u2KGe2IiuSPmGHdLYiK5I-YYd0no15m9SDg53s2qBYvclxkDzwIfat7Qym9_ov28f9seV&_nc_ohc=ghh4ujWYJsQQ7kNvwHp2YtW&_nc_oc=AdlBPGVH3brg2orEf4lMWfR50xyZ2lLSVlDBQlvYDJ0Se-N4iX2X17Ft2udfzkcxfxuSeiLWKSEHHk4XK0R5KphJ&_nc_zt=23&_nc_ht=scontent.fbir1-1.fna&_nc_gid=wmp-NZVQimtM77lz3SShng&oh=00_AfnrC7KDdRn8ZtTXH2OtWUgLd3CTia5Q6-xCkOsx7Av10A&oe=6978386C"
+              image= {ocean}
               name="Ocean Poudel"
               position="Marketing Head of Prasad Info Tech"
             />

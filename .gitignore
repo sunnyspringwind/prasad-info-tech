@@ -22,4 +22,5 @@ Thumbs.db
 
 # Work-proof build output (optional, update if needed)
 /work-proof/
-
+/gmailapi.json
+/requirements/
