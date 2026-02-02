@@ -8,7 +8,7 @@ export interface BlogPost {
   date: string;
   author: string;
   readTime: string;
-  content: string; // full blog content (HTML or Markdown)
+  content: string; // full blog content (HTML)
 }
 
 export const blogData: BlogPost[] = [
@@ -1489,7 +1489,7 @@ export const blogData: BlogPost[] = [
   author: "Prasad Info Tech",
   readTime: "4 min read",
   content: `
-    <div class="intro-section" style="margin-bottom: 2rem; line-height: 1.7;">
+       <div class="blog-section intro" style="margin-bottom: 2rem; line-height: 1.7;">
       <h2>🏛️ Why Choose a Government Registered IT Company in Nepal</h2>
       <p>
         Choosing the right IT company is very important for business growth. A government registered IT company provides trust, transparency, and professional service.
@@ -1497,7 +1497,7 @@ export const blogData: BlogPost[] = [
 
       <figure style="margin: 1rem 0; text-align: center;">
         <img 
-          src="https://scontent.fbir1-1.fna.fbcdn.net/v/t39.30808-6/469659126_122152898786322904_8034756345626665194_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeH5l79u5vzV0JUg1ip8zUhgxpT92uPaJ1XGlP3a49onVX9qeUuFikCXIjP-YRZlYH5xsaPUKnghtu0QhEcHYcG_&_nc_ohc=svWH2HcMIeAQ7kNvwEa7_aC&_nc_oc=AdnM2cpAiKP5XqbmFtftDUNGA69jjV7-UbtJ3RpQyJa-2ynoQpL5u2BedAKKgdQluMHjYo4DEIkf29htjYYQ3Tqr&_nc_zt=23&_nc_ht=scontent.fbir1-1.fna&_nc_gid=MOsZchKTeh9HGMZeplrpTA&oh=00_AfmkxFasQNqsRKxflGXj03D3SMj4y5jPm605lAQhSI-5KQ&oe=69568197" 
+          src="/blog/registerd-company.webp" 
           alt="Registered IT company office" 
           style="max-width: 100%; border-radius: 12px;"
         />
@@ -1544,7 +1544,288 @@ export const blogData: BlogPost[] = [
     </div>
   `
 
-}
+},
+{
+  id: 11,
+  slug: "best-facebook-boosting-company-kathmandu-prasad-info-tech",
+  title: "Best Facebook Boosting Company in Kathmandu, Nepal – Prasad Info Tech",
+  excerpt:
+    "Prasad Info Tech is a government-registered Facebook boosting and digital marketing company in Kathmandu, Nepal, providing result-driven Facebook & Instagram ads for manpower agencies, consultancies, and businesses across Nepal.",
+  imageUrl: "/blog/facebook-boosting-nepal.webp",
+  category: "Digital Marketing",
+  date: "2026-02-02",
+  author: "Prasad Info Tech",
+  readTime: "8 min read",
+  content: `
+     <div class="blog-section intro" style="margin-bottom: 2rem; line-height: 1.7;">
+    <h2>Introduction: Why Facebook Boosting Matters in Nepal Today</h2>
+    <p>
+      Nepal’s business environment has changed rapidly in the last few years.
+      Customers no longer rely only on shop boards, newspapers, or word of mouth.
+      Today, Facebook and Instagram are the biggest digital marketplaces in Nepal.
+    </p>
+    <figure style="margin: 1rem 0; text-align: center;">
+        <img 
+          src="/blog/facebook-boosting-nepal.webp"
+          alt="Registered IT company office" 
+          style="max-width: 100%; border-radius: 12px;"
+        />
+        <figcaption>Professional registered IT services in Nepal</figcaption>
+      </figure>
+    <p><strong>If your business is not visible on Facebook, you are invisible to your customers.</strong></p>
+</div>
+    <p>
+      This is why thousands of Nepali businesses search for:
+    </p>
+    <ul>
+      <li>Best Facebook boosting company in Kathmandu</li>
+      <li>Facebook marketing company in Nepal</li>
+      <li>Manpower Facebook boosting Nepal</li>
+      <li>Consultancy Facebook ads Nepal</li>
+    </ul>
+
+    <p>
+      Among all these, <strong>Prasad Info Tech</strong> has emerged as a trusted and
+      government-registered Facebook boosting company in Nepal, helping businesses
+      generate real leads, real messages, and real customers.
+    </p>
+
+    <h2>Who Is Prasad Info Tech?</h2>
+    <p>
+      Prasad Info Tech is a Nepal Government-registered IT and Digital Marketing
+      company, operating from Kathmandu & Itahari, serving clients all over Nepal.
+    </p>
+
+    <h3>Company Highlights</h3>
+    <ul>
+      <li>Officially registered IT company in Nepal</li>
+      <li>1,000+ businesses boosted across Nepal</li>
+      <li>Experts in Facebook & Instagram advertising</li>
+      <li>Services available all over Nepal</li>
+      <li>Trusted by manpower agencies, consultancies & SMEs</li>
+    </ul>
+
+    <p>
+      We are not freelancers. We are not fake boosters.
+      <strong>We are a professional Facebook marketing agency in Nepal.</strong>
+    </p>
+
+    <h2>What Is Facebook Boosting & Why It Works in Nepal</h2>
+    <p>
+      Facebook boosting means promoting your business post or ad to targeted users
+      using Facebook’s paid advertising system.
+    </p>
+
+    <h3>Why Facebook Boosting Is Powerful in Nepal</h3>
+    <ul>
+      <li>Over 80% of internet users in Nepal use Facebook daily</li>
+      <li>People trust Facebook ads more than random pages</li>
+      <li>Facebook ads are cheaper than TV, radio & newspapers</li>
+      <li>Ads can be shown only to interested people</li>
+      <li>Perfect for local businesses, manpower & consultancies</li>
+    </ul>
+
+    <p>
+      With Facebook boosting, you don’t waste money.
+      <strong>You reach the right people at the right time.</strong>
+    </p>
+
+    <h2>Why Prasad Info Tech Is the Best Facebook Boosting Company in Kathmandu</h2>
+
+    <h3>1. Targeted Facebook Ads (Not Random Boosting)</h3>
+    <p>We don’t boost blindly. We target ads based on:</p>
+    <ul>
+      <li>Location (Kathmandu, Lalitpur, Bhaktapur, All Nepal)</li>
+      <li>Age & gender</li>
+      <li>Job seekers, buyers, students</li>
+      <li>Interests & online behaviour</li>
+      <li>Manpower & overseas job intent</li>
+    </ul>
+
+    <h3>2. Specialised Facebook Boosting for Manpower Agencies</h3>
+    <p>
+      Manpower agencies need real applicants, not likes.
+      We specialise in manpower Facebook boosting in Nepal.
+    </p>
+    <ul>
+      <li>Recruitment Facebook ads Nepal</li>
+      <li>Job vacancy promotion</li>
+      <li>Overseas job ads (Dubai, Qatar, Saudi, Europe)</li>
+    </ul>
+
+    <p><strong>Results manpower agencies get:</strong></p>
+    <ul>
+      <li>Daily WhatsApp messages</li>
+      <li>Phone calls from job seekers</li>
+      <li>Qualified candidates</li>
+      <li>Faster hiring</li>
+      <li>Lower cost per applicant</li>
+    </ul>
+
+    <h3>3. Facebook Boosting for Consultancies & Education Centers</h3>
+    <p>
+      We provide consultancy Facebook ads in Nepal for IELTS, PTE, study abroad,
+      and training institutes.
+    </p>
+
+    <h3>4. Facebook Boosting for All Types of Businesses</h3>
+    <ul>
+      <li>Clothing & online sellers</li>
+      <li>Restaurants, cafes & hotels</li>
+      <li>Travel & tourism companies</li>
+      <li>Real estate & construction</li>
+      <li>Medical & wellness clinics</li>
+      <li>Tech & gadget stores</li>
+    </ul>
+
+    <h2>Facebook & Instagram Ads We Run</h2>
+    <ul>
+      <li>Facebook Page Promotion Ads</li>
+      <li>Lead Generation Ads</li>
+      <li>WhatsApp Message Ads</li>
+      <li>Messenger Ads</li>
+      <li>Instagram Reels Ads</li>
+      <li>Sales & Conversion Ads</li>
+    </ul>
+
+    <h2>Why Businesses Prefer Prasad Info Tech</h2>
+    <ul>
+      <li>Government-registered IT company</li>
+      <li>Transparent reporting</li>
+      <li>No fake likes or bots</li>
+      <li>Affordable packages</li>
+      <li>Custom design & video ads</li>
+      <li>Daily monitoring & optimisation</li>
+      <li>24/7 WhatsApp & call support</li>
+    </ul>
+
+    <h2>Facebook Boosting + Website = Maximum Growth</h2>
+    <p>
+      We also provide web development services including business websites,
+      consultancy & manpower websites, and ad-focused landing pages.
+    </p>
+
+    <h2>Final Words: Grow Your Business with Prasad Info Tech</h2>
+    <p>
+      If you are searching for the best Facebook boosting company in Kathmandu,
+      Facebook marketing company in Nepal, or manpower Facebook boosting Nepal —
+      your search ends here.
+    </p>
+
+    <p><strong>Prasad Info Tech – Your Growth Partner in Nepal</strong></p>
+    <p>
+      📞 Call / WhatsApp: <strong>986-2282235</strong><br/>
+      🌐 Website: <a href="https://prasadinfotech.com.np/" target="_blank">https://prasadinfotech.com.np/</a><br/>
+      📍 Service Area: All Nepal
+    </p>
+  `
+},
+
+{ id: 12,
+  slug: "facebook-boosting-manpower-recruitment-agencies-nepal",
+  title: "Facebook Boosting for Manpower & Recruitment Agencies in Nepal (Get Real Applicants)",
+  excerpt:
+    "Get real job applicants with Facebook boosting for manpower and recruitment agencies in Nepal. Prasad Info Tech specialises in recruitment-focused Facebook & WhatsApp lead ads that deliver genuine candidates fast.",
+  imageUrl:
+    "/blog/manpower-facebook-boosting-nepal.webp",
+  category: "Recruitment Marketing",
+  date: "2026-02-02",
+  author: "Prasad Info Tech",
+  readTime: "5 min read",
+  content: `
+     <div class="blog-section intro" style="margin-bottom: 2rem; line-height: 1.7;">
+    <h2>Facebook Boosting for Manpower & Recruitment Agencies in Nepal</h2>
+    <p>
+      Manpower and recruitment agencies in Nepal face one major challenge:
+      <strong>reaching genuine job seekers quickly</strong>.
+      Traditional methods like newspapers, posters, and notice boards no longer
+      deliver fast or reliable results.
+    </p>
+</div>
+<figure style="margin: 1rem 0; text-align: center;">
+        <img 
+          src="/blog/manpower-facebook-boosting-nepal.webp"
+          alt="Registered IT company office" 
+          style="max-width: 100%; border-radius: 12px;"
+        />
+        <figcaption>Professional registered IT services in Nepal</figcaption>
+      </figure>
+    <p>
+      Today, <strong>Facebook is the most powerful recruitment platform in Nepal</strong>.
+      Millions of Nepalis actively search for overseas and local jobs through Facebook
+      posts, pages, and ads.
+    </p>
+
+    <p>
+      At <strong>Prasad Info Tech</strong>, we provide specialised Facebook boosting
+      for manpower and recruitment agencies, ensuring your job vacancies reach
+      people who are actively looking for work — not random audiences.
+    </p>
+
+    <h2>How Our Manpower Facebook Boosting Works</h2>
+    <p>
+      We use advanced targeting and recruitment-focused ad strategies to attract
+      genuine applicants.
+    </p>
+
+    <ul>
+      <li>Target users interested in overseas jobs</li>
+      <li>Location-based targeting (province, district, city)</li>
+      <li>Age targeting (18–35 for foreign employment)</li>
+      <li>Messenger & WhatsApp lead campaigns</li>
+      <li>Instant auto-reply system for inquiries</li>
+    </ul>
+
+    <p>
+      This system ensures that interested job seekers can contact your agency
+      immediately through calls, WhatsApp, or Messenger.
+    </p>
+
+    <h2>Jobs We Promote for Manpower Agencies</h2>
+    <p>We promote recruitment ads for:</p>
+
+    <ul>
+      <li>Gulf countries (Dubai, Qatar, Saudi Arabia, Oman)</li>
+      <li>Europe & work visa programs</li>
+      <li>Local Nepali jobs</li>
+      <li>Freelance & contract roles</li>
+    </ul>
+
+    <p>
+      Our ads are designed to clearly explain job roles, requirements, and benefits,
+      increasing applicant quality and trust.
+    </p>
+
+    <h2>Why Manpower Agencies Choose Prasad Info Tech</h2>
+    <ul>
+      <li>More genuine job applicants</li>
+      <li>Lower cost per lead</li>
+      <li>Faster hiring process</li>
+      <li>No fake likes or fake engagement</li>
+      <li>Clear and transparent performance reports</li>
+    </ul>
+
+    <p>
+      Unlike random boosting, our recruitment ads focus only on people who are
+      most likely to apply for jobs.
+    </p>
+
+    <h2>Get Daily Calls, WhatsApp Messages & Walk-In Candidates</h2>
+    <p>
+      If your manpower agency wants <strong>daily calls, WhatsApp messages,
+      and walk-in candidates</strong>, Facebook boosting by
+      <strong>Prasad Info Tech</strong> is the smartest and most cost-effective solution.
+    </p>
+
+    <p>
+      We help manpower agencies grow faster, hire quicker, and reduce marketing waste.
+    </p>
+
+    <p><strong>Prasad Info Tech – Recruitment Marketing Experts in Nepal</strong></p>
+  `
+},
+
+
 
 
 ];
