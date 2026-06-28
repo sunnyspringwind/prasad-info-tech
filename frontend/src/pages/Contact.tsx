@@ -11,7 +11,6 @@ import {
 } from "react-icons/fa";
 import Toast from "../components/Toast";
 
-
 const ContactPage = () => {
   const [formData, setFormData] = useState({
     firstName: "",
@@ -24,11 +23,11 @@ const ContactPage = () => {
   const [toast, setToast] = useState({
     show: false,
     message: "",
-    type: "success" as "success" | "error"
+    type: "success" as "success" | "error",
   });
 
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -39,36 +38,41 @@ const ContactPage = () => {
 
   const isValidData: () => string | true = () => {
     const entries = Object.entries(formData);
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const emptyFields = entries.filter(([_, value]) => value.trim()=== "").map(([key])=> key);
-    return (emptyFields.length > 0) ? `${emptyFields[0]} cannot be empty.` : true
-    }
+    const emptyFields = entries
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      .filter(([_, value]) => value.trim() === "")
+      .map(([key]) => key);
+    return emptyFields.length > 0 ? `${emptyFields[0]} cannot be empty.` : true;
+  };
 
   const handleSubmit = async () => {
     try {
-      const validation = isValidData()
-    if (typeof validation === "string")
-      return setToast({show: true, message: validation, type: "error"})
+      const validation = isValidData();
+      if (typeof validation === "string")
+        return setToast({ show: true, message: validation, type: "error" });
       const res = await fetch("/.netlify/functions/sendEmail", {
         method: "POST",
         headers: {
-          'Content-Type': "application/json"
+          "Content-Type": "application/json",
         },
-           body: JSON.stringify(formData),
+        body: JSON.stringify(formData),
       });
 
       if (res.ok)
         setFormData({
-      firstName: "",
-      lastName: "",
-      email: "",
-      phone: "",
-      message: "",
-    });
-        return setToast({show: true, message: "Got your message we will reach you soon.", type: "success"})
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+      return setToast({
+        show: true,
+        message: "Got your message we will reach you soon.",
+        type: "success",
+      });
     } catch (error: unknown) {
-      if(error instanceof Error)
-        console.log(error)
+      if (error instanceof Error) console.log(error);
     }
   };
 
@@ -79,7 +83,7 @@ const ContactPage = () => {
         show={toast.show}
         message={toast.message}
         type={toast.type}
-        onClose={() => setToast({ show: false, message: '', type: 'success' })}
+        onClose={() => setToast({ show: false, message: "", type: "success" })}
       />
       <div className="max-w-7xl mx-auto px-4 py-16">
         {/* Header */}
@@ -96,16 +100,16 @@ const ContactPage = () => {
         {/* Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Info */}
-            <div className="space-y-8">
+          <div className="space-y-8">
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Let's <span className="text-blue-600">Connect</span>
+                Let's <span className="text-blue-600">Connect</span>
               </h2>
               <p className="text-gray-600 text-lg">
-              Prasad Info Tech specializes in digital marketing and software
-              development. Whether you need a website, mobile app, or a
-              digital strategy, we're here to help. Reach out and we'll
-              respond within 24 hours.
+                Prasad Info Tech specializes in digital marketing and software
+                development. Whether you need a website, mobile app, or a
+                digital strategy, we're here to help. Reach out and we'll
+                respond within 24 hours.
               </p>
             </div>
 
@@ -148,10 +152,9 @@ const ContactPage = () => {
                   <h3 className="font-semibold text-gray-900 mb-1">
                     Office Address
                   </h3>
-                  {/* <p className="text-gray-600">
-                    2nd Floor, InfoTech Building, Main Road
-                  </p> */}
-                  <p className="text-gray-600">Bagbazzar, Kathmandu, Nepal</p>
+                  <p className="text-gray-600">
+                    BP Chowk (Kuber Mandir Opposite), Itahari, Nepal
+                  </p>
                 </div>
               </div>
 
@@ -165,9 +168,9 @@ const ContactPage = () => {
                     Working Hours
                   </h3>
                   <p className="text-gray-600">
-                    Sunday – Friday: 9:00 AM – 6:00 PM
+                    Sunday – Friday: 10:00 AM – 4:00 PM
                   </p>
-                  <p className="text-gray-600">Saturday: 10:00 AM – 3:00 PM</p>
+                  {/* <p className="text-gray-600">Saturday: 10:00 AM – 3:00 PM</p> */}
                 </div>
               </div>
             </div>
@@ -307,9 +310,14 @@ const ContactPage = () => {
 
         {/* Map */}
         <div className="mt-16 rounded-3xl shadow-2xl overflow-hidden border border-gray-100">
+          <div className="flex items-center gap-2 px-6 py-4 bg-gray-50 text-gray-700 font-medium">
+            <FaMapMarkerAlt className="w-5 h-5 text-blue-600" />
+            Our Location
+          </div>
           <iframe
             title="Prasad Info Tech Location"
- src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.381063732896!2d85.31685236034116!3d27.705518425474075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19075849239d%3A0x4ddaddd1271c3890!2sBagbazar%2C%20Kathmandu%2044600!5e0!3m2!1sen!2snp!4v1756231706902!5m2!1sen!2snp"            className="w-full h-96 border-0"
+            src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d377.0737482429555!2d87.27149831949347!3d26.66188627254631!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sus!4v1782629473269!5m2!1sen!2sus"
+            className="w-full h-96 border-0"
             loading="lazy"
             allowFullScreen
             referrerPolicy="no-referrer-when-downgrade"
