@@ -154,9 +154,9 @@ const AboutPage = () => {
               position="Graphic Design Intern of Prasad Info Tech"
             />
             <TeamMemberCard
-              image="https://scontent.fbir1-1.fna.fbcdn.net/v/t1.6435-9/153847965_1317329248667718_7227303938825811602_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeGYLQ43KQms-tT2Simk4w6YKHbRGQ2EEH0odtEZDYQQfUNTzZtJn3nxb6yujQLIuN9lTWD8qo044Ngawe6Og009&_nc_ohc=hkrG2o3vk8oQ7kNvwEUzIYj&_nc_oc=AdmlkeiADE1wY8W1500MacSZGNvejDk8aL_4olpIf4HtlbkcO9OE-OR2aSXQqER5_MvPBVzbklzRHcJQT5_tLOpa&_nc_zt=23&_nc_ht=scontent.fbir1-1.fna&_nc_gid=sq7J9CZ3HqKimzxH60kGAw&oh=00_AfmPPH0YWEMHg4dr0PEd8lzGvJMiwuyzIMajfViFETOC6w&oe=69781FA7"
+              image="/ashish.webp"
               name="Ashish Limbu"
-              position="Full-Stack Intern of Prasad Info Tech"
+              position="Junior Full-stack Developer"
             />
           </div>
         </section>
